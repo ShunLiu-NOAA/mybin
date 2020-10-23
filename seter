@@ -1,0 +1,5 @@
+#!/bin/bash
+thisdir=`pwd`
+er=`echo $thisdir | sed -e 's/Shun.Liu/Eric.Rogers/g'`
+export erdir=$er
+echo $erdir

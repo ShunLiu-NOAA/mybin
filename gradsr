@@ -1,0 +1,1 @@
+grads -lbc "run $1"
