@@ -1,0 +1,3 @@
+
+echo variable name and nc file name
+ncdump -v $1 $2
