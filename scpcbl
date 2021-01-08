@@ -1,4 +1,5 @@
 
+winhome=/home/people/emc/www/htdocs/mmb/wx22hl/winhome
 scp $1 wx22hl@emcrzdm.ncep.noaa.gov:$winhome/CBL
 #scp $1 wx22hl@emcrzdm.ncep.noaa.gov:$2 
 #scp /u/Shun.Liu/bin/index.php wx22hl@emcrzdm.ncep.noaa.gov:$2
