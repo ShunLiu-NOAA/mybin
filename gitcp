@@ -1,0 +1,7 @@
+
+gitdir=/scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/tmp
+cp $1 /scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/tmp
+cd $gitdir
+git add $1
+git commit -m "new file"
+git push
