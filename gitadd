@@ -1,0 +1,4 @@
+thisfile=$1
+git add $thisfile
+git commit -m "${thisfile}"
+git push
