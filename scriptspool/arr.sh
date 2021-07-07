@@ -1,6 +1,6 @@
 #!/bin/bash
 #set -x
-. 1.sh
+. arr1.sh
 
 #echo $FCST_LEN_HRS
 echo ${FCST_LEN_HRS_CYCLES[-1]}
@@ -15,3 +15,15 @@ echo "==============="
 echo ${FCST_LEN_HRS_CYCLES[-1]}
 echo ${FCST_LEN_HRS_CYCLES[1]}
 echo ${FCST_LEN_HRS_CYCLES[2]}
+
+flpath=/tem/spinup/test
+
+IFS="/"
+arr=($flpath)
+str=`echo ${flpath[@]} | grep spinup`
+echo $str
+
+spinup="spinup"
+if grep -q $spinup <<< "$flpath"; then
+   echo "it is spinup cycle"
+fi
