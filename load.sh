@@ -12,6 +12,7 @@ module load prod_util/1.1.5
 module load bufr_util/1.0.1
 module load HPSS/5.0.2.5
 module load lsf/10.1
+module load grib_util/1.1.1
 
 #exit
 
