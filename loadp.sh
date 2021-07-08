@@ -19,7 +19,7 @@
   module load sigio/2.0.1
   module load crtm/2.2.5
   
-  module load EnvVars/1.0.2
+  module load EnvVars/1.0.3
   module load pm5/1.0
   module load subversion/1.7.16
   module load HPSS/5.0.2.5
@@ -40,8 +40,8 @@
   module use -a /u/Benjamin.Blake/modulefiles
   module load python3/test
   module load wgrib2/2.0.8
+  module load NCO/4.7.0
   #module load anaconda2/latest
   #export GRIB_DEFINITION_PATH=/gpfs/dell2/emc/modeling/noscrub/Benjamin.Blake/EXT/grib_api.1.14.4/share/grib_api/definitions
   export GRIB_DEFINITION_PATH=/usrx/local/nceplibs/dev/lib/grib_api/share/grib_api/definitions
   export PYTHONPATH="${PYTHONPATH}:/gpfs/dell2/emc/verification/noscrub/Logan.Dawson/python:/gpfs/dell2/emc/modeling/noscrub/Jacob.Carley/python/lib/python3.6/site-packages:/gpfs/dell2/emc/modeling/noscrub/Benjamin.Blake/PyGSI"
-
