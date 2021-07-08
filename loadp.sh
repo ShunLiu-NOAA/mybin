@@ -29,6 +29,7 @@
   module load prod_envir/1.0.2
   module load grib_util/1.0.6
   module load prod_util/1.1.0
+  module load bufr_util/1.0.1
   
   module use /gpfs/dell3/usrx/local/dev/emc_rocoto/modulefiles/
   module load ruby/2.5.1 rocoto/1.2.4
