@@ -1,0 +1,35 @@
+#!/bin/bash
+#/*===================================================================================================================================================================================*/
+##/* Sample crontab entries with best practices:                                                                                                                                       */
+##/*                                                                                                                                                                                   */
+##/* 1. TEST to make sure target script exists BEFORE executing, and                                                                                                                   */
+##/* 2. Be sure to handle STDOUT/STEDERR appropriately.                                                                                                                                */
+##/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+##10 * * * * test -f /gpfs/dell1/ptmp/User.Name/cron/mycronscript-1.ksh && /gpfs/dell1/ptmp/User.Name/cron/mycronscript-1.ksh 1>/gpfs/dell1/ptmp/User.Name/cron/mycronscript-1.log 2>&1
+##/*===================================================================================================================================================================================*/
+## Example of job definition:
+## .---------------- minute (0 - 59)
+## |  .------------- hour (0 - 23)
+## |  |  .---------- day of month (1 - 31)
+## |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+## |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+## |  |  |  |  |
+## *  *  *  *  * user-name  command to be executed
+##/*===================================================================================================================================================================================*/
+#
+#* * * * * test -f /gpfs/dell1/ptmp/Shun.Liu/cron/test.sh 1>/gpfs/dell1/ptmp/Shun.Liu/cron/test.log 2>&1
+#
+#1,15,31,45 * * * * sh /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/wsr88d_level2.v4.1.0/jobs/cronsub.sh > /gpfs/dell1/Shun.Liu/cron/level2_`date "+\%d"` 2>&1
+#1,15,34,45 * * * * sh /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/wsr88d_level2.v4.1.0/jobs/cronsub.sh >& /gpfs/dell1/ptmp/Shun.Liu/cron/level2_`date "+\%d"`.log 2>&1
+#1,15,31,45 * * * * /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/wsr88d_level2.v4.1.0/jobs/cronsub.sh >& /gpfs/dell1/ptmp/Shun.Liu/cron/level2_`date "+\%d\%H\%M"`.log 2>&1
+#
+#1,15,31,45 * * * * /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/wsr88d_level2.v4.2.0/jobs/cronsub.sh >& /gpfs/dell1/ptmp/Shun.Liu/cron/level2_`date "+\%d\%H\%M"`.log 2>&1
+#25 * * * * /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/nwprod/radar_reflectivity_mosaic.v2.0.0/jobs/cronsub.sh > /gpfs/dell1/ptmp/Shun.Liu/cron/mosaic_`date "+\%d\%H\%M"` 2>&1
+#40 * * * * /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/nwprod/radar_reflectivity_ref2grb.v2.0.0/jobs/cronsub.sh > /gpfs/dell1/ptmp/Shun.Liu/cron/ref2grb_`date "+\%d\%H\%M"` 2>&1
+#
+#1,15,31,45 * * * * /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/nwprod/radar_level2.v1.0.0/jobs/cronsub_level2.sh >& /gpfs/dell1/ptmp/Shun.Liu/cron/level2_`date "+\%d\%H\%M"`.log 2>&1
+#25 * * * * /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/nwprod/radar_level2.v1.0.0/jobs/cronsub_mosaic.sh > /gpfs/dell1/ptmp/Shun.Liu/cron/mosaic_`date "+\%d\%H\%M"` 2>&1
+#40 * * * * /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/nwprod/radar_level2.v1.0.0/jobs/cronsub_ref2grb.sh > /gpfs/dell1/ptmp/Shun.Liu/cron/ref2grb_`date "+\%d\%H\%M"` 2>&1
+* * * * * /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/fv3lamda/regional_workflow/rocoto/run_fv3sar_da.sh >> /gpfs/dell5/ptmp/Shun.Liu/fv3lamda/log/rocoto_cron_fv3lam.log 2>&1
+#1 10 * * * /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/test/pltref/plt_mrms_nc/getpoint.sh_realtime >> /gpfs/dell5/ptmp/Shun.Liu/log/get_mrms.log 2>&1
+8 2 * * * /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/test/pltref/plt_mrms_nc/getpoint.sh_realtime >> /gpfs/dell5/ptmp/Shun.Liu/log/get_mrms_`date "+\%d\%H\%M"`.log 2>&1

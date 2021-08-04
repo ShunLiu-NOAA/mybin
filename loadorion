@@ -1,0 +1,31 @@
+#for jedi
+export JEDI_OPT=/work/noaa/da/grubin/opt/modules
+module use $JEDI_OPT/modulefiles/core
+module purge
+
+#module load jedi/intel-impi # Intel compiler suite v20.0.166 with Intel MPI
+
+module load jedi/gnu-openmpi # GNU compiler suite v8.3.0 with OpenMPI v4.0.2
+
+module use -a /home/cmartin/opt/modulefiles
+module load anaconda/anaconda3-2020.04.02
+
+#module swap gcc/10.2.0
+
+module list
+
+#ecbuild -DMPIEXEC_EXECUTABLE=/opt/slurm/bin/srun -DMPIEXEC_NUMPROC_FLAG="-n" <path-to-bundle>
+#git clone git@github.com:jcsda/jedi-cmake.git
+#if encountered error and already have done cloned jedi-cmake, do the following
+#ecbuild --toolchain=<path-to-jedi-cmake>/jedi-cmake/cmake/Toolchains/jcsda-Orion-Intel.cmake <path-to-bundle>
+#make -j4
+
+export SLURM_ACCOUNT=da-cpu
+export SALLOC_ACCOUNT=$SLURM_ACCOUNT
+export SBATCH_ACCOUNT=$SLURM_ACCOUNT
+export SLURM_QOS=debug
+
+ulimit -s unlimited
+
+export OMP_NUM_THREADS=1
+
