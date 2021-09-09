@@ -2,6 +2,95 @@
 
 #set -x
 
+##############
+# test array number
+##############
+
+CYCL_HRS_SPINSTART=( \
+"1" \
+"2" \
+"3" \
+"4" \
+"5" \
+"6" \
+"7" \
+"8" \
+"9" \
+)
+
+hh=8
+tt="${CYCL_HRS_SPINSTART[${hh#0}]}"
+
+echo $tt
+exit
+
+##############
+# test case
+##############
+test=23
+
+case $test in
+11)
+taskname=get_extrn_lbcs
+;;
+12)
+taskname=make_ics
+;;
+13)
+taskname=make_lbcs_00
+;;
+21)
+taskname=prep_cyc_spinup
+;;
+22)
+taskname=anal_gsi_input_spinup
+;;
+23)
+taskname=run_fcst_spinup
+;;
+31)
+taskname=prep_cyc_prod
+;;
+32)
+taskname=anal_gsi_input_prod
+;;
+33)
+taskname=run_fcst_prod
+;;
+esac
+
+
+##############
+# test if
+##############
+CRES=C3359
+if [ $CRES = 'C3359' ]; then
+  echo $CRES
+fi
+exit
+
+##############
+# test sed
+##############
+files=`/usr/bin/ls -1 1*`
+for  file in $files
+do
+sed 's/.bashrc/bin\'/loadp'/g' $file > $file.new
+exit
+mv $file.new $file
+done
+
+
+files='drive_plots.xml'
+for  file in $files
+do
+sed '171,177s/fv3lamdax/rdas/; 171,177s/fv3lam/rrfs/' $file > $file.new
+mv $file.new $file
+done
+
+
+exit
+
 hh=06
 
 #for ((i=0;i<5;i++))
