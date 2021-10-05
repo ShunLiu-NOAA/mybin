@@ -16,7 +16,6 @@ export winhome="/home/people/emc/www/htdocs/mmb/wx22hl/winhome"
 export GIT_SSH=$HOME/ssh-gerrit
 
 alias wgrib2=/gpfs/dell1/nco/ops/nwprod/lib/wgrib2/v2.0.8/ips/18.0.1/bin/wgrib2
-
 alias h='history'
 
 alias save='cd /gpfs/dell2/emc/modeling/save/Shun.Liu'
@@ -62,17 +61,23 @@ alias xterms='xterm -bg Gray &'
 alias xtermj='xterm -bg khaki2 &'
 alias binv='/u/Yangrong.Ling/utilities/binv/binv'
 
-alias cdt='cd /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/test'
+#alias cdt='cd /gpfs/dell2/emc/modeling/noscrub/Shun.Liu/test'
+alias cdt='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km'
 alias cdc='cd /gpfs/dell2/emc/modeling/save/Shun.Liu/code/CBL'
 alias cdf='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/fv3lamda/regional_workflow/'
+alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
+alias cdstmp='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km'
 alias cdgsi='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/testgsi/regional_gsianl_tm00_00'
+alias vicron='vi ~/cron/mycrontab'
+alias vibash='vi ~/.bashrc'
+alias lpath='cat ~/bin/filepath'
+alias vipath='vi ~/bin/filepath'
+alias campara='sudo -u emc.campara -i'
 
-echo "cdf regional_workflow"
-echo "cdgsi gsi test dir"
+#echo "cdf regional_workflow"
+#echo "cdgsi gsi test dir"
 
-
-#. /usrx/local/prod/lmod/lmod/init/profit:q
-e
+#. /usrx/local/prod/lmod/lmod/init/profit
 #. /usrx/local/prod/modulefiles/.defaultmodules
 
 #if [ ! -z $MODULESHOME ]; then
@@ -83,7 +88,6 @@ e
 ######################################
 module load lsf/10.1
 module load HPSS/5.0.2.5
-
 
 #module load compiler_mpi/ips/19.0.5/impi/19.0.5
 #module load ips/18.0.1.163
@@ -142,4 +146,3 @@ module load HPSS/5.0.2.5
 #module load anaconda2/latest
 #export GRIB_DEFINITION_PATH=/gpfs/dell2/emc/modeling/noscrub/Benjamin.Blake/EXT/grib_api.1.14.4/share/grib_api/definitions
 #export PYTHONPATH="${PYTHONPATH}:/gpfs/dell2/emc/modeling/noscrub/Jacob.Carley/python/lib/python3.6/site-packages"
-

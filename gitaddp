@@ -1,0 +1,5 @@
+thisfile=$1
+cp $1 ./fig
+git add ./fig/$thisfile
+git commit -m "${thisfile}"
+git push

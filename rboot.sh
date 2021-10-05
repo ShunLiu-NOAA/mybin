@@ -3,12 +3,44 @@ module load lsf/10.1
 module use /gpfs/dell3/usrx/local/dev/emc_rocoto/modulefiles/
 module load ruby/2.5.1 rocoto/1.3.0rc2 #rocoto/1.2.4
 
-cyctime=202106272300
+cyctime=202108231900
 #rocotostat -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c all
 
-#taskname=anal_gsi_input_f000
-taskname=run_fcst_f000
-taskname=prep_start_prod
+test=23
+
+case $test in
+11)
+taskname=make_ics
+;;
+12)
+taskname=get_extrn_lbcs
+;;
+13)
+taskname=make_lbcs
+;;
+21)
+taskname=prep_cyc_spinup
+;;
+22)
+taskname=anal_gsi_input_spinup
+;;
+23)
+taskname=run_fcst_spinup
+;;
+31)
+taskname=prep_cyc_prod
+;;
+32)
+taskname=anal_gsi_input_prod
+;;
+33)
+taskname=run_fcst_prod
+;;
+esac
+
+echo $taskname
+
+
 rocotocheck -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t $taskname
 rocotorewind -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t $taskname
 rocotoboot -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t $taskname
