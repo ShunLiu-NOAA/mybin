@@ -1,5 +1,5 @@
 
-gitdir=/scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/tmp
+gitdir=/gpfs/dell2/emc/modeling/save/Shun.Liu/tmp
 #cp $1 /scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/tmp
 cd $gitdir
 git rm $1
