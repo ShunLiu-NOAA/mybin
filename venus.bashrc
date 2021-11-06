@@ -55,7 +55,7 @@ alias d='display'
 alias loadjedi='source ~/bin/load.sh'
 alias loadp='source ~/bin/loadp.sh'
 alias sor='source ~/.bashrc'
-alias xtermg='xterm -bg LavenderBlush1 &'
+alias xtermg='xterm -bg LavenderBlush1 -fa 'Monospace' -fs 14 &'
 alias xtermt='xterm -bg SlateGray1 &'
 alias xterms='xterm -bg Gray &'
 alias xtermj='xterm -bg khaki2 &'
@@ -65,9 +65,25 @@ alias binv='/u/Yangrong.Ling/utilities/binv/binv'
 alias cdt='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km'
 alias cdc='cd /gpfs/dell2/emc/modeling/save/Shun.Liu/code/CBL'
 alias cdf='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/fv3lamda/regional_workflow/'
-alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
-alias cdstmp='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km'
 alias cdgsi='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/testgsi/regional_gsianl_tm00_00'
+
+alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
+alias cdflow='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow'
+alias cdstmp='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km'
+alias cdsub='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km'
+alias cdlog='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km'
+
+export drrfs=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs
+export dflow=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow
+export dstmp=/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km
+export dsub=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km
+export dlog=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km
+
+alias cdrrfsp='cd /gpfs/dell6/emc/modeling/noscrub/emc.campara/Shun.Liu/rrfs/'
+alias cdsubp='cd /gpfs/dell6/emc/modeling/noscrub/emc.campara/Shun.Liu/rrfs/test/rrfs_NA_3km_test'
+alias cdstmpp='cd /gpfs/dell1/ptmp/emc.campara/stmp/tmpnwprd/rrfs_NA_3km_test'
+alias cdlogp='cd /gpfs/dell1/ptmp/emc.campara/ptmp/com/logs/RRFS_NA_3km'
+
 alias vicron='vi ~/cron/mycrontab'
 alias vibash='vi ~/.bashrc'
 alias lpath='cat ~/bin/filepath'
