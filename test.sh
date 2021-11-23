@@ -1,6 +1,14 @@
 #!/bin/bash
 
 #set -x
+
+
+for i in $(seq -f "%03g" 0 80)
+do
+#ifl=/gpfs/dell1/nco/ops/com/gfs/prod/enkfgdas.20211118/00/atmos/mem064/gdas.t00z.atmf006.nc
+  echo $i
+done
+
 #############
 # extract substring
 #  ${string:P:L}
