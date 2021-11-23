@@ -7,6 +7,9 @@
 /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow/scripts
 /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/testdomain_rrfs_conus_3km
 
+
+/gpfs/hps3/emc/meso/save/Ming.Hu/FIX_RRFS
+
   alias cdf='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/fv3lamda/regional_workflow/'
   alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
   alias cdstmp='/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd'
