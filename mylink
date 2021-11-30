@@ -1,0 +1,23 @@
+
+alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
+alias cdstmpr='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km_retro/2021111806'
+alias cdlogr='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km_retro.20211118/06'
+alias cdflowr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/ufs-srweather-app/regional_workflow'
+alias cdrrfsr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/'
+
+export dsubr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro
+export dstmpr=/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km_retro/2021111806
+export dlogr=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km_retro.20211118/06
+export dflowr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/ufs-srweather-app/regional_workflow
+export drrfsr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro
+
+export dtest=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/test
+
+#alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
+#alias cdflow='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow'
+#alias cdstmp='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km'
+#alias cdsub='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km'
+#alias cdlog='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km'
+
+alias cdrun='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km/2021111806/anal_gsi_spinup'
+alias cdl='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km.20211118/06' 
