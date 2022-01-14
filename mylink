@@ -1,4 +1,23 @@
 
+####
+alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
+alias cdflow='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow'
+alias cdscript='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow/scripts'
+alias cdsub='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km'
+alias cdstmp='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km/2022010706'
+alias cdlog='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km.20220107/06'
+  
+export drrfs=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs
+export dflow=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow
+export dsub=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km
+export dscript=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow/scripts
+export dlog=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km
+export dstmp=/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km
+
+export drrfsdebug=/gpfs/dell2/emc/modeling/save/Shun.Liu/code/rrfs_debug_tool
+alias rrfsdebug='cd $drrfsdebug' 
+
+####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
 alias cdstmpr='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km_retro/2021111806'
 alias cdlogr='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km_retro.20211118/06'
@@ -11,6 +30,7 @@ export dlogr=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km_ret
 export dflowr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/ufs-srweather-app/regional_workflow
 export drrfsr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro
 
+####
 export dtest=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/test
 
 #alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
@@ -21,3 +41,47 @@ export dtest=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/test
 
 alias cdrun='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km/2021111806/anal_gsi_spinup'
 alias cdl='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km.20211118/06' 
+
+#### shun fv3lamdax parallel
+export dlamsub=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/fv3lamdax/regional_workflow/rocoto
+export dlamscript=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/fv3lamdax/regional_workflow/scripts
+export dlamstmp=/gpfs/dell3/stmp/Shun.Liu/fv3lamdax/tmpnwprd
+export dlamlog=/gpfs/dell2/ptmp/Shun.Liu/fv3lamdax/log
+export dlamptmp=/gpfs/dell2/ptmp/Shun.Liu/fv3lamdax
+
+alias lamsub='cd $dlamsub'
+alias lamscript='cd $dlamscript'
+alias lamptmp='cd $dlamptmp'
+alias lamstmp='cd $dlamstmp'
+alias lamlog='cd $dlamlog'
+
+#### shun fv3lamdax parallel
+export dlamsubp=/gpfs/dell2/emc/modeling/noscrub/emc.campara/fv3lamdax/regional_workflow/rocoto
+export dlamscriptp=/gpfs/dell2/emc/modeling/noscrub/emc.campara/fv3lamdax/regional_workflow/scripts
+export dlamstmpp=/gpfs/dell3/stmp/emc.campara/fv3lamdax/tmpnwprd
+export dlamlogp=/gpfs/dell2/ptmp/emc.campara/fv3lamdax/log
+export dlamptmpp=/gpfs/dell2/ptmp/emc.campara/fv3lamdax
+
+alias lamsubp='cd $dlamsubp'
+alias lamscriptp='cd $dlamscriptp'
+alias lamptmpp='cd $dlamptmpp'
+alias lamstmpp='cd $dlamstmpp'
+alias lamlogp='cd $dlamlogp'
+
+export demcguess=/gpfs/dell2/ptmp/emc.campara/fv3lamdax/fv3lamdax.20211512/12/guess.tm06
+alias emcguess='cd $demcguess'
+
+
+####debug gsi fail in reading radar data
+export dcomgsi=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/nam.v4.1.24/sorc/nam_gsi.fd/GSI/build/src/gsi
+alias comgsi='cd $dcomgsi'
+
+export dsubgsi=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/nam.v4.1.24/sorc
+alias subgsi='cd $dsubgsi'
+
+export dsrcgsi=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/nam.v4.1.24/sorc/nam_gsi.fd/GSI/src/gsi
+alias srcgsi='cd $dsrcgsi'
+
+export dstmpgsi=/gpfs/dell2/ptmp/Shun.Liu/namanl_abort_tm01_2021112418_myexec
+alias stmpgsi='cd $dstmpgsi'
+
