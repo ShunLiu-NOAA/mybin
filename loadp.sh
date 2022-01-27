@@ -45,4 +45,5 @@
   #module load anaconda2/latest
   #export GRIB_DEFINITION_PATH=/gpfs/dell2/emc/modeling/noscrub/Benjamin.Blake/EXT/grib_api.1.14.4/share/grib_api/definitions
   export GRIB_DEFINITION_PATH=/usrx/local/nceplibs/dev/lib/grib_api/share/grib_api/definitions
-  export PYTHONPATH="${PYTHONPATH}:/gpfs/dell2/emc/verification/noscrub/Logan.Dawson/python:/gpfs/dell2/emc/modeling/noscrub/Jacob.Carley/python/lib/python3.6/site-packages:/gpfs/dell2/emc/modeling/noscrub/Benjamin.Blake/PyGSI"
+  #export PYTHONPATH="${PYTHONPATH}:/gpfs/dell2/emc/verification/noscrub/Logan.Dawson/python:/gpfs/dell2/emc/modeling/noscrub/Jacob.Carley/python/lib/python3.6/site-packages:/gpfs/dell2/emc/modeling/noscrub/Benjamin.Blake/PyGSI"
+  export PYTHONPATH="${PYTHONPATH}:/gpfs/dell2/emc/verification/noscrub/Logan.Dawson/python:/gpfs/dell2/emc/modeling/noscrub/Jacob.Carley/python/lib/python3.6/site-packages:/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/PyGSI"
