@@ -1,6 +1,6 @@
 
 winhome=/home/people/emc/www/htdocs/mmb/wx22hl/winhome/fv3
-scp $1 wx22hl@emcrzdm.ncep.noaa.gov:$winhome/fv3
+scp $1 wx22hl@emcrzdm.ncep.noaa.gov:$winhome
 #scp $1 wx22hl@emcrzdm.ncep.noaa.gov:$2 
 #scp /u/Shun.Liu/bin/index.php wx22hl@emcrzdm.ncep.noaa.gov:$2
 #scp /u/Shun.Liu/bin/allow.cfg wx22hl@emcrzdm.ncep.noaa.gov:$2
