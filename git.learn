@@ -1,0 +1,5 @@
+
+add an fort reposiory:
+$ git remote add theirusername git@github.com:theirusername/reponame.git
+$ git fetch theirusername
+$ git checkout -b mynamefortheirbranch theirusername/theirbranch

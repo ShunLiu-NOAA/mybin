@@ -42,6 +42,21 @@ export dflowr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/ufs-srweather
 export drrfsr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro
 
 ####
+mydate=20220211
+cyc=03
+alias cdsubd='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1/test/RRFS_NA_3km_dev1'
+alias cdstmpd='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/RRFS_NA_3km_dev1/${mydate}${cyc}'
+alias cdlogd='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/RRFS_NA_3km_dev1.$mydate/${cyc}'
+alias cdflowd='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1/ufs-srweather-app/regional_workflow'
+alias cdrrfsd='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1/'
+
+export dsubd=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1/test/RRFS_NA_3km_dev1
+export dstmpd=/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km_dev1/$mydate
+export dlogd=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/RRFS_NA_3km_dev1.$mydate/$cyc
+export dflowd=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1/ufs-srweather-app/regional_workflow
+export drrfsd=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1
+
+####
 export dtest=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/test
 
 #alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
