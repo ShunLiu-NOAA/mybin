@@ -1,4 +1,18 @@
 
+MACHINE="hera"
+if [[ $MACHINE == "hera" ]] ; then
+  savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
+fi
+
+if [[ $MACHINE == "hera" ]] ; then
+  savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
+fi
+
+
+####
+export drrfsdebug=$savecode/rrfs_debug_tool
+alias rrfsdebug='cd $drrfsdebug' 
+
 ####
 alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
 alias cdflow='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow'
@@ -13,9 +27,6 @@ export dsub=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km
 export dscript=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow/scripts
 export dlog=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km
 export dstmp=/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km
-
-export drrfsdebug=/gpfs/dell2/emc/modeling/save/Shun.Liu/code/rrfs_debug_tool
-alias rrfsdebug='cd $drrfsdebug' 
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
@@ -71,6 +82,53 @@ alias lamlogp='cd $dlamlogp'
 export demcguess=/gpfs/dell2/ptmp/emc.campara/fv3lamdax/fv3lamdax.20211512/12/guess.tm06
 alias emcguess='cd $demcguess'
 
+#### HERA path
+mydate=20211208
+cyc=19
+export dwwescript=/scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/rrfs/ens/ufs-srweather-app/regional_workflow/scripts
+export dwweush=/scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/rrfs/ens/ufs-srweather-app/regional_workflow/ush
+export dwwejob=/scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/rrfs/ens/ufs-srweather-app/regional_workflow/jobs
+export dwwesub=/scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/rrfs/ens/run/RRFS_CONUS_3km_16mem
+export dwwelog=/scratch2/NCEPDEV/stmp3/Shun.Liu/ptmp/com/logs/RRFS_conus_3km.${mydate}/$cyc
+export dwwestmp=/scratch2/NCEPDEV/stmp3/Shun.Liu/stmp/tmpnwprd/RRFS_conus_3km/${mydate}$cyc
+export dming=/scratch1/BMC/wrfruc/mhu/rrfs/ens/data/gfs.20211208_nc/12/atmos
+#
+alias wwescript='cd $dwwescript'
+alias wweush='cd $dwweush'
+alias wwejob='cd $dwwejob'
+alias wwesub='cd $dwwesub'
+alias wwelog='cd $dwwelog'
+alias wwestmp='cd $dwwestmp'
+alias ming='cd $dming'
+
+
+#myexp=wwe
+#mysrcpath=/scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/rrfs/ens
+#myoutpath=/scratch2/NCEPDEV/stmp3/Shun.Liu
+#
+#function links {
+#  exp=$1
+#  srcpath=$2
+#  outpath=$3
+#
+#  export d${exp}script=${srcpath}/ufs-srweather-app/regional_workflow/scripts
+#  export d${exp}ush=${srcpath}/ufs-srweather-app/regional_workflow/ush
+#  export d${exp}job=${srcpath}/ufs-srweather-app/regional_workflow/job
+#  export d${exp}sub=${srcpath}/run/RRFS_CONUS_3km
+#  export d${exp}log=${outpath}/ptmp/log
+#
+#  myscript=${d{$exp}script}
+#
+#  echo $myscript
+#
+#  alias ${exp}script='cd $myscript'
+#  alias ${exp}ush='cd $d${exp}ush'
+#  alias ${exp}job='cd $d${exp}job'
+#  alias ${exp}sub='cd $d${exp}sub'
+#  alias ${exp}log='cd $d${exp}log'
+#}
+
+#links $myexp $mysrcpath $myoutpath
 
 ####debug gsi fail in reading radar data
 export dcomgsi=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/nam.v4.1.24/sorc/nam_gsi.fd/GSI/build/src/gsi
