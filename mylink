@@ -42,8 +42,8 @@ export dflowr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/ufs-srweather
 export drrfsr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro
 
 ####
-mydate=20220220
-cyc=00
+mydate=20220221
+cyc=03
 alias cdsubd='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1/test/RRFS_NA_3km_dev1'
 alias cdstmpd='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/RRFS_NA_3km_dev1/${mydate}${cyc}'
 alias cdlogd='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/RRFS_NA_3km_dev1.$mydate/${cyc}'
