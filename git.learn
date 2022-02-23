@@ -1,5 +1,9 @@
 
-add an fort reposiory:
+add an fort to reposiory:
 $ git remote add theirusername git@github.com:theirusername/reponame.git
 $ git fetch theirusername
 $ git checkout -b mynamefortheirbranch theirusername/theirbranch
+
+compare two branch:
+got github webpage and create a PR from one branch to another
+
