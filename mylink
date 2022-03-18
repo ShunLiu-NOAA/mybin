@@ -8,6 +8,18 @@ if [[ $MACHINE == "hera" ]] ; then
   savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
 fi
 
+######################################
+## radarl2 package
+######################################
+
+export dradarsub=/lfs/h2/emc/da/noscrub/Shun.Liu/nwprod/radarl2.v1.2.1/ecf/dev
+export dradarj=/lfs/h2/emc/da/noscrub/Shun.Liu/nwprod/radarl2.v1.2.1/jobs
+export dradars=/lfs/h2/emc/da/noscrub/Shun.Liu/nwprod/radarl2.v1.2.1/scripts
+
+alias radarsub='cd $dradarsub'
+alias radarj='cd $dradarj'
+alias radars='cd $dradars'
+
 
 ####
 export drrfsdebug=$savecode/rrfs_debug_tool
