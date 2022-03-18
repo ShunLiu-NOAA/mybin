@@ -59,8 +59,8 @@ export drrfsd=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1
 export dprodd=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/RRFS_NA_3km/para/RRFS_NA_3km_dev1.$mydate
 
 #### SFE conus 3km
-mydate=20220223
-cyc=15
+mydate=20220303
+cyc=12
   
 export dsubs=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_sfe/test/RRFS_CONUS
 export dstmps=/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/RRFS_conus_3km/${mydate}${cyc}
@@ -75,6 +75,24 @@ alias cdlogs='cd $dlogs'
 alias cdflows='cd $dflows'
 alias cdrrfss='cd $drrfss'
 alias cdprods='cd $dprods'
+
+#### SFEX conus 3km
+mydate=20220315
+cyc=12
+  
+export dsubx=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_sfex/test/RRFS_CONUS_3km
+export dstmpx=/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/RRFS_conus_3km/${mydate}${cyc}
+export dlogx=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_CONUS/RRFS_conus_3km.$mydate/$cyc
+export dflowx=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_sfex/ufs-srweather-app/regional_workflow
+export drrfsx=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_sfex
+export dprodx=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/RRFS_CONUS/para/RRFS_conus_3km.$mydate
+  
+alias cdsubx='cd $dsubx'
+alias cdstmpx='cd $dstmpx'
+alias cdlogx='cd $dlogx'
+alias cdflowx='cd $dflowx'
+alias cdrrfsx='cd $drrfsx'
+alias cdprodx='cd $dprodx'
 
 ####
 export dtest=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/test
