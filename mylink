@@ -1,7 +1,11 @@
 
-MACHINE="hera"
-if [[ $MACHINE == "hera" ]] ; then
+MACHINE="wcoss"
+if [[ $MACHINE == "wcoss" ]] ; then
   savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
+  thisuser="emc.campara"
+  if [[ $thisuser == $USER ]] ; then
+    savecode=/gpfs/dell6/emc/modeling/noscrub/emc.campara/Shun.Liu/code
+  fi
 fi
 
 if [[ $MACHINE == "hera" ]] ; then
