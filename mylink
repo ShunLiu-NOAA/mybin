@@ -12,6 +12,11 @@ if [[ $MACHINE == "hera" ]] ; then
   savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
 fi
 
+if [[ $MACHINE == "orion" ]] ; then
+  save=/work/noaa/da/Shun.Liu/save
+  ptmp=/work/noaa/da/Shun.Liu/ptmp
+fi
+
 ######################################
 ## radarl2 package
 ######################################
@@ -30,19 +35,20 @@ export drrfsdebug=$savecode/rrfs_debug_tool
 alias rrfsdebug='cd $drrfsdebug' 
 
 ####
-alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
-alias cdflow='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow'
-alias cdscript='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow/scripts'
-alias cdsub='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km'
-alias cdstmp='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km/2022010706'
-alias cdlog='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km.20220107/06'
+export drrfs=$save/rrfs
+export dflow=$save/rrfs/ufs-srweather-app/regional_workflow
+export dsub=$save/rrfs/test/rrfs_NA_3km
+export dscript=$save/rrfs/ufs-srweather-app/regional_workflow/scripts
+export dlog=$ptmp/ptmp/com/logs/RRFS_NA_3km
+export dstmp=$ptmp/stmp/tmpnwprd/rrfs_NA_3km
+
+alias cdrrfs='cd $drrfs'
+alias cdflow='cd $dflow'
+alias cdscript='cd $dscript'
+alias cdsub='cd $dsub'
+alias cdstmp='cd $dstmp'
+alias cdlog='cd $dlog'
   
-export drrfs=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs
-export dflow=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow
-export dsub=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km
-export dscript=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow/scripts
-export dlog=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km
-export dstmp=/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
