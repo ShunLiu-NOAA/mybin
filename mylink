@@ -1,5 +1,5 @@
 
-MACHINE="wcoss"
+MACHINE="orion"
 if [[ $MACHINE == "wcoss" ]] ; then
   savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
   thisuser="emc.campara"
@@ -14,6 +14,7 @@ fi
 
 if [[ $MACHINE == "orion" ]] ; then
   save=/work/noaa/da/Shun.Liu/save
+  savecode=/work/noaa/da/Shun.Liu/save/code
   ptmp=/work/noaa/da/Shun.Liu/ptmp
 fi
 
@@ -37,10 +38,10 @@ alias rrfsdebug='cd $drrfsdebug'
 ####
 export drrfs=$save/rrfs
 export dflow=$save/rrfs/ufs-srweather-app/regional_workflow
-export dsub=$save/rrfs/test/rrfs_NA_3km
+export dsub=$save/rrfs/test/rrfs_a
 export dscript=$save/rrfs/ufs-srweather-app/regional_workflow/scripts
-export dlog=$ptmp/ptmp/com/logs/RRFS_NA_3km
-export dstmp=$ptmp/stmp/tmpnwprd/rrfs_NA_3km
+export dlog=$ptmp/ptmp/com/logs/rrfs_a
+export dstmp=$ptmp/stmp/tmpnwprd/rrfs_a
 
 alias cdrrfs='cd $drrfs'
 alias cdflow='cd $dflow'
