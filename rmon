@@ -1,0 +1,20 @@
+#!/bin/bash -l
+
+module purge
+module load lsf/10.1
+module use /gpfs/dell3/usrx/local/dev/emc_rocoto/modulefiles/
+module load ruby/2.5.1 rocoto/1.3.0rc2 #rocoto/1.2.4
+
+source /gpfs/dell6/emc/modeling/noscrub/emc.campara/Shun.Liu/shun.bashrc
+set -x
+sdate=`date "+%Y%m%d%H" --date="12 hour ago"`00
+edate=`date "+%Y%m%d%H"`00
+
+echo $sdate
+
+rocotostat -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c "${sdate}:${edate}" > zzz
+vim zzz -c TOhtml -c  'w! rrfs_monitor.html' -c 'qa!'
+scpfv3 rrfs_monitor.html
+
+##############
+#*/10 * * * * cd /gpfs/dell6/emc/modeling/noscrub/emc.campara/Shun.Liu/rrfs_sfe/test/rrfs_a && ./rs1 >& /gpfs/dell1/ptmp/emc.campara/ptmp/com/logs/sublog/rrfs_a_monitor_`date "+\%d\%H\%M"`.log 2>&1

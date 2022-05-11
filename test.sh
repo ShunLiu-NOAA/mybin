@@ -2,6 +2,23 @@
 
 #set -x
 
+##############
+# test array number
+##############
+
+CYCL_HRS_SPINSTART=( \
+)
+
+if [ ${#CYCL_HRS_SPINSTART[@]} -gt 0 ]; then
+echo there are parameters
+fi
+
+hh=8
+tt="${CYCL_HRS_SPINSTART[${hh#0}]}"
+
+echo $tt
+exit
+
 
 for i in $(seq -f "%03g" 0 80)
 do
