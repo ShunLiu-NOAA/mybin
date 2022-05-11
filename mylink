@@ -5,7 +5,9 @@ if [[ $MACHINE == "hera" ]] ; then
 fi
 
 if [[ $MACHINE == "hera" ]] ; then
-  savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
+  savecode=/scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/code
+  rrfsbase=/scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/rrfs_sfe
+  rrfsptmp=/scratch2/NCEPDEV/stmp3/Shun.Liu/ptmp
 fi
 
 
@@ -14,19 +16,19 @@ export drrfsdebug=$savecode/rrfs_debug_tool
 alias rrfsdebug='cd $drrfsdebug' 
 
 ####
-alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
-alias cdflow='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow'
-alias cdscript='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow/scripts'
-alias cdsub='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km'
-alias cdstmp='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km/2022010706'
-alias cdlog='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km.20220107/06'
-  
-export drrfs=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs
-export dflow=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow
-export dsub=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km
-export dscript=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow/scripts
-export dlog=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km
-export dstmp=/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km
+export drrfs=$rrfsbase
+export dflow=$rrfsbase/ufs-srweather-app/regional_workflow
+export dsub=$rrfsbase/test/rrfs_NA_3km
+export dscript=$rrfsbase/ufs-srweather-app/regional_workflow/scripts
+export dlog=$rrfsptmp/ptmp/com/logs/rrfs_a
+export dstmp=$rrfsptmp/stmp/tmpnwprd/rrfs_a
+
+alias cdrrfs='cd $drrfs'
+alias cdflow='cd $dflow'
+alias cdscript='cd $dscript'
+alias cdsub='cd $dsub'
+alias cdstmp='cd $dstmp'
+alias cdlog='cd $dlog'
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
@@ -97,7 +99,8 @@ alias lamlogp='cd $dlamlogp'
 export demcguess=/gpfs/dell2/ptmp/emc.campara/fv3lamdax/fv3lamdax.20211512/12/guess.tm06
 alias emcguess='cd $demcguess'
 
-#### HERA path
+#################### HERA path
+#################### HERA path
 mydate=20211208
 cyc=19
 export dwwescript=/scratch2/NCEPDEV/fv3-cam/save/Shun.Liu/rrfs/ens/ufs-srweather-app/regional_workflow/scripts
