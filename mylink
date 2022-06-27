@@ -1,5 +1,19 @@
 
-MACHINE="hera"
+MACHINE="wcoss2"
+if [[ $MACHINE == "wcoss2" ]] ; then
+  savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
+  thisuser="shun.liu"
+  if [[ $thisuser == $USER ]] ; then
+    savecode=/gpfs/dell6/emc/modeling/noscrub/emc.campara/Shun.Liu/code
+  fi
+  rrfsbase=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/testD
+  #ptmp=/work/noaa/da/Shun.Liu/ptmp
+  rrfsptmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/ptmp
+  rrfsstmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/stmp
+  rrfstag=RRFS_conus_3km
+  rrfstag1=RRFS_CONUS_3km
+fi
+
 if [[ $MACHINE == "wcoss" ]] ; then
   savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
   thisuser="emc.campara"
@@ -44,10 +58,11 @@ mydate=20220211
 cyc=03
 export drrfs=$rrfsbase
 export dflow=$rrfsbase/ufs-srweather-app/regional_workflow
-export dsub=$rrfsbase/test/rrfs_a
+export dsub=$rrfsbase/$rrfstag1
 export dscript=$rrfsbase/ufs-srweather-app/regional_workflow/scripts
-export dlog=$rrfsptmp/ptmp/com/logs/rrfs_a
-export dstmp=$rrfsptmp/stmp/tmpnwprd/rrfs_a
+#export dlog=$rrfsptmp/ptmp/com/logs/rrfs_a
+export dlog=$rrfsptmp/com/logs
+export dstmp=$rrfsstmp/tmpnwprd/$rrfstag
 
 alias cdrrfs='cd $drrfs'
 alias cdflow='cd $dflow'
