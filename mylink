@@ -8,10 +8,15 @@ if [[ $MACHINE == "wcoss2" ]] ; then
   fi
   rrfsbase=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/testD
   #ptmp=/work/noaa/da/Shun.Liu/ptmp
-  rrfsptmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/ptmp
-  rrfsstmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/stmp
-  rrfstag=RRFS_conus_3km
-  rrfstag1=RRFS_CONUS_3km
+  #rrfsptmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/ptmp
+  #rrfsstmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/stmp
+  #rrfstag=RRFS_conus_3km
+  #rrfstag1=RRFS_CONUS_3km
+  rrfsptmp=/lfs/h2/emc/ptmp/Shun.Liu
+  rrfsstmp=/lfs/h2/emc/ptmp/Shun.Liu/stmp
+  rrfstag=rrfs_a
+  rrfstag1=rrfs_a
+  dfs=/dfs/write/emc/da/shun.liu
 fi
 
 if [[ $MACHINE == "wcoss" ]] ; then
@@ -61,7 +66,7 @@ export dflow=$rrfsbase/ufs-srweather-app/regional_workflow
 export dsub=$rrfsbase/$rrfstag1
 export dscript=$rrfsbase/ufs-srweather-app/regional_workflow/scripts
 #export dlog=$rrfsptmp/ptmp/com/logs/rrfs_a
-export dlog=$rrfsptmp/com/logs
+export dlog=$rrfsptmp/logs
 export dstmp=$rrfsstmp/tmpnwprd/$rrfstag
 
 alias cdrrfs='cd $drrfs'
