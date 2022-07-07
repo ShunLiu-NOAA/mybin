@@ -16,7 +16,8 @@ if [[ $MACHINE == "wcoss2" ]] ; then
   rrfsstmp=/lfs/h2/emc/ptmp/Shun.Liu/stmp
   rrfstag=rrfs_a
   rrfstag1=rrfs_a
-  dfs=/dfs/write/emc/da/shun.liu
+  dfsw=/dfs/write/emc/da/shun.liu
+  dfsr=/dfs/read/emc/da/shun.liu
 fi
 
 if [[ $MACHINE == "wcoss" ]] ; then
