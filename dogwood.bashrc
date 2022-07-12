@@ -28,17 +28,10 @@ PS1="\e[31m\W>\e[m"
 #
 export GIT_SSH=$HOME/ssh-gerrit
 
-alias h='history'
 alias ls='ls --color'
 alias cp='cp -p'
 alias lsm='ls --color -l --block-size=M'
 alias clean='rm *~'
-alias llq='bjobs -u all'
-alias qq='bjobs -u Shun.Liu'
-alias qn='bjobs -X -o "jobid:11 user:10 stat:4 queue:6 exec_host:10 job_name:25 submit_time:12"'
-alias qs='bjobs -l'
-alias llcancel='bkill'
-alias qdel='bkill'
 alias h='history'
 alias a2ps='a2ps -Pemc-p-cmp7c -M Letter -S2'
 alias pd='pushd'
@@ -46,13 +39,15 @@ alias bd='popd'
 alias d='display'
 alias loadjedi='source ~/bin/load.sh'
 alias loadp='source ~/bin/loadp.sh'
-alias sor='source ~/.bashrc'
-alias xtermg='xterm -bg LavenderBlush1 -fa 'Monospace' -fs 14 &'
 alias xtermt='xterm -bg SlateGray1 &'
 alias xterms='xterm -bg Gray &'
 alias xtermj='xterm -bg khaki2 &'
-alias sor='source ~/.bashrc'
+alias qq='qstat -u $USER'
+alias llq='qstat -u $USER'
+alias llqa='qstat'
 
+alias sor='source ~/.bashrc'
+alias xtermg='xterm -bg LavenderBlush1 -fa 'Monospace' -fs 14 &'
 alias vicron='crontab -e'
 alias vibash='vi ~/.bashrc'
 alias lpath='cat ~/bin/filepath'
@@ -63,19 +58,15 @@ alias campara='sudo -u emc.campara -i'
 
 source ~/bin/mylink
 
-
-alias ptmp='cd /lfs/h2/emc/ptmp/Shun.Liu'
 export dptmp=/lfs/h2/emc/ptmp/Shun.Liu
+alias ptmp='cd /lfs/h2/emc/ptmp/Shun.Liu'
 alias stmp='cd /lfs/h2/emc/stmp/Shun.Liu'
 alias nbns='cd /lfs/h2/emc/da/noscrub/Shun.Liu'
 alias save='cd /lfs/h2/emc/da/save/Shun.Liu'
-alias nwprod='cd /lfs/h1/ops/prod'
 export dnwprod=/lfs/h1/ops/prod
-alias llq='qstat -u $USER'
-alias qq='qstat -u $USER'
-alias h='history 100'
-alias llqa='qstat'
-alias output='cd /lfs/h1/ops/canned/output/dell1/gpfs/dell1/nco/ops/com/output/prod/20210824'
+alias nwprod='cd /lfs/h1/ops/prod'
+
+#alias output='cd /lfs/h1/ops/canned/output/dell1/gpfs/dell1/nco/ops/com/output/prod/20210824'
 
 #module load envvar/1.0
 #module load PrgEnv-intel/8.1.0
