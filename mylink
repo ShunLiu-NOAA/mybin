@@ -69,6 +69,7 @@ export dscript=$rrfsbase/ufs-srweather-app/regional_workflow/scripts
 #export dlog=$rrfsptmp/ptmp/com/logs/rrfs_a
 export dlog=$rrfsptmp/logs
 export dstmp=$rrfsstmp/tmpnwprd/$rrfstag
+export dges=$rrfsptmp/nwges/para/rrfs_a
 
 alias cdrrfs='cd $drrfs'
 alias cdflow='cd $dflow'
@@ -76,6 +77,7 @@ alias cdscript='cd $dscript'
 alias cdsub='cd $dsub'
 alias cdstmp='cd $dstmp'
 alias cdlog='cd $dlog'
+alias cdges='cd $dges'
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
