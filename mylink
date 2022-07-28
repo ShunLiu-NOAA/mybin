@@ -41,8 +41,8 @@ if [[ $MACHINE == "lampara" ]] ; then
   rrfsstmp=/lfs/h2/emc/ptmp/emc.lam/Shun.Liu/stmp
   rrfstag=rrfs_a
   rrfstag1=rrfs_a
-  dfsw=/dfs/write/emc/da/shun.liu
-  dfsr=/dfs/read/emc/da/shun.liu
+  dfsw=/dfs/write/emc/lam/emc.lam
+  dfsr=/dfs/read/emc/lam/emc.lam
 fi
 
 if [[ $MACHINE == "wcoss" ]] ; then
