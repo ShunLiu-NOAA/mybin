@@ -1,5 +1,10 @@
 
 MACHINE="wcoss2"
+
+if [[ $USER == "emc.lam" ]];then
+MACHINE="lampara"
+fi
+
 if [[ $MACHINE == "wcoss2" ]] ; then
   savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
   thisuser="shun.liu"
@@ -13,11 +18,31 @@ if [[ $MACHINE == "wcoss2" ]] ; then
   #rrfstag=RRFS_conus_3km
   #rrfstag1=RRFS_CONUS_3km
   rrfsptmp=/lfs/h2/emc/ptmp/Shun.Liu
-  rrfsstmp=/lfs/h2/emc/ptmp/Shun.Liu/stmp
+  rrfsstmp=/lfs/h2/emc/stmp/Shun.Liu/stmp
   rrfstag=rrfs_a
   rrfstag1=rrfs_a
   dfsw=/dfs/write/emc/da/shun.liu
   dfsr=/dfs/read/emc/da/shun.liu
+fi
+
+if [[ $MACHINE == "lampara" ]] ; then
+  savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
+  thisuser="shun.liu"
+  if [[ $thisuser == $USER ]] ; then
+    savecode=/gpfs/dell6/emc/modeling/noscrub/emc.campara/Shun.Liu/code
+  fi
+  rrfsbase=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/rrfs/testD
+  #ptmp=/work/noaa/da/Shun.Liu/ptmp
+  #rrfsptmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/ptmp
+  #rrfsstmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/stmp
+  #rrfstag=RRFS_conus_3km
+  #rrfstag1=RRFS_CONUS_3km
+  rrfsptmp=/lfs/h2/emc/ptmp/emc.lam/Shun.Liu
+  rrfsstmp=/lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp
+  rrfstag=rrfs_a
+  rrfstag1=rrfs_a
+  dfsw=/dfs/write/emc/lam/emc.lam
+  dfsr=/dfs/read/emc/lam/emc.lam
 fi
 
 if [[ $MACHINE == "wcoss" ]] ; then
