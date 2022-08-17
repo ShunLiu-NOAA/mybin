@@ -237,3 +237,4 @@ alias srcgsi='cd $dsrcgsi'
 export dstmpgsi=/gpfs/dell2/ptmp/Shun.Liu/namanl_abort_tm01_2021112418_myexec
 alias stmpgsi='cd $dstmpgsi'
 
+alias listdisk='/apps/local/scripts/lsquota'
