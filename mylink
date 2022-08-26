@@ -6,10 +6,10 @@ MACHINE="lampara"
 fi
 
 if [[ $MACHINE == "wcoss2" ]] ; then
-  savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
+  savecode=/lfs/h2/emc/da/save/Shun.Liu/code
   thisuser="shun.liu"
   if [[ $thisuser == $USER ]] ; then
-    savecode=/gpfs/dell6/emc/modeling/noscrub/emc.campara/Shun.Liu/code
+    savecode=/lfs/h2/emc/da/save/Shun.Liu/code
   fi
   rrfsbase=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/testD
   #ptmp=/work/noaa/da/Shun.Liu/ptmp
@@ -43,14 +43,6 @@ if [[ $MACHINE == "lampara" ]] ; then
   rrfstag1=rrfs_a
   dfsw=/dfs/write/emc/lam/emc.lam
   dfsr=/dfs/read/emc/lam/emc.lam
-fi
-
-if [[ $MACHINE == "wcoss" ]] ; then
-  savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
-  thisuser="emc.campara"
-  if [[ $thisuser == $USER ]] ; then
-    savecode=/gpfs/dell6/emc/modeling/noscrub/emc.campara/Shun.Liu/code
-  fi
 fi
 
 if [[ $MACHINE == "hera" ]] ; then
