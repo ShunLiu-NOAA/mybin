@@ -6,6 +6,18 @@
 # test array number
 ##############
 
+topline=`grep bash test.sh | head -n1 | tail -n1`
+
+if [ "$topline" == "DEAD" ]; then
+  echo $topline
+else
+  echo non string
+fi
+
+exit
+
+exit
+
 CYCL_HRS_SPINSTART=( \
 )
 
