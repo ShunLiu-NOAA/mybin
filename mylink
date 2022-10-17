@@ -12,6 +12,7 @@ if [[ $MACHINE == "wcoss2" ]] ; then
     savecode=/lfs/h2/emc/da/save/Shun.Liu/code
   fi
   rrfsbase=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/testD
+  rrfsbasee=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/testEEEE
   #ptmp=/work/noaa/da/Shun.Liu/ptmp
   #rrfsptmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/ptmp
   #rrfsstmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/stmp
@@ -21,6 +22,7 @@ if [[ $MACHINE == "wcoss2" ]] ; then
   rrfsstmp=/lfs/h2/emc/stmp/Shun.Liu/stmp
   rrfstag=rrfs_a
   rrfstag1=rrfs_a
+  rrfstage=RRFS_CONUS_3km_ens
   dfsw=/dfs/write/emc/da/shun.liu
   dfsr=/dfs/read/emc/da/shun.liu
 fi
@@ -82,7 +84,9 @@ cyc=03
 export drrfs=$rrfsbase
 export dflow=$rrfsbase/ufs-srweather-app/regional_workflow
 export dsub=$rrfsbase/$rrfstag1
+export dsube=$rrfsbasee/$rrfstage
 export dscript=$rrfsbase/ufs-srweather-app/regional_workflow/scripts
+export dscripte=$rrfsbasee/ufs-srweather-app/regional_workflow/scripts
 #export dlog=$rrfsptmp/ptmp/com/logs/rrfs_a
 export dlog=$rrfsptmp/logs/rrfs_a
 export dprod=$rrfsptmp/rrfs_a/para
@@ -92,7 +96,9 @@ export dges=$rrfsptmp/nwges/para/rrfs_a
 alias cdrrfs='cd $drrfs'
 alias cdflow='cd $dflow'
 alias cdscript='cd $dscript'
+alias cdscripte='cd $dscripte'
 alias cdsub='cd $dsub'
+alias cdsube='cd $dsube'
 alias cdstmp='cd $dstmp'
 alias cdlog='cd $dlog'
 alias cdprod='cd $dprod'
@@ -229,4 +235,4 @@ alias srcgsi='cd $dsrcgsi'
 export dstmpgsi=/gpfs/dell2/ptmp/Shun.Liu/namanl_abort_tm01_2021112418_myexec
 alias stmpgsi='cd $dstmpgsi'
 
-alias listdisk='/apps/local/scripts/lsquota'
+alias listdisk='/usr/local/bin/lsquota'
