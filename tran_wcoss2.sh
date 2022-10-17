@@ -15,3 +15,10 @@ for ifile in $file
 do
   scp -pr $ifile Shun.Liu@cdxfer01.wcoss2.ncep.noaa.gov:/lfs/h2/emc/da/noscrub/Shun.Liu/wcoss/tmpnwprd
 done
+
+#Push data to WCOSS2 (dogwood) from WCOSS2 cactus (submit command on cactus)
+#scp /cactus_path/file.tar first.last@ddxfer.wcoss2.ncep.noaa.gov:/dogwood_path/file.tar 
+#This transfers data from WCOSS2 cactus to a random dogwood transfer node.
+
+#scp to acorn
+# scp $file alogin01:$file
