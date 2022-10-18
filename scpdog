@@ -1,0 +1,1 @@
+scp $1 shun.liu@ddxfer04.wcoss2.ncep.noaa.gov:$2
