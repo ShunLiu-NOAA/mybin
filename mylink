@@ -28,7 +28,7 @@ if [[ $MACHINE == "wcoss2" ]] ; then
 fi
 
 if [[ $MACHINE == "lampara" ]] ; then
-  savecode=/gpfs/dell2/emc/modeling/save/Shun.Liu/code
+  savecode=/lfs/h2/emc/lam/save/emc.lam/Shun.Liu/code
   thisuser="shun.liu"
   if [[ $thisuser == $USER ]] ; then
     savecode=/gpfs/dell6/emc/modeling/noscrub/emc.campara/Shun.Liu/code
