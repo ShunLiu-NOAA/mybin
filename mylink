@@ -22,7 +22,7 @@ if [[ $MACHINE == "wcoss2" ]] ; then
   rrfsstmp=/lfs/h2/emc/stmp/Shun.Liu/stmp
   rrfstag=rrfs_a
   rrfstag1=rrfs_a
-  rrfstage=RRFS_CONUS_3km_ens
+  rrfstage=rrfse
   dfsw=/dfs/write/emc/da/shun.liu
   dfsr=/dfs/read/emc/da/shun.liu
 fi
@@ -34,11 +34,13 @@ if [[ $MACHINE == "lampara" ]] ; then
     savecode=/gpfs/dell6/emc/modeling/noscrub/emc.campara/Shun.Liu/code
   fi
   rrfsbase=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/rrfs/testD
+  rrfsbasee=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
   #ptmp=/work/noaa/da/Shun.Liu/ptmp
   #rrfsptmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/ptmp
   #rrfsstmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/stmp
   #rrfstag=RRFS_conus_3km
   #rrfstag1=RRFS_CONUS_3km
+  rrfstage=rrfse
   rrfsptmp=/lfs/h2/emc/ptmp/emc.lam/Shun.Liu
   rrfsstmp=/lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp
   rrfstag=rrfs_a
@@ -84,25 +86,26 @@ cyc=03
 export drrfs=$rrfsbase
 export dflow=$rrfsbase/ufs-srweather-app/regional_workflow
 export dsub=$rrfsbase/$rrfstag1
-export dsube=$rrfsbasee/$rrfstage
 export dscript=$rrfsbase/ufs-srweather-app/regional_workflow/scripts
-export dscripte=$rrfsbasee/ufs-srweather-app/regional_workflow/scripts
-#export dlog=$rrfsptmp/ptmp/com/logs/rrfs_a
 export dlog=$rrfsptmp/logs/rrfs_a
 export dprod=$rrfsptmp/rrfs_a/para
 export dstmp=$rrfsstmp/tmpnwprd/$rrfstag
 export dges=$rrfsptmp/nwges/para/rrfs_a
 
+export dsube=$rrfsbasee/$rrfstage
+export dscripte=$rrfsbasee/ufs-srweather-app/regional_workflow/scripts
+
 alias cdrrfs='cd $drrfs'
 alias cdflow='cd $dflow'
 alias cdscript='cd $dscript'
-alias cdscripte='cd $dscripte'
 alias cdsub='cd $dsub'
-alias cdsube='cd $dsube'
 alias cdstmp='cd $dstmp'
 alias cdlog='cd $dlog'
 alias cdprod='cd $dprod'
 alias cdges='cd $dges'
+
+alias cdscripte='cd $dscripte'
+alias cdsube='cd $dsube'
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
@@ -236,3 +239,4 @@ export dstmpgsi=/gpfs/dell2/ptmp/Shun.Liu/namanl_abort_tm01_2021112418_myexec
 alias stmpgsi='cd $dstmpgsi'
 
 alias listdisk='/usr/local/bin/lsquota'
+alias pqq='python /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/qstat-json.py'
