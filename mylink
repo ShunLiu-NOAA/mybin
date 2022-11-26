@@ -35,16 +35,24 @@ if [[ $MACHINE == "lampara" ]] ; then
   fi
   rrfsbase=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/rrfs/testD
   rrfsbasee=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
+  rrfsbasec=/lfs/h2/emc/lam/noscrub/emc.lam/rrfsx
+
   #ptmp=/work/noaa/da/Shun.Liu/ptmp
   #rrfsptmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/ptmp
   #rrfsstmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/stmp
   #rrfstag=RRFS_conus_3km
   #rrfstag1=RRFS_CONUS_3km
+
   rrfstage=rrfse
   rrfsptmp=/lfs/h2/emc/ptmp/emc.lam/Shun.Liu
   rrfsstmp=/lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp
   rrfstag=rrfs_a
   rrfstag1=rrfs_a
+
+  rrfsptmpc=/lfs/h2/emc/ptmp/emc.lam/conus
+  rrfsstmpc=/lfs/h2/emc/stmp/emc.lam/conus
+  rrfstag=rrfs_a
+  
   dfsw=/dfs/write/emc/lam/emc.lam
   dfsr=/dfs/read/emc/lam/emc.lam
 fi
@@ -95,6 +103,7 @@ export dges=$rrfsptmp/nwges/para/rrfs_a
 export dsube=$rrfsbasee/$rrfstage
 export dscripte=$rrfsbasee/ufs-srweather-app/regional_workflow/scripts
 
+
 alias cdrrfs='cd $drrfs'
 alias cdflow='cd $dflow'
 alias cdscript='cd $dscript'
@@ -106,6 +115,25 @@ alias cdges='cd $dges'
 
 alias cdscripte='cd $dscripte'
 alias cdsube='cd $dsube'
+
+#------ conus
+export dsubc=$rrfsbasec/rrfs_conus
+export dscriptc=$rrfsbasec/ufs-srweather-app/regional_workflow/scripts
+export dlogc=$rrfsptmpc/logs/rrfs_a
+export dprodc=$rrfsptmpc/prod/rrfs_a/para
+export dstmpc=$rrfsstmpc/tmpnwprd/conus
+export dgesc=$rrfsptmpc/nwges/para/rrfs_a
+
+alias cdsubc='cd $dsubc'
+alias cdscriptc='cd $dscriptc'
+alias cdstmpc='cd $dstmpc'
+alias cdlogc='cd $dlogc'
+alias cdprodc='cd $dprodc'
+alias cdgesc='cd $dgesc'
+
+export dsubce=$rrfsbasec/rrfs_conus_ens
+alias cdsubce='cd $dsubce'
+#------
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
