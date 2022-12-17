@@ -1,0 +1,123 @@
+#!/bin/bash -l
+
+module purge
+module use /apps/ops/test/nco/modulefiles
+module load craype-x86-rome 
+module load libfabric/1.11.0.0. 
+module load craype-network-ofi 
+module load envvar/1.0
+module load core/rocoto/1.3.5
+
+module list
+
+cyctime=202212021900
+#rocotostat -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c all
+
+test=42
+
+case $test in
+11)
+taskname=get_extrn_lbcs_mem0001
+;;
+12)
+taskname=make_ics_mem0026
+;;
+13)
+taskname=make_lbcs_16
+;;
+14)
+taskname=get_extrn_ics_mem0001
+;;
+21)
+taskname=prep_cyc_spinup
+;;
+22)
+taskname=anal_gsi_input_spinup
+;;
+23)
+taskname=run_fcst_spinup
+;;
+24)
+taskname=run_post_spinup_f000
+;;
+25)
+taskname=cldanl_nonvar_spinup
+;;
+26)
+taskname=process_radarref_spinup
+;;
+27)
+taskname=process_bufr_spinup
+;;
+28)
+taskname=save_restart_spinup_f001
+;;
+29)
+taskname=gsidag_soilupdate_prod
+;;
+31)
+taskname=prep_cyc_prod_mem0001
+;;
+32)
+taskname=anal_gsi_input_prod
+;;
+33)
+taskname=run_fcst_prod
+;;
+34)
+taskname=run_post_f001
+;;
+35)
+taskname=run_wgrib2_f000
+;;
+36)
+taskname=process_radarref_prod
+;;
+37)
+taskname=process_bufr_prod
+;;
+38)
+taskname=save_restart_prod_f1
+;;
+39)
+taskname=PRDGEN_f006
+;;
+41)
+taskname=run_clean
+;;
+42)
+taskname=run_enkfupdt
+;;
+43)
+taskname=observer_gsi_ensmean
+;;
+44)
+taskname=run_ensemble_observer
+;;
+esac
+
+echo $taskname
+
+
+rocotocheck -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t $taskname
+rocotorewind -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t $taskname
+rocotoboot -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t $taskname
+
+#rocotorewind -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -m $taskname
+#rocotoboot -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -m $taskname
+
+#rocotocheck -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t anal_gsi_input_prod
+#rocotoboot -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t anal_gsi_input_prod
+#rocotoboot -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t prep_start_f000
+#rocotocomplete -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t anal_gsi_input_f000
+#rocotoboot -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t prep_start_f000
+#rocotoboot -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c $cyctime -t run_fcst_f000
+exit
+#rocotocheck -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c 202105180000 -t get_extrn_lbcs
+rocotocheck -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c 202105180000 -t get_extrn_ics
+rocotoboot -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c 202105180000 -t get_extrn_ics
+#rocotocheck -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c 202105180000 -t prep_coldstart
+
+#rocotostat -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c all
+#rocotocheck -w FV3LAM_wflow.xml -d FV3LAM_wflow.db -c 202105140300 -t anal_gsi_input
+#rocotostat -w /gpfs/dell2/emc/modeling/noscrub/Ming.Hu/rrfs/RRFS_dev2/FV3LAM_wflow.xml -d /gpfs/dell2/emc/modeling/noscrub/Ming.Hu/rrfs/RRFS_dev2/FV3LAM_wflow.db -c all
