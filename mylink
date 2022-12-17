@@ -1,5 +1,6 @@
 
 MACHINE="wcoss2"
+version="v0.3.1"
 
 if [[ $USER == "emc.lam" ]];then
 MACHINE="lampara"
@@ -52,6 +53,10 @@ if [[ $MACHINE == "lampara" ]] ; then
   rrfsptmpc=/lfs/h2/emc/ptmp/emc.lam/conus
   rrfsstmpc=/lfs/h2/emc/stmp/emc.lam/conus
   rrfstag=rrfs_a
+
+  vbase=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
+  vptmp=/lfs/h2/emc/ptmp/emc.lam/rrfs
+  vstmp=/lfs/h2/emc/stmp/emc.lam/rrfs
   
   dfsw=/dfs/write/emc/lam/emc.lam
   dfsr=/dfs/read/emc/lam/emc.lam
@@ -134,6 +139,48 @@ alias cdgesc='cd $dgesc'
 export dsubce=$rrfsbasec/rrfs_conus_ens
 alias cdsubce='cd $dsubce'
 #------
+
+#----- conus enkf v0.3.1
+version="v0.3.1"
+num=1
+thisbase=${vbase}.$version
+export dsub1=$thisbase/rrfs_conus
+export dscript1=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dlog1=$vptmp/$version/logs
+export dprod1=$vptmp/$version
+export dstmp1=$vstmp/$version
+export dges1=$vptmp/$version/nwges
+
+alias cdsub1='cd $dsub1'
+alias cdscript1='cd $dscript1'
+alias cdstmp1='cd $dstmp1'
+alias cdlog1='cd $dlog1'
+alias cdprod1='cd $dprod1'
+alias cdges1='cd $dges1'
+
+export dsub1e=$thisbase/rrfs_conus_ens
+alias cdsub1e='cd $dsub1e'
+
+#----- conus enkf v0.3.2
+version="v0.3.2"
+num=1
+thisbase=${vbase}/$version
+export dsub2=$thisbase/rrfs_conus
+export dscript2=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dlog2=$vptmp/$version/logs
+export dprod2=$vptmp/$version
+export dstmp2=$vstmp/$version
+export dges2=$vptmp/$version/nwges
+
+alias cdsub2='cd $dsub2'
+alias cdscript2='cd $dscript2'
+alias cdstmp2='cd $dstmp2'
+alias cdlog2='cd $dlog2'
+alias cdprod2='cd $dprod2'
+alias cdges2='cd $dges2'
+
+export dsub2e=$thisbase/rrfs_conus_ens
+alias cdsub2e='cd $dsub2e'
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
