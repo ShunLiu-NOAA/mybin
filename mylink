@@ -315,3 +315,6 @@ alias stmpgsi='cd $dstmpgsi'
 
 alias listdisk='/usr/local/bin/lsquota'
 alias pqq='python /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/qstat-json.py'
+alias cputil='cp /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util/* .'
+alias uprb='cp rb /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util'
+alias uprchk='cp rchk /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util'
