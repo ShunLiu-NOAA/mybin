@@ -167,6 +167,7 @@ num=1
 thisbase=${vbase}/$version
 export dsub2=$thisbase/rrfs_conus
 export dscript2=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dush2=$thisbase/ufs-srweather-app/regional_workflow/ush
 export dlog2=$vptmp/$version/logs
 export dprod2=$vptmp/$version
 export dstmp2=$vstmp/$version
@@ -174,6 +175,7 @@ export dges2=$vptmp/$version/nwges
 
 alias cdsub2='cd $dsub2'
 alias cdscript2='cd $dscript2'
+alias cdush2='cd $dush2'
 alias cdstmp2='cd $dstmp2'
 alias cdlog2='cd $dlog2'
 alias cdprod2='cd $dprod2'
@@ -181,6 +183,27 @@ alias cdges2='cd $dges2'
 
 export dsub2e=$thisbase/rrfs_conus_ens
 alias cdsub2e='cd $dsub2e'
+
+#----- na v0.3.3
+version="v0.3.3"
+num=3
+thisbase=${vbase}/$version
+export dsub3=$thisbase/rrfs_na
+export dscript3=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dlog3=$vptmp/$version/logs
+export dprod3=$vptmp/$version
+export dstmp3=$vstmp/$version
+export dges3=$vptmp/$version/nwges
+
+alias cdsub3='cd $dsub3'
+alias cdscript3='cd $dscript3'
+alias cdstmp3='cd $dstmp3'
+alias cdlog3='cd $dlog3'
+alias cdprod3='cd $dprod3'
+alias cdges3='cd $dges3'
+
+export dsub3e=$thisbase/rrfs_na_ens
+alias cdsub3e='cd $dsub3e'
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
