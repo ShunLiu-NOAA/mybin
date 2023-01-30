@@ -140,26 +140,26 @@ export dsubce=$rrfsbasec/rrfs_conus_ens
 alias cdsubce='cd $dsubce'
 #------
 
-#----- conus enkf v0.3.1
-version="v0.3.1"
-num=1
-thisbase=${vbase}.$version
-export dsub1=$thisbase/rrfs_conus
-export dscript1=$thisbase/ufs-srweather-app/regional_workflow/scripts
-export dlog1=$vptmp/$version/logs
-export dprod1=$vptmp/$version
-export dstmp1=$vstmp/$version
-export dges1=$vptmp/$version/nwges
+#----- conus enkf v0.3.6
+version="v0.3.6"
+num=6
+thisbase=${vbase}/$version
+export dsub6=$thisbase/rrfs_conus
+export dscript6=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dlog6=$vptmp/$version/logs
+export dprod6=$vptmp/$version
+export dstmp6=$vstmp/$version
+export dges6=$vptmp/$version/nwges
 
-alias cdsub1='cd $dsub1'
-alias cdscript1='cd $dscript1'
-alias cdstmp1='cd $dstmp1'
-alias cdlog1='cd $dlog1'
-alias cdprod1='cd $dprod1'
-alias cdges1='cd $dges1'
+alias cdsub6='cd $dsub6'
+alias cdscript6='cd $dscript6'
+alias cdstmp6='cd $dstmp6'
+alias cdlog6='cd $dlog6'
+alias cdprod6='cd $dprod6'
+alias cdges6='cd $dges6'
 
-export dsub1e=$thisbase/rrfs_conus_ens
-alias cdsub1e='cd $dsub1e'
+export dsub6e=$thisbase/rrfs_conus_ens
+alias cdsub6e='cd $dsub6e'
 
 #----- conus enkf v0.3.2
 version="v0.3.2"
@@ -344,3 +344,6 @@ alias uprchk='cp rchk /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util
 alias cputile='cp /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util/ens* .'
 alias uprbe='cp rb /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util/ens'
 alias uprchke='cp rchk /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util/ens'
+
+alias linkgesn='ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.3/nwges /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para/rrfs_a'
+alias lingesc='ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.2/nwges /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para/rrfs_a'
