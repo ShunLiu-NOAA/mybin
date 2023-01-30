@@ -1,0 +1,14 @@
+
+mkdir -p /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para
+mkdir -p /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a
+mkdir -p /lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp/tmpnwprd
+ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.3/nwges /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para/rrfs_a
+ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.3/prod /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a/para
+ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/v0.3.3 /lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp/tmpnwprd/rrfs_a
+
+mkdir -p /lfs/h2/emc/ptmp/emc.lam/conus/nwges
+mkdir -p /lfs/h2/emc/ptmp/emc.lam/conus/prod/rrfs_a
+mkdir -p /lfs/h2/emc/stmp/emc.lam/conus/stmp/tmpnwprd
+ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.2/nwges /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para
+ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.2/prod /lfs/h2/emc/ptmp/emc.lam/conus/prod/rrfs_a/para
+ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/v0.3.2 /lfs/h2/emc/stmp/emc.lam/conus/tmpnwprd/conus
