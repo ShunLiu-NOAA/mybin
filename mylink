@@ -140,26 +140,6 @@ export dsubce=$rrfsbasec/rrfs_conus_ens
 alias cdsubce='cd $dsubce'
 #------
 
-#----- conus enkf v0.3.6
-version="v0.3.6"
-num=6
-thisbase=${vbase}/$version
-export dsub6=$thisbase/rrfs_conus
-export dscript6=$thisbase/ufs-srweather-app/regional_workflow/scripts
-export dlog6=$vptmp/$version/logs
-export dprod6=$vptmp/$version
-export dstmp6=$vstmp/$version
-export dges6=$vptmp/$version/nwges
-
-alias cdsub6='cd $dsub6'
-alias cdscript6='cd $dscript6'
-alias cdstmp6='cd $dstmp6'
-alias cdlog6='cd $dlog6'
-alias cdprod6='cd $dprod6'
-alias cdges6='cd $dges6'
-
-export dsub6e=$thisbase/rrfs_conus_ens
-alias cdsub6e='cd $dsub6e'
 
 #----- conus enkf v0.3.2
 version="v0.3.2"
@@ -204,6 +184,53 @@ alias cdges3='cd $dges3'
 
 export dsub3e=$thisbase/rrfs_na_ens
 alias cdsub3e='cd $dsub3e'
+
+#----- conus enkf v0.3.6
+version="v0.3.6"
+num=6
+thisbase=${vbase}/$version
+export dsub6=$thisbase/rrfs_conus
+export dscript6=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dush6=$thisbase/ufs-srweather-app/regional_workflow/ush
+export dlog6=$vptmp/$version/logs
+export dprod6=$vptmp/$version
+export dstmp6=$vstmp/$version
+export dges6=$vptmp/$version/nwges
+
+alias cdsub6='cd $dsub6'
+alias cdscript6='cd $dscript6'
+alias cdush6='cd $dush6'
+alias cdstmp6='cd $dstmp6'
+alias cdlog6='cd $dlog6'
+alias cdprod6='cd $dprod6'
+alias cdges6='cd $dges6'
+
+export dsub6e=$thisbase/rrfs_conus_ens
+alias cdsub6e='cd $dsub6e'
+
+#----- na v0.3.7
+version="v0.3.7"
+num=3
+thisbase=${vbase}/$version
+export dsub7=$thisbase/rrfs_na
+export dscript7=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dush7=$thisbase/ufs-srweather-app/regional_workflow/ush
+export dlog7=$vptmp/$version/logs
+export dprod7=$vptmp/$version
+export dstmp7=$vstmp/$version
+export dges7=$vptmp/$version/nwges
+
+alias cdsub7='cd $dsub7'
+alias cdscript7='cd $dscript7'
+alias cdush7='cd $dush7'
+alias cdstmp7='cd $dstmp7'
+alias cdlog7='cd $dlog7'
+alias cdprod7='cd $dprod7'
+alias cdges7='cd $dges7'
+
+export dsub7e=$thisbase/rrfs_na_ens
+alias cdsub7e='cd $dsub7e'
+
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
@@ -333,8 +360,8 @@ alias subgsi='cd $dsubgsi'
 export dsrcgsi=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/nam.v4.1.24/sorc/nam_gsi.fd/GSI/src/gsi
 alias srcgsi='cd $dsrcgsi'
 
-export dstmpgsi=/gpfs/dell2/ptmp/Shun.Liu/namanl_abort_tm01_2021112418_myexec
-alias stmpgsi='cd $dstmpgsi'
+export dben=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/benchmark
+alias cdben='cd $dben'
 
 alias listdisk='/usr/local/bin/lsquota'
 alias pqq='python /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/qstat-json.py'
