@@ -1,0 +1,13 @@
+
+touch /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+touch /lfs/h2/emc/ptmp/emc.lam/rrfs/conus
+
+touch /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para
+touch /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a
+touch /lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp/tmpnwprd
+
+touch /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para
+touch /lfs/h2/emc/ptmp/emc.lam/conus/prod/rrfs_a
+touch /lfs/h2/emc/stmp/emc.lam/conus/stmp/tmpnwprd
+
+
