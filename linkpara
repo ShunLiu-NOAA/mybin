@@ -1,3 +1,4 @@
+#!/bin/bash
 
 rm -fr /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para
 rm -fr /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a
@@ -28,10 +29,9 @@ ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8/nwges /lfs/h2/emc/ptmp/emc.lam/conus
 ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8/prod /lfs/h2/emc/ptmp/emc.lam/conus/prod/rrfs_a/para
 ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/v0.3.8 /lfs/h2/emc/stmp/emc.lam/conus/tmpnwprd/conus
 
-exit
 rm -f /lfs/h2/emc/ptmp/emc.lam/rrfs/conus
 ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8 /lfs/h2/emc/ptmp/emc.lam/rrfs/conus
 rm -f /lfs/h2/emc/ptmp/emc.lam/rrfs/na
-ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.9 /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.7 /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 
 exit
