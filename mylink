@@ -231,6 +231,30 @@ alias cdges7='cd $dges7'
 export dsub7e=$thisbase/rrfs_na_ens
 alias cdsub7e='cd $dsub7e'
 
+#----- conus enkf v0.3.8
+version="v0.3.8"
+num=8
+thisbase=${vbase}/$version
+export dsub8=$thisbase/rrfs_conus
+export dscript8=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dush8=$thisbase/ufs-srweather-app/regional_workflow/ush
+export dlog8=$vptmp/$version/logs
+export dprod8=$vptmp/$version
+export dstmp8=$vstmp/$version
+export dges8=$vptmp/$version/nwges
+
+alias cdsub8='cd $dsub8'
+alias cdscript8='cd $dscript8'
+alias cdush8='cd $dush8'
+alias cdstmp8='cd $dstmp8'
+alias cdlog8='cd $dlog8'
+alias cdprod8='cd $dprod8'
+alias cdges8='cd $dges8'
+
+export dsub8e=$thisbase/rrfs_conus_ens
+alias cdsub8e='cd $dsub8e'
+
+
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
@@ -362,6 +386,9 @@ alias srcgsi='cd $dsrcgsi'
 
 export dben=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/benchmark
 alias cdben='cd $dben'
+export dbenr=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/benchmark/rundir/anal_conv_gsi_06z
+alias cdbenr='cd $dbenr'
+
 
 alias listdisk='/usr/local/bin/lsquota'
 alias pqq='python /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/qstat-json.py'
