@@ -254,6 +254,30 @@ alias cdges8='cd $dges8'
 export dsub8e=$thisbase/rrfs_conus_ens
 alias cdsub8e='cd $dsub8e'
 
+#----- na v0.3.9
+version="v0.3.9"
+num=3
+thisbase=${vbase}/$version
+export dsub9=$thisbase/rrfs_na
+export dscript9=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dush9=$thisbase/ufs-srweather-app/regional_workflow/ush
+export dlog9=$vptmp/$version/logs
+export dprod9=$vptmp/$version
+export dstmp9=$vstmp/$version
+export dges9=$vptmp/$version/nwges
+
+alias cdsub9='cd $dsub9'
+alias cdscript9='cd $dscript9'
+alias cdush9='cd $dush9'
+alias cdstmp9='cd $dstmp9'
+alias cdlog9='cd $dlog9'
+alias cdprod9='cd $dprod9'
+alias cdges9='cd $dges7'
+
+export dsub9e=$thisbase/rrfs_na_ens
+alias cdsub9e='cd $dsub9e'
+
+
 
 
 ####
