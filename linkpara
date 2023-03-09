@@ -8,9 +8,9 @@ mkdir -p /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para
 mkdir -p /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a
 mkdir -p /lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp/tmpnwprd
 
-ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.7/nwges /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para/rrfs_a
-ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.7/prod /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a/para
-ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/v0.3.7 /lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp/tmpnwprd/rrfs_a
+ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.9/nwges /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para/rrfs_a
+ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.9/prod /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a/para
+ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/v0.3.9 /lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp/tmpnwprd/rrfs_a
 
 
 rm -fr /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para
@@ -32,6 +32,6 @@ ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/v0.3.8 /lfs/h2/emc/stmp/emc.lam/conus/tmpnw
 rm -f /lfs/h2/emc/ptmp/emc.lam/rrfs/conus
 ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8 /lfs/h2/emc/ptmp/emc.lam/rrfs/conus
 rm -f /lfs/h2/emc/ptmp/emc.lam/rrfs/na
-ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.7 /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.9 /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 
 exit
