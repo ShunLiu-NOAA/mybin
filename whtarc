@@ -6,8 +6,8 @@
 #PBS -j oe -o /lfs/h2/emc/ptmp/Shun.Liu/logs/archive.log
 set -x
 
-cd /lfs/h2/emc/da/noscrub/Shun.Liu/test
+cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs
 #htar cf  /NCEPDEV/emc-meso/2year/emc.campara/rrfs_sfe.tar.tar
 
-var=canned_rrfs_warmstart
-htar cf /NCEPDEV/emc-da/1year/Shun.Liu/${var}.tar ${var}
+var=v0.3.8.tar
+htar cf /NCEPDEV/emc-meso/1year/emc.lam/${var}.tar ${var}
