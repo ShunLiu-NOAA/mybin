@@ -242,6 +242,8 @@ export dlog8=$vptmp/$version/logs
 export dprod8=$vptmp/$version
 export dstmp8=$vstmp/$version
 export dges8=$vptmp/$version/nwges
+export dprod8d=$vptmp/${version}_dogwood
+export dprod8c=$vptmp/${version}_cactus
 
 alias cdsub8='cd $dsub8'
 alias cdscript8='cd $dscript8'
@@ -250,6 +252,8 @@ alias cdstmp8='cd $dstmp8'
 alias cdlog8='cd $dlog8'
 alias cdprod8='cd $dprod8'
 alias cdges8='cd $dges8'
+alias cdprod8d='cd $dprod8d'
+alias cdprod8c='cd $dprod8c'
 
 export dsub8e=$thisbase/rrfs_conus_ens
 alias cdsub8e='cd $dsub8e'
