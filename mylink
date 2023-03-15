@@ -279,7 +279,7 @@ alias cdush9='cd $dush9'
 alias cdstmp9='cd $dstmp9'
 alias cdlog9='cd $dlog9'
 alias cdprod9='cd $dprod9'
-alias cdges9='cd $dges7'
+alias cdges9='cd $dges9'
 
 export dsub9e=$thisbase/rrfs_na_ens
 alias cdsub9e='cd $dsub9e'
