@@ -34,4 +34,6 @@ ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8 /lfs/h2/emc/ptmp/emc.lam/rrfs/conus
 rm -f /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.9 /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 
+ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/v0.3.8 /lfs/h2/emc/ptmp/emc.lam/rrfs/conus/stmp
+ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/v0.3.9 /lfs/h2/emc/ptmp/emc.lam/rrfs/na/stmp
 exit
