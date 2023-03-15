@@ -3,7 +3,7 @@
 #PBS -A RRFS-DEV
 #PBS -q dev_transfer
 #PBS -l select=1:ncpus=1:mem=8G
-#PBS -l walltime=1:00:00
+#PBS -l walltime=0:02:00
 #PBS -j oe -o /lfs/h2/emc/ptmp/emc.lam/mirror/rrfs_mirror.out
 #PBS -N RRFS_mirror
 
@@ -12,8 +12,8 @@ module load envvar/1.0
 set -x
 
 # mirror  RRFSUPP files from prod to dev
-#PDY=20220319
-#cyc=12
+PDY=20230309
+cyc=08
 
 mysite=$(cat /etc/cluster_name)
 primary=$(head -1 /lfs/h1/ops/prod/config/prodmachinefile | cut -d ":" -f2-)
@@ -35,11 +35,12 @@ do
   echo $fcstlength
 done
 
+sourcemachine=emc.lam@ddxfer.wcoss2.ncep.noaa.gov
 source=/lfs/h2/emc/ptmp/emc.lam/rrfs/conus/prod/rrfs_a.${PDY}/${cyc}
-destination==/lfs/h2/emc/ptmp/emc.lam/rrfs_dogwood/conus/prod/rrfs_a.${PDY}/${cyc}
-desmachine=emc.lam@cdxfer.wcoss2.ncep.noaa.gov
-ssh $desmachine mkdir -p "$destination"
-
+desmachine=emc.lam@ddxfer.wcoss2.ncep.noaa.gov
+destination==/lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8_dogwood/prod/rrfs_a.${PDY}/${cyc}
+mkdir -p $destination
+rsync -arv $sourcemachine:$source $destination
 exit
 
 devdir=/lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8_dogwood
