@@ -6,6 +6,23 @@
 # test array number
 ##############
 
+indx="03 04 05"
+cyc=08
+
+for i in $indx
+do
+  if [ "$cyc" == $i ]; then
+    echo $cyc
+  fi 
+done 
+exit
+
+spinup=( "03" "04" 05" "06" "07" "08")
+
+#for i in  
+#do 
+#done
+
 topline=`grep bash test.sh | head -n1 | tail -n1`
 
 if [ "$topline" == "DEAD" ]; then
