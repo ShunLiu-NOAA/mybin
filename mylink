@@ -258,6 +258,9 @@ alias cdprod8c='cd $dprod8c'
 export dsub8e=$thisbase/rrfs_conus_ens
 alias cdsub8e='cd $dsub8e'
 
+export dsub8ef=$thisbase/rrfs_conus_enfcst
+alias cdsub8ef='cd $dsub8ef'
+
 export dsub8m=$thisbase/mirror
 alias cdsub8m='cd $dsub8m'
 
@@ -308,8 +311,11 @@ alias cdges0='cd $dges0'
 alias cdprod0d='cd $dprod0d'
 alias cdprod0c='cd $dprod0c'
 
-export dsub0e=$thisbase/rrfs_conus_ens
+export dsub0e=$thisbase/rrfs_conus_enkf
 alias cdsub0e='cd $dsub0e'
+
+export dsub0ef=$thisbase/rrfs_conus_enfcst
+alias cdsub0ef='cd $dsub0ef'
 
 export dsub0m=$thisbase/mirror
 alias cdsub0m='cd $dsub0m'
