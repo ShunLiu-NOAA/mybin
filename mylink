@@ -320,6 +320,32 @@ alias cdsub0ef='cd $dsub0ef'
 export dsub0m=$thisbase/mirror
 alias cdsub0m='cd $dsub0m'
 
+#----- na v0.4.1
+version="v0.4.1"
+num=3
+thisbase=${vbase}/$version
+export dsub1=$thisbase/rrfs_na
+export dscript1=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dush1=$thisbase/ufs-srweather-app/regional_workflow/ush
+export dlog1=$vptmp/$version/logs
+export dprod1=$vptmp/$version
+export dstmp1=$vstmp/$version
+export dges1=$vptmp/$version/nwges
+
+alias cdsub1='cd $dsub1'
+alias cdscript1='cd $dscript1'
+alias cdush1='cd $dush1'
+alias cdstmp1='cd $dstmp1'
+alias cdlog1='cd $dlog1'
+alias cdprod1='cd $dprod1'
+alias cdges1='cd $dges1'
+
+export dsub1e=$thisbase/rrfs_na_enkf
+alias cdsub1e='cd $dsub1e'
+
+export dsub1ef=$thisbase/rrfs_na_enfcst
+alias cdsub1ef='cd $dsub1e'
+
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
