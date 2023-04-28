@@ -346,6 +346,40 @@ alias cdsub1e='cd $dsub1e'
 export dsub1ef=$thisbase/rrfs_na_enfcst
 alias cdsub1ef='cd $dsub1e'
 
+#----- conus enkf v0.5.0
+version="v0.5.0"
+num=0
+thisbase=${vbase}/$version
+export dsub5=$thisbase/rrfs_conus
+export dscript5=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dush5=$thisbase/ufs-srweather-app/regional_workflow/ush
+export dlog5=$vptmp/$version/logs
+export dprod5=$vptmp/$version
+export dstmp5=$vstmp/$version
+export dges5=$vptmp/$version/nwges
+export dprod5d=$vptmp/${version}_dogwood
+export dprod5c=$vptmp/${version}_cactus
+
+alias cdsub5='cd $dsub5'
+alias cdscript5='cd $dscript5'
+alias cdush5='cd $dush5'
+alias cdstmp5='cd $dstmp5'
+alias cdlog5='cd $dlog5'
+alias cdprod5='cd $dprod5'
+alias cdges5='cd $dges5'
+alias cdprod5d='cd $dprod5d'
+alias cdprod5c='cd $dprod5c'
+
+export dsub5e=$thisbase/rrfs_conus_enkf
+alias cdsub5e='cd $dsub5e'
+
+export dsub5ef=$thisbase/rrfs_conus_enfcst
+alias cdsub5ef='cd $dsub5ef'
+
+export dsub5m=$thisbase/mirror
+alias cdsub5m='cd $dsub0m'
+
+
 
 ####
 alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
