@@ -379,6 +379,9 @@ alias cdsub5ef='cd $dsub5ef'
 export dsub5m=$thisbase/mirror
 alias cdsub5m='cd $dsub0m'
 
+export dsub5me=$thisbase/rrfs_conus_enfcst_mphysc
+alias cdsub5me='cd $dsub5me'
+
 
 
 ####
