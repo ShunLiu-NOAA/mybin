@@ -57,6 +57,9 @@ if [[ $MACHINE == "lampara" ]] ; then
   vbase=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
   vptmp=/lfs/h2/emc/ptmp/emc.lam/rrfs
   vstmp=/lfs/h2/emc/stmp/emc.lam/rrfs
+
+  fptmp=/lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs
+  fstmp=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs
   
   dfsw=/dfs/write/emc/lam/emc.lam
   dfsr=/dfs/read/emc/lam/emc.lam
@@ -164,16 +167,16 @@ alias cdges2='cd $dges2'
 export dsub2e=$thisbase/rrfs_conus_ens
 alias cdsub2e='cd $dsub2e'
 
-#----- na v0.3.3
-version="v0.3.3"
+#----- na v0.4.3
+version="v0.4.3"
 num=3
 thisbase=${vbase}/$version
 export dsub3=$thisbase/rrfs_na
 export dscript3=$thisbase/ufs-srweather-app/regional_workflow/scripts
-export dlog3=$vptmp/$version/logs
-export dprod3=$vptmp/$version
-export dstmp3=$vstmp/$version
-export dges3=$vptmp/$version/nwges
+export dlog3=$fptmp/$version/logs
+export dprod3=$fptmp/$version
+export dstmp3=$fstmp/$version
+export dges3=$fptmp/$version/nwges
 
 alias cdsub3='cd $dsub3'
 alias cdscript3='cd $dscript3'
