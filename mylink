@@ -144,8 +144,8 @@ alias cdsubce='cd $dsubce'
 #------
 
 
-#----- conus enkf v0.3.2
-version="v0.3.2"
+#----- conus enkf v0.5.2
+version="v0.5.2"
 num=1
 thisbase=${vbase}/$version
 export dsub2=$thisbase/rrfs_conus
@@ -164,7 +164,7 @@ alias cdlog2='cd $dlog2'
 alias cdprod2='cd $dprod2'
 alias cdges2='cd $dges2'
 
-export dsub2e=$thisbase/rrfs_conus_ens
+export dsub2e=$thisbase/rrfs_conus_enkf
 alias cdsub2e='cd $dsub2e'
 
 #----- na v0.4.3
