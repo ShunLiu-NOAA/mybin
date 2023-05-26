@@ -1,0 +1,47 @@
+#PBS -A RRFS-DEV
+#PBS -q dev_transfer
+#PBS -l select=1:mpiprocs=1:ncpus=1
+#PBS -l walltime=05:59:00
+#PBS -N rrfs_a_run_archive2
+#PBS -j oe -o /lfs/h2/emc/ptmp/emc.lam/archive/archive.log
+
+module load prod_util/2.0.14
+
+set -x
+
+currentdate=2023052501
+mydate=${currentdate:0:8}
+echo $mydate
+hour=${currentdate:8:2}
+echo $hour
+
+ARCHIVEDIR=/NCEPDEV/emc-meso/1year/emc.lam/exp/c3v52
+#archive_dir=$ARCHIVEDIR/rrfs.${mydate}/$hour
+archive_dir=$ARCHIVEDIR/rrfs.${mydate}
+proddir=/lfs/h2/emc/ptmp/emc.lam/rrfs/v0.5.2/prod/rrfs.${mydate}/$hour
+
+echo $archive_dir
+
+cd $proddir
+mkdir tmpgrib
+cd tmpgrib
+num='00 01 02 03 04 05 06 07 08 09 10 11 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60'
+for inum in $num
+do 
+  #cp rrfs.t${hour}z.prslev.f0${inum}.conus_3km.grib2  ./tmpgrib
+  ln -f ../rrfs.t${hour}z.prslev.f0${inum}.conus_3km.grib2  .
+done
+
+cd tmpgrib
+
+echo $archive_dir
+
+hsi mkdir -p $archive_dir
+htar -chvf $archive_dir/rrfs.t${hour}z.prslev.conus_3km.grib2.tar rrfs.t${hour}z.prslev.f*.conus_3km.grib2
+
+exit
+
+rm -fr tmpgrib
+
+#htar -chvf $ARCHIVEDIR/rh$year/$year$month/$year$month$day/$hour/prod/rrfs.t${hour}z.natlev.conus_3km.grib2.tar rrfs.t${hour}z.natlev.f*.conus_3km.grib2
+#htar -chvf $ARCHIVEDIR/rh$year/$year$month/$year$month$day/$hour/prod/rrfs.t${hour}z.testbed.conus_3km.grib2.tar rrfs.t${hour}z.testbed.f*.conus_3km.grib2
