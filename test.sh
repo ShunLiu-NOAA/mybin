@@ -6,6 +6,14 @@
 # test array number
 ##############
 
+fldir=/lfs/h2/emc/ptmp/emc.lam/rrfs/v0.5.0/prod/rrfs.20230523/00
+numfile=`ls $fldir/rrfs.*.prslev.f*.conus_3km.grib2 | wc | awk '{ print $1 }'`
+
+if [ $numfile > 8 ]; then
+   echo $numfile
+fi
+
+
 indx="03 04 05"
 cyc=08
 
