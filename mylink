@@ -50,8 +50,8 @@ if [[ $MACHINE == "lampara" ]] ; then
   rrfstag=rrfs_a
   rrfstag1=rrfs_a
 
-  rrfsptmpc=/lfs/h2/emc/ptmp/emc.lam/conus
-  rrfsstmpc=/lfs/h2/emc/stmp/emc.lam/conus
+  rrfsptmpc=/lfs/h2/emc/ptmp/emc.lam/rrfs/conus
+  rrfsstmpc=/lfs/h2/emc/stmp/emc.lam/rrfs/conus
   rrfstag=rrfs_a
 
   vbase=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
@@ -127,10 +127,10 @@ alias cdsube='cd $dsube'
 #------ conus
 export dsubc=$rrfsbasec/rrfs_conus
 export dscriptc=$rrfsbasec/ufs-srweather-app/regional_workflow/scripts
-export dlogc=$rrfsptmpc/logs/rrfs_a
-export dprodc=$rrfsptmpc/prod/rrfs_a/para
+export dlogc=$rrfsptmpc/logs
+export dprodc=$rrfsptmpc/prod
 export dstmpc=$rrfsstmpc/tmpnwprd/conus
-export dgesc=$rrfsptmpc/nwges/para/rrfs_a
+export dgesc=$rrfsptmpc/nwges
 
 alias cdsubc='cd $dsubc'
 alias cdscriptc='cd $dscriptc'
