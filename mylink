@@ -36,7 +36,7 @@ if [[ $MACHINE == "lampara" ]] ; then
   fi
   rrfsbase=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/rrfs/testD
   rrfsbasee=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
-  rrfsbasec=/lfs/h2/emc/lam/noscrub/emc.lam/rrfsx
+  rrfsbasec=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
 
   #ptmp=/work/noaa/da/Shun.Liu/ptmp
   #rrfsptmp=/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/NCO_dirs/ptmp
@@ -53,6 +53,9 @@ if [[ $MACHINE == "lampara" ]] ; then
   rrfsptmpc=/lfs/h2/emc/ptmp/emc.lam/rrfs/conus
   rrfsstmpc=/lfs/h2/emc/stmp/emc.lam/rrfs/conus
   rrfstag=rrfs_a
+
+  rrfsptmpn=/lfs/h2/emc/ptmp/emc.lam/rrfs/na
+  rrfsstmpn=/lfs/h2/emc/stmp/emc.lam/rrfs/na
 
   vbase=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
   vptmp=/lfs/h2/emc/ptmp/emc.lam/rrfs
@@ -143,6 +146,26 @@ export dsubce=$rrfsbasec/rrfs_conus_ens
 alias cdsubce='cd $dsubce'
 #------
 
+#------ na
+export dsubn=$rrfsbasen/rrfs_conus
+export dscriptn=$rrfsbasen/ufs-srweather-app/regional_workflow/scripts
+export dlogn=$rrfsptmpn/logs
+export dprodn=$rrfsptmpn/prod
+export dstmpn=$rrfsstmpn/tmpnwprd/conus
+export dgesn=$rrfsptmpn/nwges
+  
+alias cdsubn='cd $dsubn'
+alias cdscriptn='cd $dscriptn'
+alias cdstmpn='cd $dstmpn'
+alias cdlogn='cd $dlogn'
+alias cdprodn='cd $dprodn'
+alias cdgesn='cd $dgesn'
+  
+export dsubce=$rrfsbasec/rrfs_conus_ens
+alias cdsubce='cd $dsubce'
+#------
+
+
 
 #----- conus enkf v0.5.2
 version="v0.5.2"
@@ -166,6 +189,12 @@ alias cdges2='cd $dges2'
 
 export dsub2e=$thisbase/rrfs_conus_enkf
 alias cdsub2e='cd $dsub2e'
+
+export dsub2ef=$thisbase/rrfs_conus_enfcst
+alias cdsub2ef='cd $dsub2ef'
+
+export dsub2efm=$thisbase/rrfs_conus_enfcst_mphysc
+alias cdsub2efm='cd $dsub2efm'
 
 #----- na v0.5.3
 version="v0.5.3"
@@ -192,8 +221,11 @@ alias cdges3='cd $dges3'
 export dsub3e=$thisbase/rrfs_na_enkf
 alias cdsub3e='cd $dsub3e'
 
-export dsub0ef=$thisbase/rrfs_conus_enfcst
-alias cdsub0ef='cd $dsub0ef'
+export dsub3ef=$thisbase/rrfs_na_enfcst
+alias cdsub3ef='cd $dsub0ef'
+
+export dsub3efm=$thisbase/rrfs_na_enfcst_mphyscm
+alias cdsub3efm='cd $dsub3efm'
 
 #----- conus enkf v0.3.6
 version="v0.3.6"
