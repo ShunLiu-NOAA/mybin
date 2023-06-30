@@ -42,4 +42,12 @@ ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 
 ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/${conus_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/conus/stmp
 ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na/stmp
+
+#link to t2o dir
+#since na prod is in h2 disk, link prod to f2/t2o disk first
+#link
+rm -f /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+#ln -sf lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver}/prod /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver}
+ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+ln -sf /lfs/f2/t2o/stmp/emc/stmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na/stmp
 exit
