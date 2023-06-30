@@ -12,7 +12,7 @@ module load envvar/1.0
 set -x
 
 src=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/gsi_regression/develop/install/bin/enkf.x
-target=ddxfer.wcoss2.ncep.noaa.gov:/lfs/h2/emc/ptmp/emc.lam/Shun.Liu/
+target=cdxfer.wcoss2.ncep.noaa.gov:/lfs/h2/emc/ptmp/emc.lam/Shun.Liu/
 rsync -arv $src $target
 
 exit
