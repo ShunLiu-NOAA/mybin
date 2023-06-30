@@ -1,4 +1,4 @@
 scp Shun.Liu@dtn-jet.rdhpcs.noaa.gov
 scp 20230511.180000.sfc_data.nc Shun.Liu@dtn-jet.boulder.rdhpcs.noaa.gov:/mnt/lfs1/BMC/wrfruc/Shun.Liu/tmp
-#scp file Ming.Hu@dtn-hera.rdhpcs.noaa.gov://path
+#scp file Shun.Liu@dtn-hera.rdhpcs.noaa.gov:/scratch2/NCEPDEV/fv3-cam/scrub/Shun.Liu/tmp
 
