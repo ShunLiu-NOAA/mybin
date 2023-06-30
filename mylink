@@ -222,7 +222,7 @@ export dsub3e=$thisbase/rrfs_na_enkf
 alias cdsub3e='cd $dsub3e'
 
 export dsub3ef=$thisbase/rrfs_na_enfcst
-alias cdsub3ef='cd $dsub0ef'
+alias cdsub3ef='cd $dsub3ef'
 
 export dsub3efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub3efm='cd $dsub3efm'
