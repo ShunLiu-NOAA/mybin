@@ -202,10 +202,12 @@ num=3
 thisbase=${vbase}/$version
 export dsub3=$thisbase/rrfs_na
 export dscript3=$thisbase/ufs-srweather-app/regional_workflow/scripts
-#export dlog3=$vptmp/$version/logs
-#export dprod3=$vptmp/$version
-#export dstmp3=$vstmp/$version
-#export dges3=$fvtmp/$version/nwges
+
+export dlog3ef=$vptmp/$version/logs
+export dprod3ef=$vptmp/$version
+export dstmp3ef=$vstmp/$version
+export dges3ef=$vptmp/$version/nwges
+
 export dlog3=$fptmp/$version/logs
 export dprod3=$fptmp/$version
 export dstmp3=$fstmp/$version
@@ -218,6 +220,10 @@ alias cdlog3='cd $dlog3'
 alias cdprod3='cd $dprod3'
 alias cdges3='cd $dges3'
 
+alias cdlog3ef='cd $dlog3ef'
+alias cdprod3ef='cd $dprod3ef'
+alias cdges3ef='cd $dges3ef'
+
 export dsub3e=$thisbase/rrfs_na_enkf
 alias cdsub3e='cd $dsub3e'
 
@@ -226,6 +232,8 @@ alias cdsub3ef='cd $dsub3ef'
 
 export dsub3efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub3efm='cd $dsub3efm'
+
+
 
 #----- conus enkf v0.3.6
 version="v0.3.6"
