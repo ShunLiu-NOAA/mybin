@@ -233,6 +233,44 @@ alias cdsub3ef='cd $dsub3ef'
 export dsub3efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub3efm='cd $dsub3efm'
 
+#----- na v0.6.1
+version="v0.6.1"
+num=1
+thisbase=${vbase}/$version
+export dsub1=$thisbase/rrfs_na
+export dscript1=$thisbase/ufs-srweather-app/regional_workflow/scripts
+
+export dlog1ef=$vptmp/$version/logs
+export dprod1ef=$vptmp/$version
+export dstmp1ef=$vstmp/$version
+export dges1ef=$vptmp/$version/nwges
+
+export dlog1=$fptmp/$version/logs
+export dprod1=$fptmp/$version
+export dstmp1=$fstmp/$version
+export dges1=$fptmp/$version/nwges
+
+alias cdsub1='cd $dsub1'
+alias cdscript1='cd $dscript1'
+alias cdstmp1='cd $dstmp1'
+alias cdlog1='cd $dlog1'
+alias cdprod1='cd $dprod1'
+alias cdges1='cd $dges1'
+
+alias cdlog1ef='cd $dlog1ef'
+alias cdprod1ef='cd $dprod1ef'
+alias cdges1ef='cd $dges1ef'
+
+export dsub1e=$thisbase/rrfs_na_enkf
+alias cdsub1e='cd $dsub1e'
+
+export dsub1ef=$thisbase/rrfs_na_enfcst
+alias cdsub1ef='cd $dsub1ef'
+
+export dsub1efm=$thisbase/rrfs_na_enfcst_mphyscm
+alias cdsub1efm='cd $dsub1efm'
+
+
 
 
 #----- conus enkf v0.3.6
@@ -369,32 +407,6 @@ alias cdsub0ef='cd $dsub0ef'
 
 export dsub0m=$thisbase/mirror
 alias cdsub0m='cd $dsub0m'
-
-#----- na v0.4.1
-version="v0.4.1"
-num=3
-thisbase=${vbase}/$version
-export dsub1=$thisbase/rrfs_na
-export dscript1=$thisbase/ufs-srweather-app/regional_workflow/scripts
-export dush1=$thisbase/ufs-srweather-app/regional_workflow/ush
-export dlog1=$vptmp/$version/logs
-export dprod1=$vptmp/$version
-export dstmp1=$vstmp/$version
-export dges1=$vptmp/$version/nwges
-
-alias cdsub1='cd $dsub1'
-alias cdscript1='cd $dscript1'
-alias cdush1='cd $dush1'
-alias cdstmp1='cd $dstmp1'
-alias cdlog1='cd $dlog1'
-alias cdprod1='cd $dprod1'
-alias cdges1='cd $dges1'
-
-export dsub1e=$thisbase/rrfs_na_enkf
-alias cdsub1e='cd $dsub1e'
-
-export dsub1ef=$thisbase/rrfs_na_enfcst
-alias cdsub1ef='cd $dsub1e'
 
 #----- conus enkf v0.5.0
 version="v0.5.0"
