@@ -4,7 +4,7 @@
 #ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8_cactus /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8
 
 conus_ver=v0.5.2
-na_ver=v0.5.3
+na_ver=v0.6.1
 
 rm -fr /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para
 rm -fr /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a
@@ -27,10 +27,6 @@ mkdir -p /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para
 mkdir -p /lfs/h2/emc/ptmp/emc.lam/conus/prod/rrfs_a
 mkdir -p /lfs/h2/emc/stmp/emc.lam/conus/stmp/tmpnwprd
 
-#mv /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para/rrfs_a  /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para/rrfs_a_old
-#mv /lfs/h2/emc/ptmp/emc.lam/conus/prod/rrfs_a/para /lfs/h2/emc/ptmp/emc.lam/conus/prod/rrfs_a/para_old
-#mv /lfs/h2/emc/stmp/emc.lam/conus/tmpnwprd/conus /lfs/h2/emc/stmp/emc.lam/conus/tmpnwprd/conus_old
-
 ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${conus_ver}/nwges /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para/rrfs_a
 ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${conus_ver}/prod /lfs/h2/emc/ptmp/emc.lam/conus/prod/rrfs_a/para
 ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/${conus_ver} /lfs/h2/emc/stmp/emc.lam/conus/tmpnwprd/conus
@@ -48,6 +44,7 @@ ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na/
 #link
 rm -f /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 #ln -sf lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver}/prod /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver}
-ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
-ln -sf /lfs/f2/t2o/stmp/emc/stmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na/stmp
+ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+#ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+#ln -sf /lfs/f2/t2o/stmp/emc/stmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na/stmp
 exit
