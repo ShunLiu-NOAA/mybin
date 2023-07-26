@@ -3,7 +3,7 @@
 #PBS -A RRFS-DEV
 #PBS -q dev_transfer
 #PBS -l select=1:ncpus=1:mem=8G
-#PBS -l walltime=0:02:00
+#PBS -l walltime=1:02:00
 #PBS -j oe -o /lfs/h2/emc/ptmp/emc.lam/mirror/rrfs_mirror.out
 #PBS -N RRFS_mirror
 
