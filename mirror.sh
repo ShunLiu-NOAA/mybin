@@ -11,8 +11,17 @@ module purge
 module load envvar/1.0
 set -x
 
+echo $HOSTNAME
+primary=$(echo $HOSTNAME | cut -c1-6)
+if [ "$primary" == "clogin" ]; then
+  desmachine=emc.lam@ddxfer.wcoss2.ncep.noaa.gov
+else
+  desmachine=emc.lam@cdxfer.wcoss2.ncep.noaa.gov
+fi
+
+
 src=TARGET
-target=cdxfer.wcoss2.ncep.noaa.gov:/lfs/h2/emc/ptmp/emc.lam/Shun.Liu/
+target=$desmachine:/lfs/h2/emc/ptmp/emc.lam/Shun.Liu/
 rsync -arv $src $target
 
 exit
