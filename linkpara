@@ -4,7 +4,7 @@
 #ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8_cactus /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8
 
 conus_ver=v0.5.2
-na_ver=v0.6.1
+na_ver=v0.6.5
 
 rm -fr /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para
 rm -fr /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a
