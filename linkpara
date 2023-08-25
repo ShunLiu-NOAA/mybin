@@ -6,45 +6,29 @@
 conus_ver=v0.5.2
 na_ver=v0.6.5
 
-rm -fr /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para
-rm -fr /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a
-rm -fr /lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp/tmpnwprd
+mysite=$(cat /etc/cluster_name)
+primary=$(head -1 /lfs/h1/ops/prod/config/prodmachinefile | cut -d ":" -f2-)
+backup=$(head -2 /lfs/h1/ops/prod/config/prodmachinefile | tail -1 | cut -d ":" -f2-)
 
-mkdir -p /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para
-mkdir -p /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a
-mkdir -p /lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp/tmpnwprd
-
-ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver}/nwges /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para/rrfs_a
-ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver}/prod /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/rrfs_a/para
-ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/stmp/emc.lam/Shun.Liu/stmp/tmpnwprd/rrfs_a
-
-
-rm -fr /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para
-rm -fr /lfs/h2/emc/ptmp/emc.lam/conus/prod/rrfs_a
-rm -fr /lfs/h2/emc/stmp/emc.lam/conus/stmp/tmpnwprd
-
-mkdir -p /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para
-mkdir -p /lfs/h2/emc/ptmp/emc.lam/conus/prod/rrfs_a
-mkdir -p /lfs/h2/emc/stmp/emc.lam/conus/stmp/tmpnwprd
-
-ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${conus_ver}/nwges /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para/rrfs_a
-ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${conus_ver}/prod /lfs/h2/emc/ptmp/emc.lam/conus/prod/rrfs_a/para
-ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/${conus_ver} /lfs/h2/emc/stmp/emc.lam/conus/tmpnwprd/conus
-
-rm -f /lfs/h2/emc/ptmp/emc.lam/rrfs/conus
-ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/${conus_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/conus
-rm -f /lfs/h2/emc/ptmp/emc.lam/rrfs/na
-ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
-
-ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/${conus_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/conus/stmp
-ln -sf /lfs/h2/emc/stmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na/stmp
+if [ "$primary" == "$mysite" ]; then
+  machine=prod
+  echo "this prod machine"
+else
+  machine=dev
+  echo "this devlop machine"
+fi
 
 #link to t2o dir
 #since na prod is in h2 disk, link prod to f2/t2o disk first
-#link
+
 rm -f /lfs/h2/emc/ptmp/emc.lam/rrfs/na
-#ln -sf lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver}/prod /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver}
+rm -f /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/na
+
+if [ "$machine" == "prod" ]; then
+ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/na
+else
 ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
-#ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
-#ln -sf /lfs/f2/t2o/stmp/emc/stmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na/stmp
+fi
+
 exit
