@@ -13,7 +13,8 @@ set -x
 
 echo $HOSTNAME
 primary=$(echo $HOSTNAME | cut -c1-6)
-if [ "$primary" == "clogin" ]; then
+#if [ "$primary" == "clogin" ]; then
+if [ "$primary" == "cdxfer" ]; then
   desmachine=emc.lam@ddxfer.wcoss2.ncep.noaa.gov
 else
   desmachine=emc.lam@cdxfer.wcoss2.ncep.noaa.gov
