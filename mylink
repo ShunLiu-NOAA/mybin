@@ -100,73 +100,6 @@ export drrfsdebug=$savecode/rrfs_debug_tool
 alias rrfsdebug='cd $drrfsdebug' 
 ######################################
 
-mydate=20220211
-cyc=03
-export drrfs=$rrfsbase
-export dflow=$rrfsbase/ufs-srweather-app/regional_workflow
-export dsub=$rrfsbase/$rrfstag1
-export dscript=$rrfsbase/ufs-srweather-app/regional_workflow/scripts
-export dlog=$rrfsptmp/logs/rrfs_a
-export dprod=$rrfsptmp/rrfs_a/para
-export dstmp=$rrfsstmp/tmpnwprd/$rrfstag
-export dges=$rrfsptmp/nwges/para/rrfs_a
-
-export dsube=$rrfsbasee/$rrfstage
-export dscripte=$rrfsbasee/ufs-srweather-app/regional_workflow/scripts
-
-
-alias cdrrfs='cd $drrfs'
-alias cdflow='cd $dflow'
-alias cdscript='cd $dscript'
-alias cdsub='cd $dsub'
-alias cdstmp='cd $dstmp'
-alias cdlog='cd $dlog'
-alias cdprod='cd $dprod'
-alias cdges='cd $dges'
-
-alias cdscripte='cd $dscripte'
-alias cdsube='cd $dsube'
-
-#------ conus
-export dsubc=$rrfsbasec/rrfs_conus
-export dscriptc=$rrfsbasec/ufs-srweather-app/regional_workflow/scripts
-export dlogc=$rrfsptmpc/logs
-export dprodc=$rrfsptmpc/prod
-export dstmpc=$rrfsstmpc/tmpnwprd/conus
-export dgesc=$rrfsptmpc/nwges
-
-alias cdsubc='cd $dsubc'
-alias cdscriptc='cd $dscriptc'
-alias cdstmpc='cd $dstmpc'
-alias cdlogc='cd $dlogc'
-alias cdprodc='cd $dprodc'
-alias cdgesc='cd $dgesc'
-
-export dsubce=$rrfsbasec/rrfs_conus_ens
-alias cdsubce='cd $dsubce'
-#------
-
-#------ na
-export dsubn=$rrfsbasen/rrfs_conus
-export dscriptn=$rrfsbasen/ufs-srweather-app/regional_workflow/scripts
-export dlogn=$rrfsptmpn/logs
-export dprodn=$rrfsptmpn/prod
-export dstmpn=$rrfsstmpn/tmpnwprd/conus
-export dgesn=$rrfsptmpn/nwges
-  
-alias cdsubn='cd $dsubn'
-alias cdscriptn='cd $dscriptn'
-alias cdstmpn='cd $dstmpn'
-alias cdlogn='cd $dlogn'
-alias cdprodn='cd $dprodn'
-alias cdgesn='cd $dgesn'
-  
-export dsubce=$rrfsbasec/rrfs_conus_ens
-alias cdsubce='cd $dsubce'
-#------
-
-
-
 #----- conus enkf v0.5.2
 version="v0.5.2"
 num=1
@@ -307,213 +240,42 @@ alias cdsub5ef='cd $dsub5ef'
 export dsub5efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub5efm='cd $dsub5efm'
 
-
-
-
-
-#----- conus enkf v0.3.6
-version="v0.3.6"
-num=6
-thisbase=${vbase}/$version
-export dsub6=$thisbase/rrfs_conus
-export dscript6=$thisbase/ufs-srweather-app/regional_workflow/scripts
-export dush6=$thisbase/ufs-srweather-app/regional_workflow/ush
-export dlog6=$vptmp/$version/logs
-export dprod6=$vptmp/$version
-export dstmp6=$vstmp/$version
-export dges6=$vptmp/$version/nwges
-
-alias cdsub6='cd $dsub6'
-alias cdscript6='cd $dscript6'
-alias cdush6='cd $dush6'
-alias cdstmp6='cd $dstmp6'
-alias cdlog6='cd $dlog6'
-alias cdprod6='cd $dprod6'
-alias cdges6='cd $dges6'
-
-export dsub6e=$thisbase/rrfs_conus_ens
-alias cdsub6e='cd $dsub6e'
-
-#----- na v0.3.7
-version="v0.3.7"
-num=3
+#----- na v0.6.7
+version="v0.6.7"
+num=1
 thisbase=${vbase}/$version
 export dsub7=$thisbase/rrfs_na
 export dscript7=$thisbase/ufs-srweather-app/regional_workflow/scripts
-export dush7=$thisbase/ufs-srweather-app/regional_workflow/ush
-export dlog7=$vptmp/$version/logs
-export dprod7=$vptmp/$version
-export dstmp7=$vstmp/$version
-export dges7=$vptmp/$version/nwges
+
+export dlog7ef=$vptmp/$version/logs
+export dprod7ef=$vptmp/$version
+export dstmp7ef=$vstmp/$version
+export dges7ef=$vptmp/$version/nwges
+
+export dlog7=$fptmp/$version/logs
+export dprod7=$fptmp/$version
+export dstmp7=$fstmp/$version
+export dges7=$fptmp/$version/nwges
 
 alias cdsub7='cd $dsub7'
 alias cdscript7='cd $dscript7'
-alias cdush7='cd $dush7'
 alias cdstmp7='cd $dstmp7'
 alias cdlog7='cd $dlog7'
 alias cdprod7='cd $dprod7'
 alias cdges7='cd $dges7'
 
-export dsub7e=$thisbase/rrfs_na_ens
+alias cdlog7ef='cd $dlog7ef'
+alias cdprod7ef='cd $dprod7ef'
+alias cdges7ef='cd $dges7ef'
+
+export dsub7e=$thisbase/rrfs_na_enkf
 alias cdsub7e='cd $dsub7e'
 
-#----- conus enkf v0.3.8
-version="v0.3.8"
-num=8
-thisbase=${vbase}/$version
-export dsub8=$thisbase/rrfs_conus
-export dscript8=$thisbase/ufs-srweather-app/regional_workflow/scripts
-export dush8=$thisbase/ufs-srweather-app/regional_workflow/ush
-export dlog8=$vptmp/$version/logs
-export dprod8=$vptmp/$version
-export dstmp8=$vstmp/$version
-export dges8=$vptmp/$version/nwges
-export dprod8d=$vptmp/${version}_dogwood
-export dprod8c=$vptmp/${version}_cactus
+export dsub7ef=$thisbase/rrfs_na_enfcst
+alias cdsub7ef='cd $dsub7ef'
 
-alias cdsub8='cd $dsub8'
-alias cdscript8='cd $dscript8'
-alias cdush8='cd $dush8'
-alias cdstmp8='cd $dstmp8'
-alias cdlog8='cd $dlog8'
-alias cdprod8='cd $dprod8'
-alias cdges8='cd $dges8'
-alias cdprod8d='cd $dprod8d'
-alias cdprod8c='cd $dprod8c'
-
-export dsub8e=$thisbase/rrfs_conus_ens
-alias cdsub8e='cd $dsub8e'
-
-export dsub8ef=$thisbase/rrfs_conus_enfcst
-alias cdsub8ef='cd $dsub8ef'
-
-export dsub8m=$thisbase/mirror
-alias cdsub8m='cd $dsub8m'
-
-#----- na v0.3.9
-version="v0.3.9"
-num=3
-thisbase=${vbase}/$version
-export dsub9=$thisbase/rrfs_na
-export dscript9=$thisbase/ufs-srweather-app/regional_workflow/scripts
-export dush9=$thisbase/ufs-srweather-app/regional_workflow/ush
-export dlog9=$vptmp/$version/logs
-export dprod9=$vptmp/$version
-export dstmp9=$vstmp/$version
-export dges9=$vptmp/$version/nwges
-
-alias cdsub9='cd $dsub9'
-alias cdscript9='cd $dscript9'
-alias cdush9='cd $dush9'
-alias cdstmp9='cd $dstmp9'
-alias cdlog9='cd $dlog9'
-alias cdprod9='cd $dprod9'
-alias cdges9='cd $dges9'
-
-export dsub9e=$thisbase/rrfs_na_ens
-alias cdsub9e='cd $dsub9e'
-
-#----- conus enkf v0.4.0
-version="v0.4.0"
-num=0
-thisbase=${vbase}/$version
-export dsub0=$thisbase/rrfs_conus
-export dscript0=$thisbase/ufs-srweather-app/regional_workflow/scripts
-export dush0=$thisbase/ufs-srweather-app/regional_workflow/ush
-export dlog0=$vptmp/$version/logs
-export dprod0=$vptmp/$version
-export dstmp0=$vstmp/$version
-export dges0=$vptmp/$version/nwges
-export dprod0d=$vptmp/${version}_dogwood
-export dprod0c=$vptmp/${version}_cactus
-
-alias cdsub0='cd $dsub0'
-alias cdscript0='cd $dscript0'
-alias cdush0='cd $dush0'
-alias cdstmp0='cd $dstmp0'
-alias cdlog0='cd $dlog0'
-alias cdprod0='cd $dprod0'
-alias cdges0='cd $dges0'
-alias cdprod0d='cd $dprod0d'
-alias cdprod0c='cd $dprod0c'
-
-export dsub0e=$thisbase/rrfs_conus_enkf
-alias cdsub0e='cd $dsub0e'
-
-export dsub0ef=$thisbase/rrfs_conus_enfcst
-alias cdsub0ef='cd $dsub0ef'
-
-export dsub0m=$thisbase/mirror
-alias cdsub0m='cd $dsub0m'
-
-####
-alias cdsubr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro'
-alias cdstmpr='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km_retro/2021111806'
-alias cdlogr='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km_retro.20211118/06'
-alias cdflowr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/ufs-srweather-app/regional_workflow'
-alias cdrrfsr='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/'
-
-export dsubr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/test/rrfs_NA_3km_retro
-export dstmpr=/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km_retro/2021111806
-export dlogr=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km_retro.20211118/06
-export dflowr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro/ufs-srweather-app/regional_workflow
-export drrfsr=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_retro
-
-####
-mydate=20220211
-cyc=03
-alias cdsubd='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1/test/RRFS_NA_3km_dev1'
-alias cdstmpd='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/RRFS_NA_3km_dev1/${mydate}${cyc}'
-alias cdlogd='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/RRFS_NA_3km_dev1.$mydate/${cyc}'
-alias cdflowd='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1/ufs-srweather-app/regional_workflow'
-alias cdrrfsd='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1/'
-
-export dsubd=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1/test/RRFS_NA_3km_dev1
-export dstmpd=/gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km_dev1/$mydate
-export dlogd=/gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/RRFS_NA_3km_dev1.$mydate/$cyc
-export dflowd=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1/ufs-srweather-app/regional_workflow
-export drrfsd=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs_dev1
-
-####
-export dtest=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/test
-
-#alias cdrrfs='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/'
-#alias cdflow='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/ufs-srweather-app/regional_workflow'
-#alias cdstmp='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km'
-#alias cdsub='cd /gpfs/dell6/emc/modeling/noscrub/Shun.Liu/rrfs/test/rrfs_NA_3km'
-#alias cdlog='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km'
-
-alias cdrun='cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/rrfs_NA_3km/2021111806/anal_gsi_spinup'
-alias cdl='cd /gpfs/dell1/ptmp/Shun.Liu/ptmp/com/logs/RRFS_NA_3km/rrfs_NA_3km.20211118/06' 
-
-#### shun fv3lamdax parallel
-export dlamsub=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/fv3lamdax/regional_workflow/rocoto
-export dlamscript=/gpfs/dell2/emc/modeling/noscrub/Shun.Liu/fv3lamdax/regional_workflow/scripts
-export dlamstmp=/gpfs/dell3/stmp/Shun.Liu/fv3lamdax/tmpnwprd
-export dlamlog=/gpfs/dell2/ptmp/Shun.Liu/fv3lamdax/log
-export dlamptmp=/gpfs/dell2/ptmp/Shun.Liu/fv3lamdax
-
-alias lamsub='cd $dlamsub'
-alias lamscript='cd $dlamscript'
-alias lamptmp='cd $dlamptmp'
-alias lamstmp='cd $dlamstmp'
-alias lamlog='cd $dlamlog'
-
-#### shun fv3lamdax parallel
-export dlamsubp=/gpfs/dell2/emc/modeling/noscrub/emc.campara/fv3lamdax/regional_workflow/rocoto
-export dlamscriptp=/gpfs/dell2/emc/modeling/noscrub/emc.campara/fv3lamdax/regional_workflow/scripts
-export dlamstmpp=/gpfs/dell3/stmp/emc.campara/fv3lamdax/tmpnwprd
-export dlamlogp=/gpfs/dell2/ptmp/emc.campara/fv3lamdax/log
-export dlamptmpp=/gpfs/dell2/ptmp/emc.campara/fv3lamdax
-
-alias lamsubp='cd $dlamsubp'
-alias lamscriptp='cd $dlamscriptp'
-alias lamptmpp='cd $dlamptmpp'
-alias lamstmpp='cd $dlamstmpp'
-alias lamlogp='cd $dlamlogp'
-
-export demcguess=/gpfs/dell2/ptmp/emc.campara/fv3lamdax/fv3lamdax.20211512/12/guess.tm06
-alias emcguess='cd $demcguess'
+export dsub7efm=$thisbase/rrfs_na_enfcst_mphyscm
+alias cdsub7efm='cd $dsub7efm'
 
 #################### HERA path
 #################### HERA path
