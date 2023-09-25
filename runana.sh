@@ -1,71 +1,56 @@
-#!/bin/bash -l
-#BSUB -P RRFS-T2O
-#BSUB -eo test.err
-#BSUB -oo test.out
-#BSUB -J fv3.c768
-#BSUB -W 00:10
-#BSUB -q "dev2"
-#BSUB -n 320
-#BSUB -R span[ptile=20]
-#BSUB -R affinity[core(2):distribute=balance]
-#
-set -x
+#!/bin/bash
+#PBS -A RRFS-DEV
+#PBS -q pridev
+#PBS -l walltime=01:45:00
+#PBS -l select=60:mpiprocs=128:ncpus=128
+#PBS -l place=vscatter:exclhost
+#PBS -N rrfs_a_run_fcst_spinup
+#PBS -j oe -o test.log
 
-. /usrx/local/prod/lmod/lmod/init/sh
+
+#/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/testD/ufs-srweather-app/regional_workflow/ush/load_modules_run_task.sh run_anal_gsi /lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/testD/ufs-srweather-app/regional_workflow/jobs/JREGIONAL_RUN_ANAL
+
+source /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.6.3/ufs-srweather-app/env/build_wcoss2_intel.env
+
 
 ulimit -s unlimited
 ulimit -a
 
-export HOMEfv3=/gpfs/dell6/emc/modeling/noscrub/emc.campara/fv3lamda/regional_workflow
-export PARMfv3=$HOMEfv3/parm
-export EXECfv3=$HOMEfv3/exec
-export USHfv3=$HOMEfv3/ush
-export UTILfv3=$HOMEfv3/util/ush
-export LD_LIBRARY_PATH="/gpfs/dell6/emc/modeling/noscrub/Eric.Rogers/fv3lam_for_dellp3.5/sorc/regional_forecast.fd/ccpp/lib/${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-
 set -x -u -e
+echo "start time:"
 date
 
-. ${HOMEfv3}/rocoto/machine-setup.sh
-export machine=wcoss_dell_p3.5
+#rundir=/lfs/h2/emc/ptmp/emc.lam/Shun.Liu/anal_conv_gsi_spinup
+rundir=/lfs/h2/emc/ptmp/emc.lam/Shun.Liu/anal_conv_dbz_gsi_spinup_all
 
-if [ "$machine" = "wcoss_dell_p3" ] ; then
-  . /usrx/local/prod/lmod/lmod/init/sh
-elif [ "$machine" = "wcoss_dell_p3.5" ] ; then
-  . /usrx/local/prod/lmod/lmod/init/sh
-elif [ "$machine" = "wcoss_cray" ] ; then
-  . /opt/modules/default/init/sh
-elif [ "$machine" = "hera" ] ; then
-  . /apps/lmod/lmod/init/sh
-elif [ "$machine" = "jet" ] ; then
-  . /apps/lmod/lmod/init/sh
-fi
+cd $rundir
 
-jobpre=regional_firstgue
-module use ${HOMEfv3}/modulefiles/wcoss_dell_p3.5
-jobpre=$(echo ${job} | cut -c1-17)
-if [ "${jobpre}" = "regional_forecast" ]; then
-  module load fv3
-elif [ "${jobpre}" = "regional_bufrpost" ]; then
-  module load bufr
-elif [ "${jobpre}" = "regional_post_con" ]; then
-  module load post
-elif [ "${jobpre}" = "regional_firstgue" ]; then
-  module load chgres_cube
-elif [ "${jobpre}" = "regional_make_bc_" ]; then
-  module load chgres_cube
-elif [ "${jobpre}" = "regional_postgoes" ]; then
-  module load post
-else
-  module load regional
-fi
-module list
+rm -f pe0*
+rm -f obs_input*
+rm -f stdout
 
-exec "$@"
+#cp ./bk/* .
 
-#cd /gpfs/dell5/ptmp/Shun.Liu/fv3lamda/tmpnwprd/regional_firstguess_2021081112
-cd /gpfs/dell1/ptmp/Shun.Liu/stmp/tmpnwprd/testdomain_rrfs_conus_3km/2021081106/anal_gsi_spinup
-#EXEC=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/fv3lamda/regional_workflow/exec/regional_chgres_cube.x
-EXEC=/gpfs/dell6/emc/modeling/noscrub/Shun.Liu/fv3lamda/regional_workflow/exec/regional_gsi.x
+#EXEC=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.6.3/ufs-srweather-app/bin/gsi.x
+EXEC=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.6.3/ufs-srweather-app/src/gsi/build/src/gsi/gsi.x
 
-mpirun $EXEC <gsiparm.anl > outtest 2> errtest
+APRUN="mpiexec -n 480 -ppn 8 --cpu-bind core --depth 16 --label"
+export FI_OFI_RXM_SAR_LIMIT=3145728
+export OMP_STACKSIZE=500M
+export OMP_NUM_THREADS=16
+#export OMP_PROC_BIND=close
+#export OMP_PLACES=threads
+
+$APRUN $EXEC <gsiparm.anl > stdout 2> stderr
+echo "end time:"
+date
+exit
+
+cd /lfs/h2/emc/lam/save/emc.lam/Shun.Liu/code/rrfs_debug_tool
+expdir=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/test/gsi/exp8
+mkdir $expdir
+
+sleep 30
+cp test.log $expdir
+cp /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/anal_conv_gsi_spinup/stdout $expdir
+
