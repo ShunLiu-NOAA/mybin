@@ -277,6 +277,44 @@ alias cdsub7ef='cd $dsub7ef'
 export dsub7efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub7efm='cd $dsub7efm'
 
+#----- na v0.6.9
+version="v0.6.9"
+num=1
+thisbase=${vbase}/$version
+export dsub9=$thisbase/rrfs_na
+export dscript9=$thisbase/ufs-srweather-app/regional_workflow/scripts
+
+export dlog9ef=$vptmp/$version/logs
+export dprod9ef=$vptmp/$version
+export dstmp9ef=$vstmp/$version
+export dges9ef=$vptmp/$version/nwges
+
+export dlog9=$fptmp/$version/logs
+export dprod9=$fptmp/$version
+export dstmp9=$fstmp/$version
+export dges9=$fptmp/$version/nwges
+
+alias cdsub9='cd $dsub9'
+alias cdscript9='cd $dscript9'
+alias cdstmp9='cd $dstmp9'
+alias cdlog9='cd $dlog9'
+alias cdprod9='cd $dprod9'
+alias cdges9='cd $dges9'
+
+alias cdlog9ef='cd $dlog9ef'
+alias cdprod9ef='cd $dprod9ef'
+alias cdges9ef='cd $dges9ef'
+
+export dsub9e=$thisbase/rrfs_na_enkf
+alias cdsub9e='cd $dsub9e'
+
+export dsub9ef=$thisbase/rrfs_na_enfcst
+alias cdsub9ef='cd $dsub9ef'
+
+export dsub9efm=$thisbase/rrfs_na_enfcst_mphyscm
+alias cdsub9efm='cd $dsub9efm'
+
+
 #################### HERA path
 #################### HERA path
 mydate=20211208
