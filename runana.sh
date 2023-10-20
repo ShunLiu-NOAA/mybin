@@ -22,7 +22,7 @@ date
 
 #rundir=/lfs/h2/emc/ptmp/emc.lam/Shun.Liu/anal_conv_gsi_spinup
 rundir=/lfs/h2/emc/ptmp/emc.lam/Shun.Liu/anal_conv_dbz_gsi_spinup_all
-rundir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v0.6.9/2023092418/anal_conv_dbz_gsi
+rundir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v0.6.9/2023100207/anal_conv_dbz_gsi_spinup
 
 cd $rundir
 
@@ -35,14 +35,22 @@ rm -f fv3_phyvars
 rm -f fv3_tracer
 rm -f fv3_sfcdata
 
-cp ./background/* .
+bkpath=./background
+
+cp  ${bkpath}/fv_core.res.tile1.nc     fv3_dynvars
+cp  ${bkpath}/fv_tracer.res.tile1.nc   fv3_tracer
+cp  ${bkpath}/sfc_data.nc              fv3_sfcdata
+cp  ${bkpath}/phy_data.nc             fv3_phyvars
+cp  ${bkpath}/fv3_grid_spec      fv3_grid_spec
+
+#cp ./background/* .
 
 EXEC=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.6.9/ufs-srweather-app/bin/gsi.x
 #EXEC=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.6.9/ufs-srweather-app/src/gsi/build/src/gsi/gsi.x
 
-#APRUN="mpiexec -n 360 -ppn 4 --cpu-bind core --depth 16 --label"
 #APRUN="mpiexec -n 480 -ppn 8 --cpu-bind core --depth 16"
-APRUN="mpiexec -n 360 -ppn 4 --cpu-bind core --depth 32"
+#APRUN="mpiexec -n 360 -ppn 4 --cpu-bind core --depth 16 --label"
+APRUN="mpiexec -n 480 -ppn 4 --cpu-bind core --depth 16"
 export FI_OFI_RXM_SAR_LIMIT=3145728
 export OMP_STACKSIZE=500M
 export OMP_NUM_THREADS=16
