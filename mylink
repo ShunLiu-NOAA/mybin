@@ -95,6 +95,9 @@ alias radarsub='cd $dradarsub'
 alias radarj='cd $dradarj'
 alias radars='cd $dradars'
 
+export dobs=/lfs/h2/emc/obsproc/noscrub/ashley.stanfield/Data.KEEP/CRON/rrfs/com/obsproc/v1.0
+alias cdobs='cd $dobs'
+
 ######################################
 export drrfsdebug=$savecode/rrfs_debug_tool
 alias rrfsdebug='cd $drrfsdebug' 
@@ -129,8 +132,8 @@ alias cdsub2ef='cd $dsub2ef'
 export dsub2efm=$thisbase/rrfs_conus_enfcst_mphysc
 alias cdsub2efm='cd $dsub2efm'
 
-#----- na v0.6.3
-version="v0.6.3"
+#----- na v0.7.3
+version="v0.7.3"
 num=3
 thisbase=${vbase}/$version
 export dsub3=$thisbase/rrfs_na
