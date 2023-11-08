@@ -1,0 +1,34 @@
+
+ver1=v0.6.1
+verpath1=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/${ver1}
+
+ver2=v0.7.3
+verpath2=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/${ver2}
+
+files="rb rs rchk mautoboot.sh"
+for ifile in $files
+do
+  echo $ifile
+  cp $verpath1/rrfs_na/$ifile $verpath2/rrfs_na/
+  cp $verpath1/rrfs_na_enkf/$ifile $verpath2/rrfs_na_enkf/
+  cp $verpath1/rrfs_na_enfcst/$ifile $verpath2/rrfs_na_enfcst/
+done
+
+exit
+
+cp $ver1/rrfs_na/rb $ver2/rrfs_na/
+cp $ver1/rrfs_na_enkf/rb $ver2/rrfs_enkf/
+cp $ver1/rrfs_an_enfcst/rb $ver2/rrfs_enfcst/
+
+cp $ver1/rrfs_na/rs $ver2/rrfs_na/
+cp $ver1/rrfs_na_enkf/rs $ver2/rrfs_enkf/
+cp $ver1/rrfs_an_enfcst/rs $ver2/rrfs_enfcst/
+
+cp $ver1/rrfs_na/rchk $ver2/rrfs_na/
+cp $ver1/rrfs_na_enkf/rchk $ver2/rrfs_enkf/
+cp $ver1/rrfs_an_enfcst/rchk $ver2/rrfs_enfcst/
+
+cp $ver1/rrfs_na/mautoboot.sh $ver2/rrfs_na/
+cp $ver1/rrfs_na_enkf/mautoboot.sh $ver2/rrfs_enkf/
+cp $ver1/rrfs_an_enfcst/mautoboot.sh $ver2/rrfs_enfcst/
+
