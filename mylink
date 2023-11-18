@@ -132,12 +132,56 @@ alias cdsub2ef='cd $dsub2ef'
 export dsub2efm=$thisbase/rrfs_conus_enfcst_mphysc
 alias cdsub2efm='cd $dsub2efm'
 
+#----- na v0.7.2 
+version="v0.7.2"
+num=2 
+thisbase=${vbase}/$version
+export d2=$thisbase
+export dsub2=$thisbase/rrfs_na
+export dscript2=$thisbase/rrfs-workflow/scripts
+export dush2=$thisbase/rrfs-workflow/ush
+
+export dlog2ef=$vptmp/$version/logs
+export dprod2ef=$vptmp/$version
+export dstmp2ef=$vstmp/$version
+export dges2ef=$vptmp/$version/nwges
+
+export dlog2=$fptmp/$version/logs
+export dprod2=$fptmp/$version
+export dstmp2=$fstmp/$version
+export dges2=$fptmp/$version/nwges
+
+alias cd2='cd $d2'
+alias cdsub2='cd $dsub2'
+alias cdscript2='cd $dscript2'
+alias cdush2='cd $dush2'
+alias cdstmp2='cd $dstmp2'
+alias cdlog2='cd $dlog2'
+alias cdprod2='cd $dprod2'
+alias cdges2='cd $dges2'
+
+alias cdlog2ef='cd $dlog2ef'
+alias cdprod2ef='cd $dprod2ef'
+alias cdges2ef='cd $dges2ef'
+
+export dsub2e=$thisbase/rrfs_na_enkf
+alias cdsub2e='cd $dsub3e'
+
+export dsub2ef=$thisbase/rrfs_na_enfcst
+alias cdsub2ef='cd $dsub2ef'
+
+export dsub2efm=$thisbase/rrfs_na_enfcst_mphyscm
+alias cdsub2efm='cd $dsub2efm'
+
+
 #----- na v0.7.3
 version="v0.7.3"
 num=3
 thisbase=${vbase}/$version
+export d3=$thisbase
 export dsub3=$thisbase/rrfs_na
-export dscript3=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dscript3=$thisbase/rrfs-workflow/scripts
+export dush3=$thisbase/rrfs-workflow/ush
 
 export dlog3ef=$vptmp/$version/logs
 export dprod3ef=$vptmp/$version
@@ -149,8 +193,10 @@ export dprod3=$fptmp/$version
 export dstmp3=$fstmp/$version
 export dges3=$fptmp/$version/nwges
 
+alias cd3='cd $d3'
 alias cdsub3='cd $dsub3'
 alias cdscript3='cd $dscript3'
+alias cdush3='cd $dush3'
 alias cdstmp3='cd $dstmp3'
 alias cdlog3='cd $dlog3'
 alias cdprod3='cd $dprod3'
