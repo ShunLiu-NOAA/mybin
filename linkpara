@@ -15,7 +15,7 @@ if [ "$primary" == "$mysite" ]; then
   echo "this prod machine"
 else
   machine=dev
-  echo "this devlop machine"
+  echo "this develop machine"
 fi
 
 #link to t2o dir
@@ -25,7 +25,8 @@ rm -f /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 rm -f /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/na
 
 if [ "$machine" == "prod" ]; then
-ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+# ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/na
 else
 ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
