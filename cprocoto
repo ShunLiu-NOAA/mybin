@@ -1,8 +1,8 @@
 
-ver1=v0.6.1
+ver1=v0.7.3
 verpath1=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/${ver1}
 
-ver2=v0.7.2
+ver2=v0.7.5
 verpath2=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/${ver2}
 
 files="rb rs rchk mautoboot.sh"
