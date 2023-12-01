@@ -103,6 +103,8 @@ export drrfsdebug=$savecode/rrfs_debug_tool
 alias rrfsdebug='cd $drrfsdebug' 
 ######################################
 
+alias cdrrfs='cd ${vbase}'
+
 #----- conus enkf v0.5.2
 version="v0.5.2"
 num=1
@@ -172,6 +174,48 @@ alias cdsub2ef='cd $dsub2ef'
 
 export dsub2efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub2efm='cd $dsub2efm'
+
+#----- na v0.7.4 
+version="v0.7.4"
+num=4  
+thisbase=${vbase}/$version
+export d4=$thisbase
+export dsub4=$thisbase/rrfs_na
+export dscript4=$thisbase/rrfs-workflow/scripts
+export dush4=$thisbase/rrfs-workflow/ush
+
+export dlog4ef=$vptmp/$version/logs
+export dprod4ef=$vptmp/$version
+export dstmp4ef=$vstmp/$version
+export dges4ef=$vptmp/$version/nwges
+
+export dlog4=$vptmp/$version/logs
+export dprod4=$vptmp/$version
+export dstmp4=$vstmp/$version
+export dges4=$vptmp/$version/nwges
+
+alias cd4='cd $d4'
+alias cdsub4='cd $dsub4'
+alias cdscript4='cd $dscript4'
+alias cdush4='cd $dush4'
+alias cdstmp4='cd $dstmp4'
+alias cdlog4='cd $dlog4'
+alias cdprod4='cd $dprod4'
+alias cdges4='cd $dges4'
+
+alias cdlog4ef='cd $dlog4ef'
+alias cdprod4ef='cd $dprod4ef'
+alias cdges4ef='cd $dges4ef'
+
+export dsub4e=$thisbase/rrfs_na_enkf
+alias cdsub4e='cd $dsub4e'
+
+export dsub4ef=$thisbase/rrfs_na_enfcst
+alias cdsub4ef='cd $dsub4ef'
+
+export dsub4efm=$thisbase/rrfs_na_enfcst_mphyscm
+alias cdsub4efm='cd $dsub4efm'
+
 
 
 #----- na v0.7.3
