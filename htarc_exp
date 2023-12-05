@@ -9,16 +9,16 @@ module load prod_util/2.0.14
 
 set -x
 
-currentdate=2023052501
+currentdate=2022072100
 mydate=${currentdate:0:8}
 echo $mydate
 hour=${currentdate:8:2}
 echo $hour
 
-ARCHIVEDIR=/NCEPDEV/emc-meso/1year/emc.lam/exp/c3v52
+ARCHIVEDIR=/NCEPDEV/emc-meso/1year/emc.lam/exp/n3v72
 #archive_dir=$ARCHIVEDIR/rrfs.${mydate}/$hour
 archive_dir=$ARCHIVEDIR/rrfs.${mydate}
-proddir=/lfs/h2/emc/ptmp/emc.lam/rrfs/v0.5.2/prod/rrfs.${mydate}/$hour
+proddir=/lfs/h2/emc/ptmp/emc.lam/rrfs/v0.7.2/prod/rrfs.${mydate}/$hour
 
 echo $archive_dir
 
@@ -38,6 +38,11 @@ echo $archive_dir
 
 hsi mkdir -p $archive_dir
 htar -chvf $archive_dir/rrfs.t${hour}z.prslev.conus_3km.grib2.tar rrfs.t${hour}z.prslev.f*.conus_3km.grib2
+
+cd ..
+htar -chvf $archive_dir/rrfs.t${hour}z.fit.tar rrfs.t${hour}z.fit*.tm00
+htar -chvf $archive_dir/diag.t${hour}z.tar diag.*.nc4
+htar -chvf $archive_dir/stdout.t${hour}z.tar stdout.*
 
 exit
 
