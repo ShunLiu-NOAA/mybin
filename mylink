@@ -301,7 +301,7 @@ version="v0.7.5"
 num=1
 thisbase=${vbase}/$version
 export dsub5=$thisbase/rrfs_na
-export dscript5=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dscript5=$thisbase/rrfs-workflow/scripts
 
 export dlog5ef=$vptmp/$version/logs
 export dprod5ef=$vptmp/$version
