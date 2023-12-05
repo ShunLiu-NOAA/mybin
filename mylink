@@ -481,6 +481,7 @@ alias uprchk='cp rchk /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util
 alias cputile='cp /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util/ens* .'
 alias uprbe='cp rb /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util/ens'
 alias uprchke='cp rchk /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util/ens'
+alias hpcname='cat /etc/cluster_name'
 
 alias linkgesn='ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.3/nwges /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para/rrfs_a'
 alias lingesc='ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.2/nwges /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para/rrfs_a'
