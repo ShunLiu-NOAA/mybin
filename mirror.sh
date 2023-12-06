@@ -3,8 +3,8 @@
 #PBS -A RRFS-DEV
 #PBS -q dev_transfer
 #PBS -l select=1:ncpus=1:mem=8G
-#PBS -l walltime=1:02:00
-#PBS -j oe -o /lfs/h2/emc/ptmp/emc.lam/mirror/rrfs_mirror.out
+#PBS -l walltime=3:02:00
+#PBS -j oe -o /lfs/h2/emc/ptmp/emc.lam/mirror/rrfs_mirror_THISDATE.out
 #PBS -N RRFS_mirror
 
 module purge
