@@ -334,11 +334,11 @@ export dsub5efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub5efm='cd $dsub5efm'
 
 #----- na v0.6.7
-version="v0.6.7"
+version="v0.7.7"
 num=1
 thisbase=${vbase}/$version
 export dsub7=$thisbase/rrfs_na
-export dscript7=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dscript7=$thisbase/rrfs-workflow/scripts
 
 export dlog7ef=$vptmp/$version/logs
 export dprod7ef=$vptmp/$version
