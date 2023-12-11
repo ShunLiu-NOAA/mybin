@@ -333,7 +333,45 @@ alias cdsub5ef='cd $dsub5ef'
 export dsub5efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub5efm='cd $dsub5efm'
 
-#----- na v0.6.7
+#----- na v0.7.6
+version="v0.7.6"
+num=1
+thisbase=${vbase}/$version
+export dsub6=$thisbase/rrfs_na
+export dscript6=$thisbase/rrfs-workflow/scripts
+
+export dlog6ef=$vptmp/$version/logs
+export dprod6ef=$vptmp/$version
+export dstmp6ef=$vstmp/$version
+export dges6ef=$vptmp/$version/nwges
+
+export dlog6=$fptmp/$version/logs
+export dprod6=$fptmp/$version
+export dstmp6=$fstmp/$version
+export dges6=$fptmp/$version/nwges
+
+alias cdsub6='cd $dsub6'
+alias cdscript6='cd $dscript6'
+alias cdstmp6='cd $dstmp6'
+alias cdlog6='cd $dlog6'
+alias cdprod6='cd $dprod6'
+alias cdges6='cd $dges6'
+
+alias cdlog6ef='cd $dlog6ef'
+alias cdprod6ef='cd $dprod6ef'
+alias cdges6ef='cd $dges6ef'
+
+export dsub6e=$thisbase/rrfs_na_enkf
+alias cdsub6e='cd $dsub6e'
+
+export dsub6ef=$thisbase/rrfs_na_enfcst
+alias cdsub6ef='cd $dsub6ef'
+
+export dsub6efm=$thisbase/rrfs_na_enfcst_mphyscm
+alias cdsub6efm='cd $dsub6efm'
+
+
+#----- na v0.7.7
 version="v0.7.7"
 num=1
 thisbase=${vbase}/$version
