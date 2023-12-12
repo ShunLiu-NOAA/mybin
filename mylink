@@ -408,12 +408,12 @@ alias cdsub7ef='cd $dsub7ef'
 export dsub7efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub7efm='cd $dsub7efm'
 
-#----- na v0.6.9
-version="v0.6.9"
+#----- na v0.7.9
+version="v0.7.9"
 num=1
 thisbase=${vbase}/$version
 export dsub9=$thisbase/rrfs_na
-export dscript9=$thisbase/ufs-srweather-app/regional_workflow/scripts
+export dscript7=$thisbase/rrfs-workflow/scripts
 
 export dlog9ef=$vptmp/$version/logs
 export dprod9ef=$vptmp/$version
