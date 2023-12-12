@@ -1,17 +1,16 @@
 
-ver1=v0.7.5
-verpath1=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/${ver1}
+verpath1=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util
 
-ver2=v0.7.7
+ver2=v0.7.9
 verpath2=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/${ver2}
 
 files="rb rs rchk mautoboot.sh"
 for ifile in $files
 do
   echo $ifile
-  cp $verpath1/rrfs_na/$ifile $verpath2/rrfs_na/
-  cp $verpath1/rrfs_na_enkf/$ifile $verpath2/rrfs_na_enkf/
-  cp $verpath1/rrfs_na_enfcst/$ifile $verpath2/rrfs_na_enfcst/
+  cp $verpath1/det/$ifile $verpath2/rrfs_na/
+  cp $verpath1/enkf/$ifile $verpath2/rrfs_na_enkf/
+  cp $verpath1/enfcst/$ifile $verpath2/rrfs_na_enfcst/
 done
 
 exit
