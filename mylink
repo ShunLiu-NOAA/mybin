@@ -413,7 +413,7 @@ version="v0.7.9"
 num=1
 thisbase=${vbase}/$version
 export dsub9=$thisbase/rrfs_na
-export dscript7=$thisbase/rrfs-workflow/scripts
+export dscript9=$thisbase/rrfs-workflow/scripts
 
 export dlog9ef=$vptmp/$version/logs
 export dprod9ef=$vptmp/$version
