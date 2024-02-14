@@ -5,6 +5,7 @@
 
 conus_ver=v0.5.2
 na_ver=v0.7.9
+exp_ver=v0.8.3
 
 mysite=$(cat /etc/cluster_name)
 primary=$(head -1 /lfs/h1/ops/prod/config/prodmachinefile | cut -d ":" -f2-)
@@ -30,6 +31,7 @@ ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/na
 else
 ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${exp_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/exp
 fi
 
 exit
