@@ -1,7 +1,7 @@
 
 verpath1=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util
 
-ver2=v0.8.1
+ver2=v0.8.3
 verpath2=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/${ver2}
 
 files="rb rs rchk mautoboot.sh"
