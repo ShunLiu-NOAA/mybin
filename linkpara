@@ -34,4 +34,6 @@ ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${exp_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/exp
 fi
 
+ln -sf /lfs/h2/emc/lam/noscrub/emc.lam/obsproc.DATA/CRON/rrfs_e/com/obsproc/v1.0/* /lfs/h2/emc/lam/noscrub/emc.lam/obsproc.DATA/CRON/rrfs/com/obsproc/v1.0
+
 exit
