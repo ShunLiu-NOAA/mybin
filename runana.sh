@@ -31,8 +31,9 @@ set -x -u -e
 echo "start time:"
 date
 
-rundir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v0.7.9/2024022200/anal_conv_dbz_gsi
-rundir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v0.7.9/2024022200/ensmean/observer_gsi
+rundir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v0.7.9/2024022700/anal_conv_dbz_gsi
+#rundir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v0.7.9/2024022200/ensmean/observer_gsi
+
 
 cd $rundir
 
@@ -53,7 +54,7 @@ bkpath=./background
 #cp  ${bkpath}/phy_data.nc             fv3_phyvars
 #cp  ${bkpath}/fv3_grid_spec      fv3_grid_spec
 
-#cp ./background/* .
+cp ./background/* .
 
 EXEC=./gsi.x
 #EXEC=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.6.9/ufs-srweather-app/src/gsi/build/src/gsi/gsi.x
