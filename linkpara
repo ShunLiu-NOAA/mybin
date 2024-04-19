@@ -4,8 +4,8 @@
 #ln -sf  /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8_cactus /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.8
 
 conus_ver=v0.5.2
-na_ver=v0.8.9
-exp_ver=v0.8.9
+na_ver=v0.9.1
+exp_ver=v0.9.1
 
 mysite=$(cat /etc/cluster_name)
 primary=$(head -1 /lfs/h1/ops/prod/config/prodmachinefile | cut -d ":" -f2-)
