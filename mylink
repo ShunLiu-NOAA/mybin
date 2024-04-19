@@ -259,8 +259,8 @@ alias cdsub3ef='cd $dsub3ef'
 export dsub3efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub3efm='cd $dsub3efm'
 
-#----- na v0.8.1
-version="v0.8.1"
+#----- na v0.9.1
+version="v0.9.1"
 num=1
 thisbase=${vbase}/$version
 export dsub1=$thisbase/rrfs_na
