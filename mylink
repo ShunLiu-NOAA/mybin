@@ -148,10 +148,10 @@ export dprod2ef=$vptmp/$version
 export dstmp2ef=$vstmp/$version
 export dges2ef=$vptmp/$version/nwges
 
-export dlog2=$vptmp/$version/logs
-export dprod2=$vptmp/$version
-export dstmp2=$vstmp/$version
-export dges2=$vptmp/$version/nwges
+export dlog2=$fptmp/$version/logs
+export dprod2=$fptmp/$version
+export dstmp2=$fstmp/$version
+export dges2=$fptmp/$version/nwges
 
 alias cd2='cd $d2'
 alias cdsub2='cd $dsub2'
