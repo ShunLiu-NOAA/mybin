@@ -175,9 +175,9 @@ alias cdsub2ef='cd $dsub2ef'
 export dsub2efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub2efm='cd $dsub2efm'
 
-#----- na v0.7.4 
-version="v0.7.4"
-num=4  
+#----- na v0.9.4
+version="v0.9.4"
+num=4
 thisbase=${vbase}/$version
 export d4=$thisbase
 export dsub4=$thisbase/rrfs_na
@@ -189,10 +189,10 @@ export dprod4ef=$vptmp/$version
 export dstmp4ef=$vstmp/$version
 export dges4ef=$vptmp/$version/nwges
 
-export dlog4=$vptmp/$version/logs
-export dprod4=$vptmp/$version
-export dstmp4=$vstmp/$version
-export dges4=$vptmp/$version/nwges
+export dlog4=$fptmp/$version/logs
+export dprod4=$fptmp/$version
+export dstmp4=$fstmp/$version
+export dges4=$fptmp/$version/nwges
 
 alias cd4='cd $d4'
 alias cdsub4='cd $dsub4'
@@ -215,7 +215,6 @@ alias cdsub4ef='cd $dsub4ef'
 
 export dsub4efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub4efm='cd $dsub4efm'
-
 
 
 #----- na v0.9.3
