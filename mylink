@@ -339,15 +339,28 @@ thisbase=${vbase}/$version
 export dsub6=$thisbase/rrfs_na
 export dscript6=$thisbase/rrfs-workflow/scripts
 
-export dlog6ef=$vptmp/$version/logs
-export dprod6ef=$vptmp/$version
-export dstmp6ef=$vstmp/$version
-export dges6ef=$vptmp/$version/nwges
+rptmp=/lfs/h3/emc/rrfstemp/ptmp/emc.lam/rrfs
+rstmp=/lfs/h3/emc/rrfstemp/stmp/emc.lam/rrfs
 
-export dlog6=$fptmp/$version/logs
-export dprod6=$fptmp/$version
-export dstmp6=$fstmp/$version
-export dges6=$fptmp/$version/nwges
+export dlog6ef=$rptmp/$version/logs
+export dprod6ef=$rptmp/$version
+export dstmp6ef=$rstmp/$version
+export dges6ef=$rptmp/$version/nwges
+
+export dlog6=$rptmp/$version/logs
+export dprod6=$rptmp/$version
+export dstmp6=$rstmp/$version
+export dges6=$rptmp/$version/nwges
+
+#export dlog6ef=$vptmp/$version/logs
+#export dprod6ef=$vptmp/$version
+#export dstmp6ef=$vstmp/$version
+#export dges6ef=$vptmp/$version/nwges
+
+#export dlog6=$fptmp/$version/logs
+#export dprod6=$fptmp/$version
+#export dstmp6=$fstmp/$version
+#export dges6=$fptmp/$version/nwges
 
 alias cdsub6='cd $dsub6'
 alias cdscript6='cd $dscript6'
@@ -510,6 +523,7 @@ export dbenr=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/benchmark/rundir/anal_conv
 alias cdbenr='cd $dbenr'
 
 
+alias rrfsdisk='cd /lfs/h3/emc/rrfstemp'
 alias listdisk='/usr/local/bin/lsquota'
 alias pqq='python /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/qstat-json.py'
 alias cputil='cp /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/workflow_util/* .'
