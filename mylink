@@ -437,7 +437,7 @@ export dprod8=$fptmp/$version
 export dstmp8=$fstmp/$version
 export dges8=$fptmp/$version/nwges
 
-alias cdsub8='cd $dsub9'
+alias cdsub8='cd $dsub8'
 alias cdscript8='cd $dscript8'
 alias cdstmp8='cd $dstmp8'
 alias cdlog8='cd $dlog8'
