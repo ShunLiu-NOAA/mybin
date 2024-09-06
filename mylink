@@ -420,6 +420,40 @@ alias cdsub7ef='cd $dsub7ef'
 export dsub7efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub7efm='cd $dsub7efm'
 
+#----- na v0.9.8
+version="v0.9.8"
+num=1
+thisbase=${vbase}/$version
+export dsub8=$thisbase/rrfs_na
+export dscript8=$thisbase/rrfs-workflow/scripts
+
+export dlog8ef=$vptmp/$version/logs
+export dprod8ef=$vptmp/$version
+export dstmp8ef=$vstmp/$version
+export dges8ef=$vptmp/$version/nwges
+
+export dlog8=$fptmp/$version/logs
+export dprod8=$fptmp/$version
+export dstmp8=$fstmp/$version
+export dges8=$fptmp/$version/nwges
+
+alias cdsub8='cd $dsub9'
+alias cdscript8='cd $dscript8'
+alias cdstmp8='cd $dstmp8'
+alias cdlog8='cd $dlog8'
+alias cdprod8='cd $dprod8'
+alias cdges8='cd $dges8'
+
+alias cdlog8ef='cd $dlog8ef'
+alias cdprod8ef='cd $dprod8ef'
+alias cdges8ef='cd $dges8ef'
+
+export dsub8e=$thisbase/rrfs_na_enkf
+alias cdsub8e='cd $dsub8e'
+
+export dsub8ef=$thisbase/rrfs_na_enfcst
+alias cdsub8ef='cd $dsub8ef'
+
 #----- na v0.7.9
 version="v0.7.9"
 num=1
