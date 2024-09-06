@@ -1,0 +1,4 @@
+set -x
+winhome=/home/people/emc/www/htdocs/mmb/wx22hl/winhome/hwt
+scp $1 wx22hl@emcrzdm.ncep.noaa.gov:$winhome
+
