@@ -16,14 +16,18 @@ module load wgrib2/2.0.8_wmo
 
 #set -x
 
-cyc=00
-cd /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.9.6/prod/rrfs.20220202/$cyc
+#ncyc='00 06 12 18'
+ncyc='00'
+for cyc in $ncyc
+do
+
+cd /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.9.7/prod/rrfs.20240519/$cyc
 
 mkdir tmp
 mkdir tmp1
 mkdir tmp_orig
 cd tmp
-for fhr in $(seq -f "%02g" 0 60)
+for fhr in $(seq -f "%02g" 00 60)
 do 
   echo $fhr
   cp ../rrfs.t${cyc}z.prslev.f0${fhr}.conus.grib2 rrfs.t${cyc}z.prslev.f0${fhr}.conus_bad.grib2
@@ -31,6 +35,8 @@ do
   wgrib2 rrfs.t${cyc}z.prslev.f0${fhr}.conus_bad.grib2 -match ave -not MASSDEN -grib rrfs_conus_piece1_f0${fhr}.grib2
   wgrib2 rrfs.t${cyc}z.prslev.f0${fhr}.conus_bad.grib2 -not ave -grib rrfs_conus_piece2_f0${fhr}.grib2
   cat rrfs_conus_piece1_f0${fhr}.grib2 rrfs_conus_piece2_f0${fhr}.grib2 > ../rrfs.t${cyc}z.prslev.f0${fhr}.conus.grib2
+done
+
 done
 
 exit
