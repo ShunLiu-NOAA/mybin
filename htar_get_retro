@@ -6,15 +6,19 @@
 #PBS -j oe -o /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/get_retro.log
 set -x
 
+mkdir -p /lfs/h2/emc/ptmp/emc.lam/Shun.Liu
 cd /lfs/h2/emc/ptmp/emc.lam/Shun.Liu
-mkdir 03
-cd 03
+cd /lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v0.9.7
 
-ver=v0.9.6
+ver=v0.9.7
 
 #for ihh in $(seq -f "%03g" 0 12)
-for ihh in {12..21..3}
-do
+#for ihh in {12..21..3}
+#for ihh in {12..21..3}
+#do
 #htar xf /NCEPDEV/emc-meso/2year/emc.lam/rrfs_retro/${ver}/2024/05/07/grib2_ctrl_2024050703.tar ./rrfs.t03z.prslev.f${ihh}.conus.grib2
-htar xf /NCEPDEV/emc-meso/2year/emc.lam/rrfs_retro/${ver}/2024/05/07/grib2_ctrl_20240507${ihh}.tar
-done
+ihh=06
+htar xf /NCEPDEV/emc-meso/2year/emc.lam/rrfs_retro/${ver}/2024/05/08/grib2_ctrl_20240508${ihh}.tar
+ihh=12
+htar xf /NCEPDEV/emc-meso/2year/emc.lam/rrfs_retro/${ver}/2024/05/08/grib2_ctrl_20240508${ihh}.tar
+#done
