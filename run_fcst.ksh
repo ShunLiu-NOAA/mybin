@@ -1,13 +1,13 @@
 #! /bin/sh
 #PBS -A RRFS-DEV
-#PBS -q devmax
+#PBS -q pridev
 #PBS -l select=52:mpiprocs=64:ompthreads=2:ncpus=128
 #PBS -l walltime=02:30:00
-#PBS -N n3v85_run_fcst_prod
+#PBS -N TEST_run_fcst_prod
 #PBS -j oe -o run_fcst_prod_n3v85_2024030421.log
 #PBS -l place=excl
 
-SRCDIR=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.9.7/rrfs-workflow
+SRCDIR=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.9.1/rrfs-workflow
 cd $SRCDIR
 module purge
 source versions/run.ver
@@ -38,9 +38,9 @@ export OMP_STACKSIZE=1G
 
 
 FV3_EXE=${SRCDIR}/exec/ufs_model
-case=2023120400
-workdir=/lfs/h2/emc/ptmp/emc.lam/rrfs/case
-workdir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v0.9.7/2024051801/fcst_fv3lam
+#case=2023120400
+#workdir=/lfs/h2/emc/ptmp/emc.lam/rrfs/case
+workdir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v0.9.1/2024090912/fcst_fv3lam_test
 cd $workdir
 #cp -r fcst_fv3lam_base fcst_fv3lam
 #cd fcst_fv3lam
