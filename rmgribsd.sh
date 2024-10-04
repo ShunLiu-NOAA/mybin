@@ -21,7 +21,7 @@ ncyc='00'
 for cyc in $ncyc
 do
 
-cd /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.9.7/prod/rrfs.20240519/$cyc
+cd /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.9.7/prod/rrfs.20240530/$cyc
 
 mkdir tmp
 mkdir tmp1
