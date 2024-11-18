@@ -17,17 +17,17 @@ module load wgrib2/2.0.8_wmo
 #set -x
 
 #ncyc='00 06 12 18'
-ncyc='00'
+ncyc='12'
 for cyc in $ncyc
 do
 
-cd /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.9.7/prod/rrfs.20240530/$cyc
+cd /lfs/h2/emc/ptmp/emc.lam/rrfs/v1.0.2/prod/rrfs.20240530/$cyc
 
 mkdir tmp
 mkdir tmp1
 mkdir tmp_orig
 cd tmp
-for fhr in $(seq -f "%02g" 00 60)
+for fhr in $(seq -f "%02g" 31 60)
 do 
   echo $fhr
   cp ../rrfs.t${cyc}z.prslev.f0${fhr}.conus.grib2 rrfs.t${cyc}z.prslev.f0${fhr}.conus_bad.grib2
