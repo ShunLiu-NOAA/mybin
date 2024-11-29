@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+date
+
+proddir=/lfs/h2/emc/ptmp/emc.lam/rrfs/v0.9.1/prod
+newdir=/lfs/h3/emc/rrfstemp/noscrub/Shun.Liu/v0.9.1/prod
+mydate=$PDY
+mycyc=$cyc
+mkdir -p ${newdir}/rrfs.${mydate}
+
+echo ${proddir}/rrfs.${mydate}/$cyc
+echo ${newdir}//rrfs.${mydate}
+
+cp -r ${proddir}/rrfs.${mydate}/$cyc ${newdir}/rrfs.${mydate}
+
