@@ -190,8 +190,8 @@ export dsub4efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub4efm='cd $dsub4efm'
 
 
-#----- na v0.9.3
-version="v0.9.3"
+#----- na v1.0.3
+version="v1.0.3"
 num=3
 thisbase=${vbase}/$version
 export d3=$thisbase
