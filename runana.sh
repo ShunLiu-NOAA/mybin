@@ -1,6 +1,6 @@
 #!/bin/bash
 #PBS -A RRFS-DEV
-#PBS -q pridev
+#PBS -q devhigh
 #PBS -l walltime=00:45:00
 ##PBS -l select=60:mpiprocs=128:ncpus=128
 #PBS -l select=30:mpiprocs=8:ompthreads=16:ncpus=128 
@@ -12,13 +12,13 @@
 
 #/lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/testD/ufs-srweather-app/regional_workflow/ush/load_modules_run_task.sh run_anal_gsi /lfs/h2/emc/da/noscrub/Shun.Liu/rrfs/testD/ufs-srweather-app/regional_workflow/jobs/JREGIONAL_RUN_ANAL
 
-source /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.9.6/rrfs-workflow/versions/build.ver
-source /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.9.6/rrfs-workflow/versions/run.ver
+source /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v1.0.3/rrfs-workflow/versions/build.ver
+source /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v1.0.3/rrfs-workflow/versions/run.ver
 
 module purge
-module use /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.9.6/rrfs-workflow/modulefiles
+module use /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v1.0.3/rrfs-workflow/modulefiles
 module load build_wcoss2_intel
-module use /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.9.6/rrfs-workflow/modulefiles/tasks/wcoss2
+module use /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v1.0.3/rrfs-workflow/modulefiles/tasks/wcoss2
 module load run_analysis_gsi.local.lua
 
 ulimit -s unlimited
@@ -29,7 +29,7 @@ echo "start time:"
 date
 
 #rundir=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/test/anal_conv_dbz_gsi_spinup_coldstart
-rundir=/lfs/h3/emc/rrfstemp/stmp/emc.lam/rrfs/v0.9.6/2022020901/anal_conv_dbz_gsi
+rundir=/lfs/h3/emc/rrfstemp/stmp/emc.lam/rrfs/v1.0.3/2024011308/anal_conv_dbz_gsi_test
 cd $rundir
 
 rm -f pe0*
@@ -57,7 +57,8 @@ bkpath=./bk
 #cp ./background/* .
 
 #EXEC=./gsi.x
-EXEC=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.9.6/rrfs-workflow/exec/gsi.x
+#EXEC=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.9.6/rrfs-workflow/exec/gsi.x
+EXEC=/lfs/h2/emc/da/noscrub/Shun.Liu/GSI/build/src/gsi/gsi.x
 #EXEC=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.9.2/rrfs-workflow/sorc/gsi/build/src/gsi/gsi.x
 APRUN="mpiexec -n 240 -ppn 8 --cpu-bind core --depth 16"
 #APRUN="mpiexec -n 480 -ppn 16 --cpu-bind core --depth 8"
