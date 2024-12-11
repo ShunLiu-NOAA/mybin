@@ -107,12 +107,13 @@ alias cdgesd='cd /lfs/h3/emc/rrfstemp/ptmp/emc.lam/rrfs/v1.0.1/nwges'
 
 alias cdrrfs='cd ${vbase}'
 
-#----- na v0.9.2 
-version="v1.0.2"
+#----- na v1.1.2 
+version="v1.1.2"
 num=2 
 thisbase=${vbase}/$version
 export d2=$thisbase
 export dsub2=$thisbase/rrfs_na
+export darchive2=$thisbase/archive
 export dscript2=$thisbase/rrfs-workflow/scripts
 export dush2=$thisbase/rrfs-workflow/ush
 
@@ -138,6 +139,7 @@ alias cdges2='cd $dges2'
 alias cdlog2ef='cd $dlog2ef'
 alias cdprod2ef='cd $dprod2ef'
 alias cdges2ef='cd $dges2ef'
+alias cdar2='cd $darchive2'
 
 export dsub2e=$thisbase/rrfs_na_enkf
 alias cdsub2e='cd $dsub2e'
@@ -148,12 +150,13 @@ alias cdsub2ef='cd $dsub2ef'
 export dsub2efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub2efm='cd $dsub2efm'
 
-#----- na v0.9.4
-version="v0.9.4"
+#----- na v1.1.4
+version="v1.1.4"
 num=4
 thisbase=${vbase}/$version
 export d4=$thisbase
 export dsub4=$thisbase/rrfs_na
+export darchive4=$thisbase/archive
 export dscript4=$thisbase/rrfs-workflow/scripts
 export dush4=$thisbase/rrfs-workflow/ush
 
@@ -162,10 +165,13 @@ export dprod4ef=$vptmp/$version
 export dstmp4ef=$vstmp/$version
 export dges4ef=$vptmp/$version/nwges
 
+rptmp=/lfs/h3/emc/lam/noscrub/emc.lam/rrfs
+rstmp=/lfs/h3/emc/lam/noscrub/emc.lam/stmp/rrfs
+
 export dlog4=$fptmp/$version/logs
 export dprod4=$fptmp/$version
-export dstmp4=$fstmp/$version
-export dges4=$fptmp/$version/nwges
+export dstmp4=$rstmp/$version
+export dges4=$rptmp/$version/nwges
 
 alias cd4='cd $d4'
 alias cdsub4='cd $dsub4'
@@ -179,6 +185,7 @@ alias cdges4='cd $dges4'
 alias cdlog4ef='cd $dlog4ef'
 alias cdprod4ef='cd $dprod4ef'
 alias cdges4ef='cd $dges4ef'
+alias cdar4='cd $darchive4'
 
 export dsub4e=$thisbase/rrfs_na_enkf
 alias cdsub4e='cd $dsub4e'
