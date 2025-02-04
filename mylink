@@ -328,10 +328,13 @@ export dprod5ef=$vptmp/$version
 export dstmp5ef=$vstmp/$version
 export dges5ef=$vptmp/$version/nwges
 
-export dlog5=$fptmp/$version/logs
-export dprod5=$fptmp/$version
-export dstmp5=$fstmp/$version
-export dges5=$fptmp/$version/nwges
+rptmp=/lfs/h3/emc/lam/noscrub/emc.lam/rrfs
+rstmp=/lfs/h3/emc/lam/noscrub/emc.lam/stmp/rrfs
+
+export dlog5=$rptmp/$version/logs
+export dprod5=$rptmp/$version
+export dstmp5=$rstmp/$version
+export dges5=$rptmp/$version/nwges
 
 alias cdsub5='cd $dsub5'
 alias cdscript5='cd $dscript5'
