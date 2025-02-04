@@ -31,7 +31,9 @@ date
 #rundir=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/test/anal_conv_dbz_gsi_spinup_coldstart
 #rundir=/lfs/h3/emc/rrfstemp/stmp/emc.lam/rrfs/v1.0.0/2024011308/anal_conv_dbz_gsi_test
 #rundir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v1.0.0/rrfs_analysis_gsi_conv_dbz_spinup_para_15
-rundir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v1.0.0/rrfs_analysis_gsi_conv_dbz_spinup_para_15
+#rundir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v1.0.0/rrfs_analysis_gsi_conv_dbz_spinup_para_15
+rundir=/lfs/h3/emc/lam/noscrub/emc.lam/stmp/rrfs/v1.0.0/rrfs_analysis_gsi_conv_dbz_spinup_para_03
+rundir=/lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rrfs/v1.0.0/rrfs_analysis_gsi_conv_dbz_para_21
 cd $rundir
 
 rm -f pe0*
@@ -47,13 +49,18 @@ rm -f fort.2*
 #rm -f fv3_tracer
 #rm -f fv3_sfcdata
 #
-bkpath=./bk
+bkpath=./background
 
 #cp  ${bkpath}/fv_core.res.tile1.nc     fv3_dynvars
 ##cp  ${bkpath}/fv_tracer.res.tile1.nc   fv3_tracer
 #cp  ${bkpath}/sfc_data.nc              fv3_sfcdata
 #cp  ${bkpath}/phy_data.nc             fv3_phyvars
 #cp  ${bkpath}/fv3_grid_spec      fv3_grid_spec
+cp  ${bkpath}/fv3_dynvars .
+cp  ${bkpath}/fv3_sfcdata .
+cp  ${bkpath}/fv3_phyvars .
+cp  ${bkpath}/fv3_tracer .
+
 
 #cp ./background/* .
 #cp ./background/* .
