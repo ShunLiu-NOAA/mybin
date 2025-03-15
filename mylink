@@ -595,5 +595,7 @@ alias hpcname='cat /etc/cluster_name'
 alias linkgesn='ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.3/nwges /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/nwges/para/rrfs_a'
 alias lingesc='ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/v0.3.2/nwges /lfs/h2/emc/ptmp/emc.lam/conus/nwges/para/rrfs_a'
 
+alias gsi='cd /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/GSI_rrfs_release/ush'
+alias rgsic='cd /lfs/h3/emc/lam/noscrub/emc.lam/stmp/rrfs/v1.0.0/anal_conv_dbz_gsi_spinup'
 alias ting='cd /lfs/h2/emc/da/noscrub/Ting.Lei/dr-shun/rrfs_analysis_gsi_conv_dbz_spinup_para_03'
 alias rgsi='cd /lfs/h3/emc/lam/noscrub/emc.lam/stmp/rrfs/v1.0.0/rrfs_analysis_gsi_conv_dbz_spinup_para_03'
