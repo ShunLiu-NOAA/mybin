@@ -583,7 +583,6 @@ alias cdbenr='cd $dbenr'
 export dsfc=/lfs/h3/emc/lam/noscrub/ecflow/ptmp/emc.lam/ecflow_rrfs/para/com/rrfs/v1.0/surface
 export dsat=/lfs/h3/emc/lam/noscrub/ecflow/ptmp/emc.lam/ecflow_rrfs/para/com/rrfs/v1.0/satbias
 
-
 alias rrfsdisk='cd /lfs/h3/emc/rrfstemp'
 alias listdisk='/usr/local/bin/lsquota'
 alias pqq='python /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/qstat-json.py'
@@ -607,3 +606,14 @@ alias cdstmpe='cd /lfs/h3/emc/lam/noscrub/ecflow/stmp/emc.lam/rrfs/ecflow_rrfs'
 alias cdrrfse='cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/para/packages/rrfs.v1.0.0'
 alias cdloge='cd /lfs/h3/emc/lam/noscrub/ecflow/ptmp/emc.lam/ecflow_rrfs/para/output/prod/today'
 alias cdcom='cd /lfs/h3/emc/lam/noscrub/ecflow/ptmp/emc.lam/ecflow_rrfs/para/com/rrfs/v1.0'
+
+alias rap='cd /lfs/h2/emc/lam/noscrub/emc.lam/packages/rap.v5.1.19'
+alias cdrapcom='cd /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/ecflow_rap/para/com'
+alias cdraplog='cd /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/ecflow_rap/para/output/prod/today'
+alias cdrapstmp='cd /lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rap/ecflow_rap'
+
+alias cdrapcomo='cd /lfs/h1/ops/prod/com/rap/v5.1'
+alias rap1='cd /lfs/h2/emc/lam/noscrub/emc.lam/packages/rap.v5.1.20'
+alias cdrapcom1='cd /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/ecflow_rap_ctl/para/com'
+alias cdraplog1='cd /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/ecflow_rap_ctl/para/output/prod/today'
+alias cdrapstmp1='cd /lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rap/ecflow_rap_ctl'
