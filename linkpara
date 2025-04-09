@@ -27,7 +27,8 @@ rm -f /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/na
 
 if [ "$machine" == "prod" ]; then
 # ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
-ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+# ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
+ln -sf /lfs/h3/emc/lam/noscrub/ecflow/ptmp/emc.lam/ecflow_rrfs/para/com/rrfs/v1.0 /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 ln -sf /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/rrfs/na
 else
 ln -sf /lfs/h2/emc/ptmp/emc.lam/rrfs/${na_ver} /lfs/h2/emc/ptmp/emc.lam/rrfs/na
