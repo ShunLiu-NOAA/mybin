@@ -1,0 +1,6 @@
+date: 202411
+project: sondes denies experiments
+goal:
+1. read station ID from prepbufr using fortran read_prepbufr.f90
+2. search if missing station ID is available in the bufr file
+
