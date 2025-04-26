@@ -617,3 +617,10 @@ alias rap1='cd /lfs/h2/emc/lam/noscrub/emc.lam/packages/rap.v5.1.20'
 alias cdrapcom1='cd /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/ecflow_rap_ctl/para/com'
 alias cdraplog1='cd /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/ecflow_rap_ctl/para/output/prod/today'
 alias cdrapstmp1='cd /lfs/f2/t2o/ptmp/emc/stmp/emc.lam/rap/ecflow_rap_ctl'
+
+alias rap2='cd /lfs/h2/emc/lam/noscrub/emc.lam/packages/rap.v5.1.21'
+rap2base=/lfs/h2/emc/ptmp/emc.lam/ecflow_rap_ctl/para
+alias cdrapcom2='cd $rap2base/com'
+alias cdraplog2='cd $rap2base/output/prod/today'
+alias cdrapstmp2='cd /lfs/h2/emc/stmp/emc.lam/rap/ecflow_rap_ctl'
+
