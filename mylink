@@ -624,3 +624,5 @@ alias cdrapcom2='cd $rap2base/com'
 alias cdraplog2='cd $rap2base/output/prod/today'
 alias cdrapstmp2='cd /lfs/h2/emc/stmp/emc.lam/rap/ecflow_rap_ctl'
 
+gittmp=/lfs/h2/emc/lam/save/emc.lam/Shun.Liu/code/tmp
+alias cdgittmp='cd $gittmp'
