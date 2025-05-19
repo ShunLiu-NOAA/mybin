@@ -1,4 +1,29 @@
 
+find /lfs/h2/emc/ptmp/emc.lam/ecflow_rap_ctl/para/com -type f -exec touch {} +
+
+exit
+
+touch /lfs/h2/emc/ptmp/emc.lam/ecflow_rap_ctl/para/com/gfs/v16.3/*
+touch /lfs/h2/emc/ptmp/emc.lam/ecflow_rap_ctl/para/com/obsproc/v1.2/*
+
+nwgesdir=/lfs/h2/emc/ptmp/emc.lam/ecflow_rap_ctl/para/com/rap/v5.1/nwges
+cd $nwgesdir
+
+fl=`ls -1d *`
+for ifl in $fl; do
+  touch ${nwgesdir}/${ifl}/*
+done
+
+rapdir=/lfs/h2/emc/ptmp/emc.lam/ecflow_rap_ctl/para/com/rap/v5.1
+cd $rapdir
+fl=`ls -1d rap.*`
+for ifl in $fl; do
+  touch ${rapdir}/${ifl}/*
+done
+
+
+
+exit
 touch /lfs/h2/emc/ptmp/emc.lam/rrfs/na
 touch /lfs/h2/emc/ptmp/emc.lam/rrfs/conus
 
