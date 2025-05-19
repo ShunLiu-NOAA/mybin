@@ -626,3 +626,7 @@ alias cdrapstmp2='cd /lfs/h2/emc/stmp/emc.lam/rap/ecflow_rap_ctl'
 
 gittmp=/lfs/h2/emc/lam/save/emc.lam/Shun.Liu/code/tmp
 alias cdgittmp='cd $gittmp'
+
+bindir=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin
+alias cdbin='cd $bindir'
+
