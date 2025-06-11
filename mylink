@@ -631,3 +631,7 @@ alias cdgittmp='cd $gittmp'
 bindir=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin
 alias cdbin='cd $bindir'
 
+alias cdstmpe1='cd /lfs/f2/t2o/ptmp/emc/Shun.Liu/stmp/rrfs'
+alias cdrrfse1='cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/ecflow/rrfs-workflow/'
+alias cdloge1='cd /lfs/f2/t2o/ptmp/emc/Shun.Liu/output/prod/today'
+alias cdcom1='cd /lfs/f2/t2o/ptmp/emc/Shun.Liu/com/rrfs/v1.0'
