@@ -603,9 +603,9 @@ alias rgsi='cd /lfs/h3/emc/lam/noscrub/emc.lam/stmp/rrfs/v1.0.0'
 alias ting='cd /lfs/h2/emc/da/noscrub/Ting.Lei/dr-shun/rrfs_analysis_gsi_conv_dbz_spinup_para_03'
 alias rgsi='cd /lfs/h3/emc/lam/noscrub/emc.lam/stmp/rrfs/v1.0.0/rrfs_analysis_gsi_conv_dbz_spinup_para_03'
 
-#alias cdstmpe='cd /lfs/h3/emc/lam/noscrub/ecflow/stmp/emc.lam/rrfs/ecflow_rrfs'
-alias cdstmpe='cd /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/ecflow/stmp/emc.lam/rrfs/ecflow_rrfs'
-alias cdrrfse='cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/para/packages/rrfs.v1.0.0'
+alias cdstmpe='cd /lfs/h3/emc/lam/noscrub/ecflow/stmp/emc.lam/rrfs/ecflow_rrfs'
+#alias cdstmpe='cd /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/ecflow/stmp/emc.lam/rrfs/ecflow_rrfs'
+alias cdrrfse='cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/para/packages/rrfs.v1.0'
 alias cdloge='cd /lfs/h3/emc/lam/noscrub/ecflow/ptmp/emc.lam/ecflow_rrfs/para/output/prod/today'
 alias cdcom='cd /lfs/h3/emc/lam/noscrub/ecflow/ptmp/emc.lam/ecflow_rrfs/para/com/rrfs/v1.0'
 
@@ -646,3 +646,45 @@ alias viexp='vi /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/exp.sh'
 alias sorexp='source /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/exp.sh'
 
 alias vig="vim -N -u /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/shun.vimrc"
+
+#----- na v1.2.0
+version="v1.2.0"
+num=1
+vbase=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs1x
+thisbase=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs1x
+thisbase=${vbase}/$version
+export dsub0=$thisbase/rrfs_na
+export dscript0=$thisbase/rrfs-workflow/scripts
+export drrfs0=$thisbase/rrfs-workflow
+
+export dlog0ef=$vptmp/$version/logs
+export dprod0ef=$vptmp/$version
+export dstmp0ef=$vstmp/$version
+export dges0ef=$vptmp/$version/nwges
+
+export dlog0=$fptmp/$version/logs
+export dprod0=$fptmp/$version
+export dstmp0=$fstmp/$version
+export dges0=$fptmp/$version/nwges
+
+alias cdsub0='cd $dsub0'
+alias cdscript0='cd $dscript0'
+alias cdstmp0='cd $dstmp0'
+alias cdlog0='cd $dlog0'
+alias cdprod0='cd $dprod0'
+alias cdges0='cd $dges0'
+alias cdrrfs0='cd $drrfs0'
+
+alias cdlog0ef='cd $dlog0ef'
+alias cdprod0ef='cd $dprod0ef'
+alias cdges0ef='cd $dges0ef'
+
+export dsub0e=$thisbase/rrfs_na_enkf
+alias cdsub0e='cd $dsub0e'
+
+export dsub0ef=$thisbase/rrfs_na_enfcst
+alias cdsub0ef='cd $dsub0ef'
+
+export dsub0efm=$thisbase/rrfs_na_enfcst_mphyscm
+alias cdsub0efm='cd $dsub0efm'
+
