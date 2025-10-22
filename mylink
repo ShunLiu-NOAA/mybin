@@ -604,6 +604,7 @@ alias ting='cd /lfs/h2/emc/da/noscrub/Ting.Lei/dr-shun/rrfs_analysis_gsi_conv_db
 alias rgsi='cd /lfs/h3/emc/lam/noscrub/emc.lam/stmp/rrfs/v1.0.0/rrfs_analysis_gsi_conv_dbz_spinup_para_03'
 
 alias cdstmpe='cd /lfs/h3/emc/lam/noscrub/ecflow/stmp/emc.lam/rrfs/ecflow_rrfs'
+alias cdstmpe='cd /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/ecflow/stmp/emc.lam/rrfs/ecflow_rrfs'
 #alias cdstmpe='cd /lfs/f2/t2o/ptmp/emc/ptmp/emc.lam/ecflow/stmp/emc.lam/rrfs/ecflow_rrfs'
 alias cdrrfse='cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/para/packages/rrfs.v1.0'
 alias cdloge='cd /lfs/h3/emc/lam/noscrub/ecflow/ptmp/emc.lam/ecflow_rrfs/para/output/prod/today'
