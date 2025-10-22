@@ -15,7 +15,7 @@ echo $HOSTNAME
 
 cd THISDIR
 
-htar xf /NCEPDEV/emc-da/1year/Shun.Liu/TARGET.tar TARGET
+htar xf /NCEPDEV/emc-da/1year/Shun.Liu/TARGET.tar
 #/usr/local/bin/htar -xf /NCEPDEV/emc-meso/1year/emc.lam/tmp/TARGET.tar
 
 exit
