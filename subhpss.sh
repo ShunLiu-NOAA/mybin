@@ -13,8 +13,8 @@ cd $thisdir
 #rm -f /lfs/h2/emc/ptmp/emc.lam/mirror/rrfs_mirror.out
 mkdir -p  /lfs/h2/emc/ptmp/emc.lam/mirror
 mkdir -p /lfs/h2/emc/ptmp/emc.lam/Shun.Liu
-#cp $dnbns/bin/mirror.sh mirror1.sh
-cp htar_sub_orig.sh htar_sub.sh
+cp $dnbns/bin/htar_sub_orig.sh htar_sub.sh
+#cp htar_sub_orig.sh htar_sub.sh
 #target=$thisdir/$flnm
 target=$flnm
 sed -i "s|TARGET|${target}|g" htar_sub.sh
