@@ -1,0 +1,24 @@
+1. login ecflow node
+   ssh -Y xxxx.yyyy@ddecflow01.wcoss2.ncep.noaa.gov
+   ssh -Y xxxx.yyyy@cdecflow01.wcoss2.ncep.noaa.gov
+2. check the existing ecflow_servers
+   ps -aux | grep ecflow_server
+3. start your own ecflow_server
+   server_check.sh yes
+   make a note for ecflow port:
+     Host: ddcflow01
+     Port: 34104
+4. setup ecflow log directory 
+   /u/shun.liu/ecflow
+   loade.sh
+5. change evironment variables
+   ecf/include
+    a. COM directory
+    b. ouput directory
+    c. cycle_end: output
+    d. run directory
+    e. remove lin's personal email
+5. start an ecflow_server
+   ecflow_ui
+6. 
+
