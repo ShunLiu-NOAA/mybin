@@ -1,11 +1,12 @@
 
-mydate=20251209
-mydatem1=20251209
-cyc=18
-cyc06=18
+mydate=20260212
+mydatem1=20260212
+cyc=12
+cyc06=12
 #com=/lfs/f2/t2o/ptmp/emc/Shun.Liu/com/rrfs/v1.0
 com=/lfs/f2/t2o/ptmp/emc/Shun.Liu/com/rrfs/v1.0
-mir=/lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0
+mir=/lfs/h1/ops/para/com/rrfs/v1.0
+#mir=/lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0
 #mir=/lfs/h3/emc/lam/noscrub/ecflow/ptmp/emc.lam/ecflow_rrfs/para/com/rrfs/v1.0
 
 mkdir -p $com/rrfs.${mydate}/$cyc
