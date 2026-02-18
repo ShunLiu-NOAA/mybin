@@ -1,6 +1,10 @@
 
-#cp ./background/
-cp ./background/fv3_dynvars ./bk1 &
-cp ./background/fv3_phyvars ./bk1 &
-cp ./background/fv3_sfcdata ./bk1 &
-cp ./background/fv3_tracer ./bk1 &
+bkdir=bk2
+rm -fr bk2
+mkdir -p $bkdir
+sleep 3
+cp ./background/fv_tracer.res.tile1.nc ./$bkdir &
+cp ./background/phy_data.nc ./$bkdir &
+cp ./background/fv_core.res.tile1.nc ./$bkdir &
+cp ./background/sfc_data.nc ./$bkdir &
+
