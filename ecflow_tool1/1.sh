@@ -1,51 +1,19 @@
-#!/bin/bash
+module load ecflow/5.6.0.11
+#export ECF_PORT=34104
+export ECF_PORT=32035
+export ECF_HOST=cdecflow01
+#34104
 
-set -x
-type qstat
+#load defs
+cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/prod_clone.v0.0.2/ecf
 
-# If it's an alias or function, try disabling it for this one command
-# If it's an alias:
-# \qstat -f -u shun.liu | cat -A
-
-# If it's a function or you want to use the direct binary:
-# Find the actual path to qstat
-which qstat
-# Then use the full path:
-# /path/to/qstat -f -u shun.liu | cat -A
-exit
-
-
-
-qstat -f -u $(whoami) | cat -A
-
-exit
-qstat -f -u $(whoami) | awk '
-/^Job Id:/ {
-    job_id = $3
-}
-/^Job_Name =/ {
-    # Reconstruct the job name by joining fields from the 3rd to the end
-    job_name = $3
-    for (i = 4; i <= NF; i++) {
-        job_name = job_name " " $i
-    }
-    print job_id, job_name
-}'
+#ecflow_client --host $ECF_HOST --port $ECF_PORT --replace=/prod_clone defs.def false force
+ecflow_client --host $ECF_HOST --port $ECF_PORT --replace=/prod_clone/jupdateprodclonestatuses defs.def
 
 exit
 
-qstat -w -u $(whoami)| awk 'NR > 2 {print $1,$2,$3,$4,$5}'
-exit
-
-qstat -w -u $(whoami) | awk '
-/^Job Id:/ {
-    job_id = $3
-}
-/Job_Name =/ {
-    job_name = $3
-    # Reconstruct job name in case it has spaces
-    for (i = 4; i <= NF; i++) {
-        job_name = job_name " " $i
-    }
-    print job_id, job_name
-}'
+for cyc in $(seq -w 15 15); do
+g_cyc_tmp=$(( (10#$cyc / 6) * 6 ))
+g_cyc=$(printf "%02d" $g_cyc_tmp)
+ecflow_client --host $ECF_HOST --port $ECF_PORT --requeue=force /emc_rrfs_dev/primary/${g_cyc}/rrfs/v1.0/${cyc}/prep/det
+done
