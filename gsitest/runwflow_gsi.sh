@@ -66,6 +66,8 @@ rm -f obs_input*
 rm -f stdout
 rm -f stderr
 rm -f fort.2*
+#rm -f berror_prewgt_reg_vIntrp.dat
+rm -f satbias_out.int
 #rm -f anl_grid.480.3950.2700
 #rm -f xnorm_new.480.1351.1976
 
@@ -74,12 +76,12 @@ rm -f fort.2*
 #rm -f fv3_tracer
 #rm -f fv3_sfcdata
 #
-bkpath=./background
+bkpath=./bk3
 
-#cp  ${bkpath}/fv_core.res.tile1.nc     fv3_dynvars
-##cp  ${bkpath}/fv_tracer.res.tile1.nc   fv3_tracer
-#cp  ${bkpath}/sfc_data.nc              fv3_sfcdata
-#cp  ${bkpath}/phy_data.nc             fv3_phyvars
+mv  ${bkpath}/fv_core.res.tile1.nc     fv3_dynvars
+mv  ${bkpath}/fv_tracer.res.tile1.nc   fv3_tracer
+mv  ${bkpath}/sfc_data.nc              fv3_sfcdata
+mv  ${bkpath}/phy_data.nc             fv3_phyvars
 #cp  ${bkpath}/fv3_grid_spec      fv3_grid_spec
 #cp  ${bkpath}/fv3_dynvars .
 #cp  ${bkpath}/fv3_sfcdata .
@@ -92,7 +94,7 @@ bkpath=./background
 
 #EXEC=./gsi.x
 #EXEC=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v1.0.0/rrfs-workflow/exec/gsi.x
-EXEC=${rrfsdir}/exec/gsi.x
+EXEC=${rrfsdir}/exec/gsi.x_new
 #EXEC=/lfs/h2/emc/da/noscrub/Shun.Liu/GSI/build/src/gsi/gsi.x
 #EXEC=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs/v0.9.2/rrfs-workflow/sorc/gsi/build/src/gsi/gsi.x
 APRUN="mpiexec -n 480 -ppn 8 --cpu-bind core --depth 16"
@@ -103,7 +105,7 @@ APRUN="mpiexec -n 480 -ppn 8 --cpu-bind core --depth 16"
 #ulimit -s unlimited
 #ulimit -a
 export FI_OFI_RXM_SAR_LIMIT=3145728
-export OMP_STACKSIZE=1000M
+export OMP_STACKSIZE=500M
 export OMP_NUM_THREADS=16
 
 #mpiexec -n 480 -ppn 8 --cpu-bind core --depth 16 ./gsi.x
