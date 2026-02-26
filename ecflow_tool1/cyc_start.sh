@@ -1,8 +1,8 @@
 
-mydate=20260212
-mydatem1=20260212
-cyc=12
-cyc06=12
+mydate=20260222
+mydatem1=20260222
+cyc=15
+cyc06=15
 #com=/lfs/f2/t2o/ptmp/emc/Shun.Liu/com/rrfs/v1.0
 com=/lfs/f2/t2o/ptmp/emc/Shun.Liu/com/rrfs/v1.0
 mir=/lfs/h1/ops/para/com/rrfs/v1.0
