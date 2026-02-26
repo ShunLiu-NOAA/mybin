@@ -1,2 +1,2 @@
 #ssh emc.lam@dlogin02.wcoss2.ncep.noaa.gov
-ssh ${USER}@dlogin02.wcoss2.ncep.noaa.gov
+ssh ${USER}@clogin02.wcoss2.ncep.noaa.gov
