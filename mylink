@@ -634,13 +634,16 @@ bindir=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin
 alias cdbin='cd $bindir'
 alias cdbine='cd $bindir/ecflow_tool1'
 
+#ecflow test
 alias cdstmpe1='cd /lfs/f2/t2o/ptmp/emc/Shun.Liu/stmp/rrfs'
 alias cdrrfse1='cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/ecflow/rrfs-workflow/'
+export dloge1='/lfs/f2/t2o/ptmp/emc/Shun.Liu/output/prod/today'
 alias cdloge1='cd /lfs/f2/t2o/ptmp/emc/Shun.Liu/output/prod/today'
-alias cdcom1='cd /lfs/f2/t2o/ptmp/emc/Shun.Liu/com/rrfs/v1.0'
+alias cdcome1='cd /lfs/f2/t2o/ptmp/emc/Shun.Liu/com/rrfs/v1.0'
 alias cdmir='cd /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0'
-alias cdet='cd /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/ecflow_tool1'
+#end ecflow test
 
+alias cdet='cd /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/ecflow_tool1'
 alias cdrrfst='cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/test/rrfs-workflow/'
 
 alias viexp='vi /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin/exp.sh'
@@ -689,3 +692,34 @@ alias cdsub0ef='cd $dsub0ef'
 export dsub0efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub0efm='cd $dsub0efm'
 
+#=========nco version===============
+version="nco"
+num=1
+vbase=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
+thisbase=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
+thisbase=${vbase}/$version
+export dsubn=$thisbase/rrfs-workflow/ecf
+export dscriptn=$thisbase/rrfs-workflow/scripts
+export drrfsn=$thisbase/rrfs-workflow
+
+export dlogn=$vptmp/$version/logs
+export dprodn=$vptmp/$version
+export dstmpn=$vstmp/$version
+export dgesn=$vptmp/$version/nwges
+
+export dlogn=$fptmp/$version/logs
+export dprodn=$fptmp/$version
+export dstmpn=$fstmp/$version
+export dgesn=$fptmp/$version/nwges
+
+alias cdsubn='cd $dsubn'
+alias cdscriptn='cd $dscriptn'
+alias cdstmpn='cd $dstmpn'
+alias cdlogn='cd $dlogn'
+alias cdprodn='cd $dprodn'
+alias cdgesn='cd $dgesn'
+alias cdrrfsn='cd $drrfsn'
+
+alias cdlogn='cd $dlogn'
+alias cdprodn='cd $dprodn'
+alias cdgesn='cd $dgesn'
