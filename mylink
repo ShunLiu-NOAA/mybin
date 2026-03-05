@@ -633,6 +633,7 @@ alias cdgittmp='cd $gittmp'
 bindir=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/bin
 alias cdbin='cd $bindir'
 alias cdbine='cd $bindir/ecflow_tool1'
+alias cdbinn='cd $bindir/ecflow_tooln'
 
 #ecflow test
 alias cdstmpe1='cd /lfs/f2/t2o/ptmp/emc/Shun.Liu/stmp/rrfs'
@@ -692,34 +693,30 @@ alias cdsub0ef='cd $dsub0ef'
 export dsub0efm=$thisbase/rrfs_na_enfcst_mphyscm
 alias cdsub0efm='cd $dsub0efm'
 
-#=========nco version===============
+#=========start rrfs_nco branch workflow test ===============
 version="nco"
-num=1
 vbase=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
 thisbase=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs
 thisbase=${vbase}/$version
+
 export dsubn=$thisbase/rrfs-workflow/ecf
 export dscriptn=$thisbase/rrfs-workflow/scripts
 export drrfsn=$thisbase/rrfs-workflow
-
-export dlogn=$vptmp/$version/logs
-export dprodn=$vptmp/$version
-export dstmpn=$vstmp/$version
-export dgesn=$vptmp/$version/nwges
-
-export dlogn=$fptmp/$version/logs
-export dprodn=$fptmp/$version
-export dstmpn=$fstmp/$version
-export dgesn=$fptmp/$version/nwges
-
 alias cdsubn='cd $dsubn'
 alias cdscriptn='cd $dscriptn'
+alias cdrrfsn='cd $drrfsn'
+
+vptmp=/lfs/f2/t2o/ptmp/emc/para
+export dlogn=$vptmp/output/prod/today
+export dprodn=$vptmp/com
+export dcomn=$vptmp/com
+export dstmpn=$vptmp/stmp
+
 alias cdstmpn='cd $dstmpn'
 alias cdlogn='cd $dlogn'
 alias cdprodn='cd $dprodn'
-alias cdgesn='cd $dgesn'
-alias cdrrfsn='cd $drrfsn'
+alias cdcomn='cd $dprodn'
 
-alias cdlogn='cd $dlogn'
-alias cdprodn='cd $dprodn'
-alias cdgesn='cd $dgesn'
+export dncocom=/lfs/h1/ops/para/com/rrfs/v1.0
+alias cdncocom='cd $dncocom'
+#=========end rrfs_nco branch workflow test ===============
