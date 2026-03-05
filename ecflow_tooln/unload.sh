@@ -1,8 +1,15 @@
 module load ecflow/5.6.0.11
-#export ECF_PORT=34104
-export ECF_PORT=32035
-export ECF_HOST=cdecflow01
-#34104
+
+echo $HOSTNAME
+primary=$(echo $HOSTNAME | cut -c1-6)
+if [ "$primary" == "cdxfer" ]; then
+  export ECF_PORT=32035
+  export ECF_HOST=cdecflow01
+else
+  export ECF_PORT=32035
+  export ECF_HOST=ddecflow02
+fi
+
 ecflow_client --host $ECF_HOST --port $ECF_PORT --delete=force yes /para
 exit
 
