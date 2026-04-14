@@ -17,12 +17,12 @@ cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/nco/rrfs-workflow/ecf/defs
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --begin=emc_rrfs_dev
 
 set -x
-for cyc in $(seq -w 00 23); do
+for cyc in $(seq -w 00 11); do
 g_cyc_tmp=$(( (10#$cyc / 6) * 6 ))
 g_cyc=$(printf "%02d" $g_cyc_tmp)
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable ECF_INCLUDE /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/ecflow/rrfs-workflow/ecf/include /emc_rrfs_dev/primary/${g_cyc}
-ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable PDY 20260304 /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z
-ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable PDY 20260304 /para/primary/${g_cyc}/rrfs/v1.0/cycle_end
+ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable PDY 20260410 /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z
+ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable PDY 20260410 /para/primary/${g_cyc}/rrfs/v1.0/cycle_end
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable PDY 20250804 /emc_rrfs_dev_${cyc}/primary/${cyc}
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable QUEUE devhigh /emc_rrfs_dev/primary/${cyc}
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable MACHINE_SITE development /emc_rrfs_dev}/primary/${cyc}
