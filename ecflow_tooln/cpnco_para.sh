@@ -3,7 +3,7 @@ module load envvar/1.0
 module load prod_util/2.0.10
 
 #sdate=2025060415
-#sdate=2025060415
+sdate=2026032323
 
 thistime=`$NDATE -3 $sdate`
 
