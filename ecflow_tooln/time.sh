@@ -1,8 +1,24 @@
 module load ecflow/5.6.0.11
-#export ECF_PORT=34104
-export ECF_PORT=32035
-export ECF_HOST=cdecflow01
-#34104
+
+echo $HOSTNAME
+primary=$(echo $HOSTNAME | cut -c1-6)
+if [ "$primary" == "cdxfer" ]; then
+  export ECF_PORT=32035
+  export ECF_HOST=cdecflow01
+else
+  export ECF_PORT=32035
+  export ECF_HOST=ddecflow02
+fi
+
+#load defs
+cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/nco/rrfs-workflow/ecf/defs
+
+#ecflow_client --host $ECF_HOST --port $ECF_PORT --alter="change clock_type real 17.03.2026 10:55 /para"
+#ecflow_client --host ddecflow02 --port 32035 --alter='change clock_type real 17.03.2026 10:55 /para'
+ecflow_client --host ddecflow02 --port 32035 --alter="change clock_type real 17.03.2026 10:55 -4:00 /para"
+#ecflow_client --host ddecflow02 --port 32035 --alter change clock_type real 17.03.2026 10:55 -4:00 /para
+#ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable PDY 20260317 /para/primary/${g_cyc}/rrfs/v1.0/cycle_end
+exit
 
 
 for cyc in $(seq -w 00 1 23); do
