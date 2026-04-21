@@ -16,7 +16,9 @@ cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/prod_clone.v0.0.2/ecf
 ecflow_client --host $ECF_HOST --port $ECF_PORT --load=defs.def
 ecflow_client --host $ECF_HOST --port $ECF_PORT --begin=prod_clone
 
-#exit
+ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable ECF_INCLUDE /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/prod_clone.v0.0.2/include /prod_clone
+
+exit
 sleep 10
 
 for cyc in $(seq -w 00 23); do
