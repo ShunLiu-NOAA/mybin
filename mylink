@@ -708,15 +708,19 @@ alias cdrrfsn='cd $drrfsn'
 
 vptmp=/lfs/f2/t2o/ptmp/emc/para
 export dlogn=$vptmp/output/prod/today
-export dprodn=$vptmp/com
-export dcomn=$vptmp/com
+export dprodn=$vptmp/com/rrfs/v1.0
+#export dcomn=$vptmp/com/rrfs/v1.0
+export dcomn=/lfs/h3/emc/lam/noscrub/emc.lam/com/rrfs/v1.0
 export dstmpn=$vptmp/stmp
 
 alias cdstmpn='cd $dstmpn'
 alias cdlogn='cd $dlogn'
 alias cdprodn='cd $dprodn'
-alias cdcomn='cd $dprodn'
+alias cdcomn='cd $dcomn'
 
 export dncocom=/lfs/h1/ops/para/com/rrfs/v1.0
 alias cdncocom='cd $dncocom'
+
+alias cdlogp='cd /lfs/f2/t2o/ptmp/emc/para/output/prod_clone'
+
 #=========end rrfs_nco branch workflow test ===============
