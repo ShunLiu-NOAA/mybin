@@ -2,6 +2,16 @@
 #rrfsdir=/lfs/f2/t2o/ptmp/emc/Shun.Liu/stmp/rrfs
 #find $rrfsdir -type d -path '${rrfsdir}/rrfs_*' -mmin +180 -print >zzz
 
+#find $rrfsdir -type d -path '${rrfsdir}/rrfs_*' -mmin +600 -print >zzz
+rrfsdir=/lfs/f2/t2o/ptmp/emc/para/stmp
+
+cd $rrfsdir
+
+for cyc in $(seq -w 06 10); do
+rm -fr *_${cyc}.*.d*
+rm -fr *_${cyc}_v1.0_prod*
+done
+
 #exit
 
 cdate=20250822
