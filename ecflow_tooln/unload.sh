@@ -13,6 +13,13 @@ fi
 ecflow_client --host $ECF_HOST --port $ECF_PORT --delete=force yes /para
 exit
 
+ecflow_client --host $ECF_HOST --port $ECF_PORT --delete=force yes /emc_ctl_hrrr_dev_00
+ecflow_client --host $ECF_HOST --port $ECF_PORT --delete=force yes /emc_ctl_hrrr_dev_06
+ecflow_client --host $ECF_HOST --port $ECF_PORT --delete=force yes /emc_ctl_hrrr_dev_12
+ecflow_client --host $ECF_HOST --port $ECF_PORT --delete=force yes /emc_ctl_hrrr_dev_18
+ecflow_client --host $ECF_HOST --port $ECF_PORT --delete=force yes /emc_runhistory
+#ecflow_client --host $ECF_HOST --port $ECF_PORT --delete=force yes /para
+
 #echo "Suite date: $ECF_DATE, time: $ECF_TIME, clock info: $ECF_CLOCK"
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --query variable /emc_rrfs_dev_00/primary/00:ECF_DATE
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --query variable /emc_rrfs_dev_00/primary/00:ECF_TIME
