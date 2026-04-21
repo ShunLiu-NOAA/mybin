@@ -1,15 +1,21 @@
 module load ecflow/5.6.0.11
-#export ECF_PORT=34104
-export ECF_PORT=32035
-export ECF_HOST=cdecflow01
-#34104
+
+echo $HOSTNAME
+primary=$(echo $HOSTNAME | cut -c1-6)
+if [ "$primary" == "cdxfer" ]; then
+  export ECF_PORT=32035
+  export ECF_HOST=cdecflow01
+else
+  export ECF_PORT=32035
+  export ECF_HOST=ddecflow02
+fi
 
 #load defs
 cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/prod_clone.v0.0.2/ecf
 
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --replace=/prod_clone defs.def false force
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --replace=/prod_clone/jupdateprodclonestatuses defs.def
-ecflow_client --host cdecflow01 --port 32035 --replace /prod_clone /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/prod_clone.v0.0.2/ecf/defs.def
+ecflow_client --host $ECF_HOST --port $ECF_PORT --replace /prod_clone /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/prod_clone.v0.0.2/ecf/defs.def
 
 exit
 
