@@ -14,7 +14,7 @@ fi
 cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/nco/rrfs-workflow/ecf/defs
 
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --replace /para rrfs_nco_para.def false force
-ecflow_client --host $ECF_HOST --port $ECF_PORT --replace /para rrfs_nco_para.def
+ecflow_client --host $ECF_HOST --port $ECF_PORT --replace /para /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/nco/rrfs-workflow/ecf/defs/rrfs_nco_para.def
 
 exit
 
