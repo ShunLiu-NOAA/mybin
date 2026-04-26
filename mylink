@@ -723,4 +723,7 @@ alias cdncocom='cd $dncocom'
 
 alias cdlogp='cd /lfs/f2/t2o/ptmp/emc/para/output/prod_clone'
 
+alias sshc='ssh clogin06'
+alias sshd='ssh dlogin06'
+
 #=========end rrfs_nco branch workflow test ===============
