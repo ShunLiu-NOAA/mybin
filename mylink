@@ -720,6 +720,9 @@ alias cdcomn='cd $dcomn'
 
 export dncocom=/lfs/h1/ops/para/com/rrfs/v1.0
 alias cdncocom='cd $dncocom'
+export dncolog=/lfs/h1/ops/para/output
+alias cdncolog='cd $dncolog'
+
 
 alias cdlogp='cd /lfs/f2/t2o/ptmp/emc/para/output/prod_clone'
 
