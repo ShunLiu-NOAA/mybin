@@ -1,7 +1,7 @@
 module load ecflow/5.6.0.11
 #export ECF_PORT=34104
 export ECF_PORT=32035
-export ECF_HOST=cdecflow01
+export ECF_HOST=ddecflow02
 #34104
 
 #echo "Suite date: $ECF_DATE, time: $ECF_TIME, clock info: $ECF_CLOCK"

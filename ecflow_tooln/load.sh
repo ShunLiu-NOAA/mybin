@@ -1,4 +1,4 @@
-module load ecflow/5.6.0.11
+module load ecflow/5.6.0.14
 #export ECF_PORT=34104
 
 echo $HOSTNAME
@@ -27,11 +27,28 @@ for cyc in $(seq -w 00 23); do
 g_cyc_tmp=$(( (10#$cyc / 6) * 6 ))
 g_cyc=$(printf "%02d" $g_cyc_tmp)
 ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable ECF_INCLUDE /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/nco/rrfs-workflow/ecf/include /para/primary/${g_cyc}
-ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable PDY 20260424 /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z
-ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable PDY 20260424 /para/primary/${g_cyc}/rrfs/v1.0/cycle_end
+ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable PDY 20260708 /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z
+ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable PDY 20260708 /para/primary/${g_cyc}/rrfs/v1.0/cycle_end
+
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable PDY 20250814 /emc_rrfs_dev/primary/${g_cyc}/rrfs/v1.0/${cyc}
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable QUEUE devhigh /emc_rrfs_dev/primary/${cyc}
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable MACHINE_SITE development /emc_rrfs_dev}/primary/${cyc}
+done
+
+for cyc in $(seq -w 00 06 23); do
+g_cyc_tmp=$(( (10#$cyc / 6) * 6 ))
+g_cyc=$(printf "%02d" $g_cyc_tmp)
+ecflow_client --host $ECF_HOST --port $ECF_PORT --alter=change defstatus complete /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z/ensf
+ecflow_client --host $ECF_HOST --port $ECF_PORT --alter=change defstatus complete /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z/firewx
+done
+
+
+exit
+
+# As emc.lam
+for cyc in $(seq -w 00 23); do
+ecflow_client --host ddecflow02 --port 32035 --alter=change defstatus complete /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z/ensf
+ecflow_client --host ddecflow02 --port 32035 --alter=change defstatus complete /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z/firswx
 done
 
 exit

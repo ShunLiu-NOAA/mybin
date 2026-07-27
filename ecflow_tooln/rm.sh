@@ -7,7 +7,7 @@ rrfsdir=/lfs/f2/t2o/ptmp/emc/para/stmp
 
 cd $rrfsdir
 
-for cyc in $(seq -w 06 10); do
+for cyc in $(seq -w 00 17); do
 rm -fr *_${cyc}.*.d*
 rm -fr *_${cyc}_v1.0_prod*
 done

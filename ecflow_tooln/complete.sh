@@ -11,11 +11,11 @@ else
 fi
 
 
-for cyc in $(seq -w 12 15); do
+for cyc in $(seq -w 06 06); do
 g_cyc_tmp=$(( (10#$cyc / 6) * 6 ))
 g_cyc=$(printf "%02d" $g_cyc_tmp)
 #ecflow_client --host $ECF_HOST --port $ECF_PORT --force=complete recursive /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z/det
-#ecflow_client --host $ECF_HOST --port $ECF_PORT --force=complete recursive /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z/enkf/forecast
+#ecflow_client --host $ECF_HOST --port $ECF_PORT --force=complete recursive /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z/enkf/ics
 ecflow_client --host $ECF_HOST --port $ECF_PORT --force=complete recursive /para/primary/${g_cyc}/rrfs/v1.0/${cyc}z
 done
 

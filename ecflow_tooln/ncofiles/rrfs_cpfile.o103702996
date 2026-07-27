@@ -1,0 +1,154 @@
+PBS: Running prologue on parent mom node: nid001628...
+Job 103702996.dbqs01 nodelist: nid001628
++ sdate=2026032323
++ thistime=2026032323
++ echo 2026032323
+2026032323
++ mydate=20260323
++ cyc=23
++ echo 20260323 23
+20260323 23
++ thisdate=2026032323
+++ /apps/ops/prod/nco/core/prod_util.v2.0.10/exec/ndate +1 2026032323
++ thistime1=2026032400
++ mydate1=20260324
++ cyc1=00
++ [[ 23 == \1\9 ]]
++ mkdir -p /lfs/h2/emc/ptmp/emc.lam/mirror
++ mkdir -p /lfs/h2/emc/ptmp/emc.lam/Shun.Liu
++ imem=12
++ mySPIN=spinup
++ [[ spinup == \s\p\i\n\u\p ]]
+++ ls -1 /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.coupler.res /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_core.res.nc /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_core.res.tile1.nc /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_diag.res.tile1.nc /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_srf_wnd.res.tile1.nc /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_tracer.res.tile1.nc /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.phy_data.nc /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.sfc_data.nc
++ fl='/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.coupler.res
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_core.res.nc
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_core.res.tile1.nc
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_diag.res.tile1.nc
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_srf_wnd.res.tile1.nc
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_tracer.res.tile1.nc
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.phy_data.nc
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.sfc_data.nc'
++ desdir=/lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART
++ mkdir -p /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART
++ for ifl in $fl
++ i=1
++ echo /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.coupler.res,1
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.coupler.res,1
++ cp -p /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.coupler.res /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART
++ for ifl in $fl
++ i=2
++ echo /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_core.res.nc,2
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_core.res.nc,2
++ cp -p /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_core.res.nc /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART
++ for ifl in $fl
++ i=3
++ echo /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_core.res.tile1.nc,3
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_core.res.tile1.nc,3
++ cp -p /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_core.res.tile1.nc /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART
++ for ifl in $fl
++ i=4
++ echo /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_diag.res.tile1.nc,4
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_diag.res.tile1.nc,4
++ cp -p /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_diag.res.tile1.nc /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART
++ for ifl in $fl
++ i=5
++ echo /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_srf_wnd.res.tile1.nc,5
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_srf_wnd.res.tile1.nc,5
++ cp -p /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_srf_wnd.res.tile1.nc /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART
++ for ifl in $fl
++ i=6
++ echo /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_tracer.res.tile1.nc,6
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_tracer.res.tile1.nc,6
++ cp -p /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.fv_tracer.res.tile1.nc /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART
++ for ifl in $fl
++ i=7
++ echo /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.phy_data.nc,7
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.phy_data.nc,7
++ cp -p /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.phy_data.nc /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART
++ for ifl in $fl
++ i=8
++ echo /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.sfc_data.nc,8
+/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.sfc_data.nc,8
++ cp -p /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART/20260324.000000.sfc_data.nc /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/RESTART
+++ ls -1 /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/INPUT/gfs_ctrl.nc
++ fl=/lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/INPUT/gfs_ctrl.nc
++ desdir=/lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/INPUT
++ mkdir -p /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/INPUT
++ for ifl in $fl
++ cp -p /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/INPUT/gfs_ctrl.nc /lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.20260323/23/m012/forecast/INPUT
+Cgroup mem limit exceeded: t
+
+PBS: Running epilogue on parent mom node: nid001628...
+##### Job 103702996.dbqs01 - PBS Job Script:
+(Note: Duplicate #PBS entries are a function how PBS interprets and caches the original job script.)
+
+#!/bin/bash
+
+#PBS -A RRFS-DEV
+#PBS -q pridev
+#PBS -l select=1:ncpus=1:mem=8G
+#PBS -l walltime=1:02:00
+#PBS -j oe
+#PBS -N rrfs_cpfile
+
+##PBS -j oe -o /lfs/h2/emc/ptmp/emc.lam/mirror/rrfs_mirror_2025070210.out
+##PBS -N rrfs_mirror
+
+module purge
+module load envvar/1.0
+module load prod_util/2.0.10
+
+set -x
+
+#sdate=2026030921
+sdate=${DAYSIN}
+
+thistime=$sdate
+
+echo $thistime
+mydate=${thistime:0:8}
+cyc=${thistime:8:10}
+echo $mydate $cyc
+
+thisdate=$thistime
+
+thistime1=`$NDATE +1 $sdate`
+mydate1=${thistime1:0:8}
+cyc1=${thistime1:8:10}
+
+if [[ "${cyc}" == "19" ]]; then
+    cyc="19_spinup"
+fi
+
+mkdir -p  /lfs/h2/emc/ptmp/emc.lam/mirror
+mkdir -p /lfs/h2/emc/ptmp/emc.lam/Shun.Liu
+
+#cd /lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/mirrior
+#rm -f mirrordet*.sh
+
+# total 7 files
+imem=${MEM}
+
+mySPIN=spinup
+if [[ "${mySPIN}" == "spinup" ]]; then
+fl=`ls -1 /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.${mydate}/${cyc}/m0${imem}/forecast/RESTART/${mydate1}.${cyc1}*`
+desdir=/lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.${mydate}/${cyc}/m0${imem}/forecast/RESTART
+
+mkdir -p $desdir
+for ifl in $fl; do
+  i=$((i+1))
+  echo $ifl,$i
+  cp -p $ifl $desdir
+done
+fi
+
+fl=`ls -1 /lfs/h1/ops/para/com/rrfs/v1.0/enkfrrfs.${mydate}/${cyc}/m0${imem}/forecast/INPUT/gfs_ctrl.nc`
+desdir=/lfs/h2/emc/stmp/emc.lam/com/rrfs/v1.0/enkfrrfs.${mydate}/${cyc}/m0${imem}/forecast/INPUT
+mkdir -p $desdir
+for ifl in $fl; do
+  cp -p $ifl $desdir
+done
+
+##### End of job script
+------------------------------------------------------------------
+
