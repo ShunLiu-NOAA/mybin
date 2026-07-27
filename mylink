@@ -711,7 +711,8 @@ export dlogn=$vptmp/output/prod/today
 export dprodn=$vptmp/com/rrfs/v1.0
 #export dcomn=$vptmp/com/rrfs/v1.0
 export dcomn=/lfs/h3/emc/lam/noscrub/emc.lam/com/rrfs/v1.0
-export dstmpn=$vptmp/stmp
+#export dstmpn=$vptmp/stmp
+export dstmpn=/lfs/h3/emc/lam/noscrub/emc.lam/stmp
 
 alias cdstmpn='cd $dstmpn'
 alias cdlogn='cd $dlogn'
@@ -723,10 +724,14 @@ alias cdncocom='cd $dncocom'
 export dncolog=/lfs/h1/ops/para/output
 alias cdncolog='cd $dncolog'
 
-
 alias cdlogp='cd /lfs/f2/t2o/ptmp/emc/para/output/prod_clone'
+#=========end rrfs_nco branch workflow test ===============
 
 alias sshc='ssh clogin06'
 alias sshd='ssh dlogin06'
 
-#=========end rrfs_nco branch workflow test ===============
+gitbase=/lfs/h2/emc/lam/noscrub/emc.lam/Shun.Liu/rrfs-workflow
+export drrfsg=${gitbase}
+alias cdrrfsg='cd $drrfsg'
+
+alias cdncorrfs='cd /lfs/h1/ops/para/packages/rrfs.v1.0.18'
