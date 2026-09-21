@@ -5,8 +5,11 @@ export ECF_HOST=ddecflow02
 #34104
 
 cyc=19
-ecflow_client --host $ECF_HOST --port $ECF_PORT --why /emc_rrfs_dev_${cyc}/primary/${cyc}/rrfs/v1.0/prep/enkf/jrrfs_enkf_recenter_spinup
-ecflow_client --host $ECF_HOST --port $ECF_PORT --query state /emc_rrfs_dev_${cyc}/primary/${cyc}/rrfs/v1.0/prep/enkf/jrrfs_enkf_recenter_spinup
+#ecflow_client --host $ECF_HOST --port $ECF_PORT --why /emc_rrfs_dev_${cyc}/primary/${cyc}/rrfs/v1.0/prep/enkf/jrrfs_enkf_recenter_spinup
+#ecflow_client --host $ECF_HOST --port $ECF_PORT --query state /emc_rrfs_dev_${cyc}/primary/${cyc}/rrfs/v1.0/prep/enkf/jrrfs_enkf_recenter_spinup
+
+for cyc in $(seq -w 00 1 23); do
+done
 
 exit
 

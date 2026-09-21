@@ -1,8 +1,8 @@
 
-mydate=20260709
-mydatem1=20260709
-cyc=05
-cyc06=05
+mydate=20260729
+mydatem1=20260729
+cyc=06
+cyc06=06
 #com=/lfs/f2/t2o/ptmp/emc/Shun.Liu/com/rrfs/v1.0
 #com=/lfs/f2/t2o/ptmp/emc/Shun.Liu/com/rrfs/v1.0
 #com=/lfs/f2/t2o/ptmp/emc/para/com/rrfs/v1.0
@@ -40,6 +40,11 @@ cd $com/enkfrrfs.${mydate}/$cyc
 ln -sf $mir0/enkfrrfs.${mydate}/$cyc/* .
 #ln -sf $mir0/enkfrrfs.${mydate}/$cyc/lbcs .
 #ln -sf $mir/enkfrrfs.${mydate}/${cyc06} .
+
+rm -f $com/rrfsens.${mydate}/$cyc
+mkdir -p $com/rrfsens.${mydate}/$cyc
+cd $com/rrfsens.${mydate}/$cyc
+ln -sf $mir0/rrfsens.${mydate}/$cyc/* .
 
 #################################
 #  other files

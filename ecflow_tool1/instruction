@@ -6,7 +6,7 @@
 3. start your own ecflow_server
    server_check.sh yes
    make a note for ecflow port:
-     Host: ddcflow01
+     Host: ddcflow02
      Port: 34104
 4. setup ecflow log directory 
    /u/shun.liu/ecflow
