@@ -1,13 +1,45 @@
+#!/bin/bash
 #PBS -A RRFS-DEV
 #PBS -q dev_transfer
 #PBS -l select=1:mpiprocs=1:ncpus=1
 #PBS -l walltime=04:15:00
 #PBS -N rrfs_a_run_archive2
-#PBS -j oe -o /lfs/h2/emc/ptmp/Shun.Liu/logs/archive.log
+#PBS -j oe -o /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/logs/archive.log
+
 set -x
 
-cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs
-#htar cf  /NCEPDEV/emc-meso/2year/emc.campara/rrfs_sfe.tar.tar
+if [ -z "${PBS_JOBID}" ]; then
+    # Not yet running under PBS: this is the submission step.
+    # Usage: ./submit_htar.sh FILEDIR/FILENAME [c|x]
+    #   c = archive (htar cf)  [default]
+    #   x = retrieve (htar xf)
+    PATHIN=$1
+    MODE=${2:-c}
 
-var=v0.3.8.tar
-htar cf /NCEPDEV/emc-meso/1year/emc.lam/${var}.tar ${var}
+    if [ -z "${PATHIN}" ]; then
+        echo "Usage: $0 FILEDIR/FILENAME [c|x]"
+        exit 1
+    fi
+
+    if [ "${MODE}" != "c" ] && [ "${MODE}" != "x" ]; then
+        echo "MODE must be 'c' (archive) or 'x' (retrieve), got '${MODE}'"
+        exit 1
+    fi
+
+    FILEDIR=$(dirname "${PATHIN}")
+    FILENAME=$(basename "${PATHIN}")
+
+    mkdir -p /lfs/h2/emc/ptmp/emc.lam/Shun.Liu/logs
+
+    qsub -v FILEDIR="${FILEDIR}",FILENAME="${FILENAME}",MODE="${MODE}" "$0"
+    exit $?
+fi
+
+# Running under PBS: do the actual archive/retrieve work.
+cd "${FILEDIR}"
+
+if [ "${MODE}" = "x" ]; then
+    htar xf /NCEPDEV/emc-meso/1year/emc.lam/${FILENAME}.tar ${FILENAME}
+else
+    htar cf /NCEPDEV/emc-meso/1year/emc.lam/${FILENAME}.tar ${FILENAME}
+fi
