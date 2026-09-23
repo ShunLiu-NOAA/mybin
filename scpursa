@@ -1,0 +1,1 @@
+scp -r $1 Shun.Liu@dtn-ursa.fairmont.rdhpcs.noaa.gov:/scratch4/NCEPDEV/fv3-cam/Shun.Liu/wcoss2
