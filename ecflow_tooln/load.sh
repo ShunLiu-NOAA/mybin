@@ -5,7 +5,7 @@ echo $HOSTNAME
 primary=$(echo $HOSTNAME | cut -c1-6)
 if [ "$primary" == "cdxfer" ]; then
   export ECF_PORT=32035
-  export ECF_HOST=cdecflow01
+  export ECF_HOST=cdecflow02
 else
   export ECF_PORT=32035
   export ECF_HOST=ddecflow02
