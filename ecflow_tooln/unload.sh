@@ -1,14 +1,26 @@
 module load ecflow/5.6.0.11
 
-echo $HOSTNAME
-primary=$(echo $HOSTNAME | cut -c1-6)
-if [ "$primary" == "cdxfer" ]; then
-  export ECF_PORT=32035
-  export ECF_HOST=cdecflow01
-else
-  export ECF_PORT=32035
-  export ECF_HOST=ddecflow02
-fi
+#echo $HOSTNAME
+#primary=$(echo $HOSTNAME | cut -c1-6)
+#if [ "$primary" == "cdxfer" ]; then
+#  export ECF_PORT=32035
+#  export ECF_HOST=cdecflow01
+#else
+#  export ECF_PORT=32035
+#  export ECF_HOST=ddecflow02
+#fi
+
+case ${HOSTNAME:0:1} in
+  c) export ECF_HOST=cdecflow02 ;;
+  d) export ECF_HOST=ddecflow02 ;;
+  *) echo "unknown machine: $HOSTNAME" >&2; exit 1 ;;
+esac
+
+export ECF_PORT=32035
+echo "$HOSTNAME -> $ECF_HOST:$ECF_PORT"
+
+#ecflow_client --suites                      # make sure /para is listed before deleting
+#ecflow_client --delete=force yes /para
 
 ecflow_client --host $ECF_HOST --port $ECF_PORT --delete=force yes /para
 exit
