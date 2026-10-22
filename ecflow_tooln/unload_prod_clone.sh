@@ -12,8 +12,6 @@ echo "$HOSTNAME -> $ECF_HOST:$ECF_PORT"
 #ecflow_client --suites                      # make sure /para is listed before deleting
 #ecflow_client --delete=force yes /para
 
-ecflow_client --host $ECF_HOST --port $ECF_PORT --delete=force yes /para
-
 ecflow_client --host $ECF_HOST --port $ECF_PORT --delete=force yes /prod_clone
 exit
 
