@@ -1,22 +1,24 @@
 module load ecflow/5.6.0.11
 
-echo $HOSTNAME
-primary=$(echo $HOSTNAME | cut -c1-6)
-if [ "$primary" == "cdxfer" ]; then
-  export ECF_PORT=32035
-  export ECF_HOST=cdecflow01
-else
-  export ECF_PORT=32035
-  export ECF_HOST=ddecflow02
-fi
+case ${HOSTNAME:0:1} in
+  c) export ECF_HOST=cdecflow02 ;;
+  d) export ECF_HOST=ddecflow02 ;;
+  *) echo "unknown machine: $HOSTNAME" >&2; exit 1 ;;
+esac
+
+export ECF_PORT=32035
+echo "$HOSTNAME -> $ECF_HOST:$ECF_PORT"
 
 #load defs
-cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/prod_clone.v0.0.2/ecf
+cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/nco/rrfs-workflow/ush/prod_clone/ecf
 
-ecflow_client --host $ECF_HOST --port $ECF_PORT --load=defs.def
+ecflow_client --host $ECF_HOST --port $ECF_PORT --load=defs_retro.def
 ecflow_client --host $ECF_HOST --port $ECF_PORT --begin=prod_clone
 
-ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable ECF_INCLUDE /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/prod_clone.v0.0.2/include /prod_clone
+exit
+
+#ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable ECF_INCLUDE /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/prod_clone.v0.0.2/include /prod_clone
+#ecflow_client --host $ECF_HOST --port $ECF_PORT --alter add variable ECF_INCLUDE /lfs/h2/emc/lam/noscrub/emc.lam/rrfs/prod_clone.v0.0.2/include /prod_clone
 
 exit
 sleep 10
