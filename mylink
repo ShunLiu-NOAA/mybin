@@ -710,7 +710,7 @@ vptmp=/lfs/f2/t2o/ptmp/emc/para
 export dlogn=$vptmp/output/prod/today
 export dprodn=$vptmp/com/rrfs/v1.0
 #export dcomn=$vptmp/com/rrfs/v1.0
-export dcomn=/lfs/h3/emc/lam/noscrub/emc.lam/com/rrfs/v1.0
+export dcomn=/lfs/h3/emc/lam/noscrub/emc.lam/ptmp/com/rrfs/v1.0
 #export dstmpn=$vptmp/stmp
 export dstmpn=/lfs/h3/emc/lam/noscrub/emc.lam/stmp
 
@@ -735,3 +735,6 @@ export drrfsg=${gitbase}
 alias cdrrfsg='cd $drrfsg'
 
 alias cdncorrfs='cd /lfs/h1/ops/para/packages/rrfs.v1.0.18'
+
+dlogr=/lfs/h3/emc/lam/noscrub/emc.lam/ptmp/submit/para/primary/00/rrfs/v1.0/00z/
+alias cdlogr='cd $dlogr'
